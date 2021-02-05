@@ -1,0 +1,590 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cardBackgroundColor"
+    tools:context=".reports.InvoiceDetailsActivity">
+
+    <include layout="@layout/appbar_layout" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/WHITE"
+        android:orientation="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <include
+            layout="@layout/so_header"
+            android:visibility="gone" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            style="@style/UtilsItemSpacing"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/WHITE">
+
+            <TextView
+                android:id="@+id/tvInvoiceNo"
+                style="@style/UtilsSubHeaderStyles"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="4dp"
+                android:layout_marginRight="4dp"
+                android:text="TextView"
+                android:textSize="@dimen/xlarge_text_size"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/ivDeliveryStatus"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <!-- <android.support.constraint.Guideline
+                 android:id="@+id/guideline"
+                 android:layout_width="0dp"
+                 android:layout_height="wrap_content"
+                 android:orientation="vertical"
+                 app:layout_constraintGuide_percent="0.8" />-->
+
+            <!-- <TextView
+                 android:id="@+id/tvAmount"
+                 android:layout_width="0dp"
+                 android:layout_height="wrap_content"
+                 android:layout_marginLeft="8dp"
+                 android:layout_marginRight="8dp"
+                 android:text="TextView"
+                 android:gravity="right"
+                 style="@style/UtilsMediumTextStyle"
+                 app:layout_constraintLeft_toLeftOf="@+id/guideline"
+                 app:layout_constraintRight_toLeftOf="@+id/ivDeliveryStatus"
+                 app:layout_constraintTop_toTopOf="@+id/tvAddress"
+                 android:layout_marginTop="0dp"
+                 app:layout_constraintHorizontal_bias="0.0" />-->
+
+            <!-- <TextView
+                 android:id="@+id/tvDate"
+                 android:layout_width="0dp"
+                 android:layout_height="wrap_content"
+                 android:layout_marginLeft="4dp"
+                 android:gravity="right"
+                 android:text="TextView"
+                 style="@style/UtilsMediumTextStyle"
+                 app:layout_constraintLeft_toLeftOf="@+id/guideline"
+                 android:layout_marginTop="4dp"
+                 app:layout_constraintTop_toBottomOf="@+id/tvAmount"
+                 app:layout_constraintRight_toLeftOf="@+id/ivStatus"
+                 android:layout_marginRight="8dp" />-->
+
+            <ImageView
+                android:id="@+id/ivDeliveryStatus"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_retailer" />
+
+            <TextView
+                android:id="@+id/tvCustomerName"
+                style="@style/UtilsMediumTextStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="4dp"
+                android:layout_marginRight="4dp"
+                android:layout_marginTop="6dp"
+                android:gravity="start"
+                android:text="TextView"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/ivDeliveryStatus"
+                app:layout_constraintTop_toBottomOf="@+id/tvInvoiceNo" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <include layout="@layout/single_line_lay" />
+
+        <include
+            layout="@layout/so_details_header"
+            android:visibility="gone" />
+
+        <include layout="@layout/single_line_lay" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:visibility="gone">
+
+            <!-- old UI-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_27sdp"
+                        android:background="@color/bg_title"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/_5sdp">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="fill_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center|left"
+                                android:text="@string/so_header_details_one"
+                                android:textColor="@color/BLACK"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:gravity="center_vertical">
+
+                            <ImageView
+                                android:id="@+id/iv_expand_icon"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:src="@drawable/down" />
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/header_item"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone" />
+
+                    <include layout="@layout/single_line_lay" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <include
+                        android:id="@+id/soItemTitelView"
+                        layout="@layout/so_header_title" />
+
+                    <include layout="@layout/single_line_lay" />
+
+
+                    <include
+                        android:id="@+id/noRecordItemDetails"
+                        layout="@layout/no_record_found" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <include
+                        android:id="@+id/soPatFunTitelView"
+                        layout="@layout/so_header_title" />
+
+                    <include layout="@layout/single_line_lay" />
+
+                    <include layout="@layout/partner_functn_header" />
+
+                    <include
+                        android:id="@+id/noRecordPartnerFun"
+                        layout="@layout/no_record_found" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <include
+                        android:id="@+id/invConTitelView"
+                        layout="@layout/so_header_title" />
+
+                    <include layout="@layout/single_line_lay" />
+
+                    <include layout="@layout/so_preview_item_header" />
+
+                    <LinearLayout
+                        android:id="@+id/invCon_item"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_6ssp"
+                        android:orientation="vertical" />
+
+                    <include
+                        android:id="@+id/noRecordConditionItm"
+                        layout="@layout/no_record_found" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/cardBackgroundColor">
+            <!-- new UI -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/cardBackgroundColor"
+                android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cvOrderDetails"
+                    style="@style/CardViewStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="0dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            style="@style/UtilsItemSpacing"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/secondaryDarkColor"
+                            android:paddingBottom="@dimen/padding_normal_16"
+                            android:paddingTop="@dimen/padding_normal_16">
+
+                            <ImageView
+                                android:id="@+id/ivOrderDetails"
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:layout_marginBottom="0dp"
+                                android:layout_marginRight="8dp"
+                                android:tint="@color/secondaryTextColor"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:srcCompat="@drawable/ic_arrow_down_black_24dp" />
+
+                            <TextView
+                                android:id="@+id/tvOrderDetails"
+                                style="@style/UtilsSubHeaderStyles"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="0dp"
+                                android:layout_marginRight="8dp"
+                                android:text="Invoice Data"
+                                android:textColor="@color/secondaryTextColor"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintHorizontal_bias="0.518"
+                                app:layout_constraintLeft_toRightOf="@+id/ivEmptyView"
+                                app:layout_constraintRight_toLeftOf="@+id/guideline1" />
+
+                            <ImageView
+                                android:id="@+id/ivEmptyView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:visibility="gone"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:srcCompat="@drawable/ic_store_black_24dp" />
+
+                            <androidx.constraintlayout.widget.Guideline
+                                android:id="@+id/guideline1"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                app:layout_constraintGuide_percent="0.32"
+                                tools:layout_editor_absoluteX="140dp"
+                                tools:layout_editor_absoluteY="242dp" />
+
+                            <TextView
+                                android:id="@+id/tvDate"
+                                style="@style/UtilsMediumTextStyle"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="0dp"
+                                android:layout_marginEnd="16dp"
+                                android:layout_marginLeft="16dp"
+                                android:layout_marginRight="16dp"
+                                android:layout_marginStart="16dp"
+                                android:layout_marginTop="0dp"
+                                android:gravity="right"
+                                android:text="TextView"
+                                android:textColor="@color/secondaryTextColor"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintHorizontal_bias="0.0"
+                                app:layout_constraintLeft_toLeftOf="@+id/guideline1"
+                                app:layout_constraintRight_toLeftOf="@+id/ivOrderDetails"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <include layout="@layout/single_line_lay" />
+
+                        <include
+                            android:id="@+id/headerItem"
+                            layout="@layout/invoice_header_details"
+                            android:visibility="gone" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cvPricingDetails"
+                    style="@style/CardViewStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="0dp"
+                    android:layout_marginTop="0dp"
+                    android:orientation="vertical">
+
+                    <!--<include layout="@layout/single_line_lay" />-->
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            style="@style/UtilsItemSpacing"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/secondaryDarkColor">
+
+                            <ImageView
+                                android:id="@+id/ivPricingDetails"
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:layout_marginBottom="0dp"
+                                android:layout_marginRight="8dp"
+                                android:layout_marginTop="0dp"
+                                android:tint="@color/secondaryTextColor"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintVertical_bias="0.562"
+                                app:srcCompat="@drawable/ic_arrow_down_black_24dp" />
+
+                            <TextView
+                                android:id="@+id/tvPricingDetail"
+                                style="@style/UtilsSubHeaderStyles"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="0dp"
+                                android:layout_marginEnd="8dp"
+                                android:layout_marginRight="8dp"
+                                android:layout_marginTop="0dp"
+                                android:text="Total Amount"
+                                android:textColor="@color/secondaryTextColor"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintLeft_toRightOf="@+id/ivEmptyView1"
+                                app:layout_constraintRight_toLeftOf="@+id/guideline"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <ImageView
+                                android:id="@+id/ivEmptyView1"
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:visibility="gone"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:srcCompat="@drawable/ic_store_black_24dp" />
+
+                            <androidx.constraintlayout.widget.Guideline
+                                android:id="@+id/guideline"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                app:layout_constraintGuide_percent="0.32"
+                                tools:layout_editor_absoluteX="140dp"
+                                tools:layout_editor_absoluteY="409dp" />
+
+                            <TextView
+                                android:id="@+id/tvAmount"
+                                style="@style/UtilsMediumTextStyle"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="0dp"
+                                android:layout_marginEnd="16dp"
+                                android:layout_marginLeft="16dp"
+                                android:layout_marginRight="16dp"
+                                android:layout_marginStart="16dp"
+                                android:layout_marginTop="0dp"
+                                android:gravity="right"
+                                android:text="TextView"
+                                android:textColor="@color/secondaryTextColor"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintHorizontal_bias="0.0"
+                                app:layout_constraintLeft_toLeftOf="@+id/guideline"
+                                app:layout_constraintRight_toLeftOf="@+id/ivPricingDetails"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintVertical_bias="0.521" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <LinearLayout
+                            android:id="@+id/llSOCondition"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:paddingBottom="@dimen/padding_normal_16"
+                            android:visibility="gone" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cvItem"
+                    style="@style/CardViewStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <include layout="@layout/single_line_lay" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            style="@style/UtilsItemSpacing"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/secondaryDarkColor"
+                            android:paddingBottom="@dimen/padding_normal_16"
+                            android:paddingTop="@dimen/padding_normal_16">
+
+                            <ImageView
+                                android:id="@+id/ivItemDetails"
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:tint="@color/secondaryTextColor"
+                                android:visibility="invisible"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:srcCompat="@drawable/ic_arrow_down_black_24dp" />
+
+                            <TextView
+                                android:id="@+id/tvItemDetail"
+                                style="@style/UtilsSubHeaderStyles"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="0dp"
+                                android:layout_marginTop="0dp"
+                                android:text="Items"
+                                android:textColor="@color/secondaryTextColor"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintLeft_toRightOf="@+id/ivEmptyView2"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <ImageView
+                                android:id="@+id/ivEmptyView2"
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:visibility="gone"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:srcCompat="@drawable/ic_store_black_24dp" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <include layout="@layout/single_line_lay" />
+
+                        <LinearLayout
+                            android:id="@+id/llItemList"
+                            android:layout_width="match_parent"
+
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/recycler_view_data"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <include
+                        android:id="@+id/soItemTitelView"
+                        layout="@layout/so_header_title" />
+
+                    <include layout="@layout/single_line_lay" />
+
+
+                    <include layout="@layout/no_record_found" />
+                </LinearLayout>
+
+
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/tlDetails"
+                    style="@style/UtilsTabLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    app:tabGravity="fill"
+                    app:tabMaxWidth="0dp"
+                    app:tabMode="fixed" />
+
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/viewPager"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:id="@+id/ll_notes_list_header"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <include
+                        android:id="@+id/notesView"
+                        layout="@layout/so_header_title" />
+
+                    <include layout="@layout/single_line_lay" />
+
+                    <include layout="@layout/so_notes" />
+
+                    <include
+                        android:id="@+id/so_notes_item"
+                        layout="@layout/so_notes_item"
+                        android:visibility="gone" />
+
+                    <include layout="@layout/single_line_lay" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

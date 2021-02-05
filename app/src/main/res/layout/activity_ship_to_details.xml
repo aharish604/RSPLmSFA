@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cardBackgroundColor">
+
+    <include layout="@layout/appbar_layout" />
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <include layout="@layout/so_create_header" />
+           <!-- <LinearLayout
+                android:id="@+id/ll_details_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <include layout="@layout/single_line_lay" />
+
+                <include
+                    android:id="@+id/singleView"
+                    layout="@layout/so_list_item" />
+            </LinearLayout>-->
+
+            <include layout="@layout/single_line_lay" />
+
+            <androidx.core.widget.NestedScrollView
+                android:id="@+id/nsvContainer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    style="@style/UtilsItemSpacing"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvTitleShip"
+                        style="@style/Header"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="0dp"
+                        android:paddingLeft="0dp"
+                        android:paddingTop="@dimen/padding_normal_8"
+                        android:text="@string/so_create_shipping" />
+
+                    <Switch
+                        android:id="@+id/switchOneTimeShip"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/so_create_one_time_ship"
+                        android:textColor="@color/BLACK"
+                        android:paddingTop="@dimen/padding_normal_16"
+                        android:paddingBottom="@dimen/padding_normal_16"
+                        android:textSize="@dimen/util_sub_title_sp" />
+
+                    <com.rspl.sf.msfa.ui.MaterialDesignSpinner
+                        android:id="@+id/spShipTo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="@dimen/padding_normal_16"
+                        app:ms_alwaysShowFloatingLabel="true"
+                        app:ms_enableFloatingLabel="true"
+                        app:ms_floatingLabelText="@string/tvShipTo"
+                        app:ms_multiline="false" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/UtilsMediumTextStyle"
+                        android:id="@+id/tvaddress"
+                        android:visibility="gone"
+                        android:gravity="start|center"
+                        android:text="TextView"/>
+                    <include
+                        android:id="@+id/oneTimeShip"
+                        android:visibility="gone"
+                        layout="@layout/snippet_one_time_ship_to_party" />
+
+                    <com.rspl.sf.msfa.ui.MaterialDesignSpinner
+                        android:id="@+id/spShippingCondition"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:ms_alwaysShowFloatingLabel="true"
+                        app:ms_enableFloatingLabel="true"
+                        android:visibility="gone"
+                        app:ms_floatingLabelText="@string/tvShippingCondition"
+                        app:ms_multiline="false" />
+
+                    <!--<android.support.design.widget.TextInputLayout
+                        android:id="@+id/tiPoNumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:theme="@style/MyEditTextTheme">
+                        &lt;!&ndash;app:hintTextAppearance="@style/EditTextHintStyle"&ndash;&gt;
+
+                        <EditText
+                            android:id="@+id/etPONumber"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/tvPO"
+                            android:singleLine="true" />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/tiPoDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:theme="@style/MyEditTextTheme">
+
+                        <EditText
+                            android:id="@+id/etPODate"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/tvDate"
+                            android:editable="false"
+                            android:focusable="false"
+                            android:cursorVisible="false"
+                            android:inputType="date"
+                            android:singleLine="true" />
+                    </android.support.design.widget.TextInputLayout>-->
+                    <!--  <com.arteriatech.sf.mdc.ui.MaterialDesignSpinner
+                          android:id="@+id/spPODate"
+                          android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          app:ms_alwaysShowFloatingLabel="true"
+                          app:ms_enableFloatingLabel="true"
+                          app:ms_floatingLabelText="@string/tvDate"
+                          app:ms_multiline="true" />-->
+                    <com.rspl.sf.msfa.ui.MaterialDesignSpinner
+                        android:id="@+id/spSalesOffice"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:ms_alwaysShowFloatingLabel="true"
+                        app:ms_enableFloatingLabel="true"
+                        app:ms_floatingLabelText="@string/tvSalesOffice"
+                        android:visibility="gone"
+                        app:ms_multiline="false" />
+                    <com.rspl.sf.msfa.ui.MaterialDesignSpinner
+                        android:id="@+id/spSalesGroup"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:ms_alwaysShowFloatingLabel="true"
+                        app:ms_enableFloatingLabel="true"
+                        app:ms_floatingLabelText="@string/tvSalesGrp"
+                        android:visibility="gone"
+                        app:ms_multiline="false" />
+                    <com.rspl.sf.msfa.ui.MaterialDesignSpinner
+                        android:id="@+id/spIncoTerm1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:ms_alwaysShowFloatingLabel="true"
+                        android:visibility="gone"
+                        app:ms_enableFloatingLabel="true"
+                        app:ms_floatingLabelText="@string/tvIncoTerm"
+                        app:ms_multiline="false" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tiIncoterm2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:theme="@style/MyEditTextTheme">
+
+                        <EditText
+                            android:id="@+id/etIncoterm2"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/tvIncoTerm2"
+                            android:visibility="gone"
+                            android:singleLine="true" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+                    <TextView
+                        android:id="@+id/tvTitlePaymentTerm"
+                        style="@style/Header"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="0dp"
+                        android:paddingLeft="0dp"
+                        android:paddingTop="@dimen/padding_normal_16"
+                        android:text="@string/so_details_terms" />
+
+                    <com.rspl.sf.msfa.ui.MaterialDesignSpinner
+                        android:id="@+id/spPaymentTerm"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="@dimen/padding_normal_16"
+                        app:ms_alwaysShowFloatingLabel="true"
+                        app:ms_enableFloatingLabel="true"
+                        app:ms_floatingLabelText="@string/tvPaymentTerm"
+                        app:ms_multiline="false" />
+
+
+                </LinearLayout>
+            </androidx.core.widget.NestedScrollView>
+
+        </LinearLayout>
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:visibility="gone"
+            android:layout_height="match_parent">
+
+            <com.rspl.sf.msfa.ui.MovableFloatingActionButton
+                android:id="@+id/fabEdit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|end"
+                android:layout_margin="@dimen/so_details_fab_margin"
+                style="@style/FloatingActionButtonStyle"
+                app:backgroundTint="@color/floatingActionButtonColor"
+                app:srcCompat="@drawable/ic_mode_edit_black_24dp" />
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

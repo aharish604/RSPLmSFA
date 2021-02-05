@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: :ODataAPI-4.4.0:@aar">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ca2907d9e6216fb7d3fd2a314ef979fe/jetified-ODataAPI-4.4.0/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ca2907d9e6216fb7d3fd2a314ef979fe/jetified-ODataAPI-4.4.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ca2907d9e6216fb7d3fd2a314ef979fe/jetified-ODataAPI-4.4.0/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

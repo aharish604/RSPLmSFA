@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        style="@style/UtilsItemSpacing"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/textViewRetailerName"
+            style="@style/UtilsMediumTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textViewCustomerID"
+            style="@style/UtilsMediumTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="TextView"
+            app:layout_constraintTop_toBottomOf="@+id/textViewRetailerName" />
+
+        <TextView
+            android:id="@+id/textViewMTDValue"
+            style="@style/UtilsMediumTextStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:gravity="right"
+            android:text="TextView"
+            app:layout_constraintLeft_toRightOf="@+id/textViewCustomerID"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textViewCustomerID" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <include layout="@layout/single_line_lay" />
+</LinearLayout>

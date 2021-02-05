@@ -1,0 +1,17 @@
+<component name="libraryTable">
+  <library name="Gradle: :mUtils3.2.5:@aar">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e2c58c2d596a9bc9f3d46f0a9598a909/jetified-mUtils3.2.5/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e2c58c2d596a9bc9f3d46f0a9598a909/jetified-mUtils3.2.5/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e2c58c2d596a9bc9f3d46f0a9598a909/jetified-mUtils3.2.5/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e2c58c2d596a9bc9f3d46f0a9598a909/jetified-mUtils3.2.5/jars/libs/annotations-16.0.3.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e2c58c2d596a9bc9f3d46f0a9598a909/jetified-mUtils3.2.5/jars/libs/bcpkix-jdk15on-1.60.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e2c58c2d596a9bc9f3d46f0a9598a909/jetified-mUtils3.2.5/jars/libs/bcprov-jdk15on-1.60.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e2c58c2d596a9bc9f3d46f0a9598a909/jetified-mUtils3.2.5/jars/libs/gson-2.2.4.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e2c58c2d596a9bc9f3d46f0a9598a909/jetified-mUtils3.2.5/jars/libs/jdeferred-core-1.2.6.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e2c58c2d596a9bc9f3d46f0a9598a909/jetified-mUtils3.2.5/jars/libs/slf4j-api-1.7.25.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cardBackgroundColor"
+    android:orientation="vertical">
+    <include layout="@layout/appbar_layout"/>
+
+    <include layout="@layout/filter_display_layout"/>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefresh_targets"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_days_layout"
+                style="@style/UtilsItemSpacing"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/WHITE">
+
+                <TextView
+                    android:id="@+id/tv_remaing_days"
+                    style="@style/UtilsSubHeaderStyles"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:textSize="@dimen/xlarge_text_size"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline10"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginRight="8dp" />
+
+                <TextView
+                    android:id="@+id/tv_remaing_days_text"
+                    style="@style/UtilsSmallTextStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginTop="4dp"
+                    android:visibility="invisible"
+                    android:text="Pending"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline10"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_remaing_days"
+                    android:layout_marginRight="8dp" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.67" />
+
+                <TextView
+                    android:id="@+id/tv_days_percentage"
+                    style="@style/UtilsSubHeaderStyles"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:gravity="center"
+                    android:visibility="invisible"
+                    android:textSize="@dimen/xlarge_text_size"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/guideline10"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginLeft="8dp" />
+                <com.rspl.sf.msfa.ui.TextProgressBar
+                    android:id="@+id/progressBar"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:max="100"
+                    android:progress="0"
+                    style="@style/CustomProgressBarHorizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/guideline10"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_percentage_txt"
+                    style="@style/UtilsSmallTextStyle"
+                    android:layout_width="0dp"
+                    android:gravity="center"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="4dp"
+                    android:text="Days Completed"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/guideline10"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_days_percentage"
+                    android:layout_marginLeft="8dp" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_view_targets"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <include layout="@layout/no_record_found" />
+        </LinearLayout>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</LinearLayout>

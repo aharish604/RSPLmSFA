@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: :MobilePlace-4.4.0:@aar">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/6be23008cddb6476a4fe5f3e88598b43/jetified-MobilePlace-4.4.0/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/6be23008cddb6476a4fe5f3e88598b43/jetified-MobilePlace-4.4.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/6be23008cddb6476a4fe5f3e88598b43/jetified-MobilePlace-4.4.0/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

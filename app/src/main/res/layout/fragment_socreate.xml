@@ -1,0 +1,902 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:ignore="ContentDescription">
+
+    <include layout="@layout/so_create_header" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <LinearLayout
+            android:id="@+id/llHeaderView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="@dimen/padding_normal_16">
+
+            <!--<LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/llSoldTo"
+                android:orientation="horizontal"
+                android:padding="@dimen/padding_four_dip">
+
+                <LinearLayout
+                    android:layout_width="@dimen/width_zero_dip"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight=".4"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:paddingEnd="@dimen/padding_zero_dip"
+                        android:paddingLeft="@dimen/padding_three_dip"
+                        android:paddingRight="@dimen/padding_zero_dip"
+                        android:paddingStart="@dimen/padding_zero_dip"
+                        android:text="@string/tvSoldTo"
+                        android:textColor="@color/TEXT_COLOR"
+                        android:textSize="@dimen/util_normal_text_sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top|center"
+                        android:paddingLeft="@dimen/padding_three_dip"
+                        android:text="@string/lbl_star"
+                        android:textColor="@color/RED"
+                        android:textSize="@dimen/util_normal_text_sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="@dimen/width_zero_dip"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.1"
+                    android:text="@string/lbl_semi_colon"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/util_normal_text_sp" />
+
+
+                <Spinner
+                    android:id="@+id/spSoldTo"
+                    android:visibility="gone"
+                    style="@style/spinner_style"
+                    android:layout_width="@dimen/width_zero_dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.75"
+                    android:paddingEnd="@dimen/padding_zero_dip"
+                    android:paddingLeft="@dimen/padding_three_dip"
+                    android:paddingRight="@dimen/padding_three_dip"
+                    android:paddingStart="@dimen/padding_zero_dip"
+                    android:textSize="@dimen/util_normal_text_sp" />
+                <TextView
+                    android:id="@+id/tvSoldTo"
+                    android:layout_margin="@dimen/padding_three_dip"
+                    android:layout_width="@dimen/width_zero_dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.75"
+                    android:textSize="@dimen/util_normal_text_sp" />
+            </LinearLayout>-->
+            <com.rspl.sf.msfa.ui.MaterialDesignSpinner
+                android:id="@+id/spSoldTo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:ms_alwaysShowFloatingLabel="true"
+                app:ms_enableFloatingLabel="true"
+                app:ms_floatingLabelText="@string/tvSoldTo"
+                app:ms_multiline="true" />
+
+            <include
+                android:visibility="gone"
+                android:id="@+id/oneTimeShip"
+                layout="@layout/snippet_one_time_ship_to_party" />
+
+            <com.rspl.sf.msfa.ui.MaterialDesignSpinner
+                android:id="@+id/spSalesArea"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:ms_alwaysShowFloatingLabel="true"
+                app:ms_enableFloatingLabel="true"
+                app:ms_floatingLabelText="@string/tvSalesArea"
+                app:ms_multiline="false" />
+
+            <com.rspl.sf.msfa.ui.MaterialDesignSpinner
+                android:id="@+id/spOrderType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:ms_alwaysShowFloatingLabel="true"
+                android:visibility="gone"
+                app:ms_enableFloatingLabel="true"
+                app:ms_floatingLabelText="@string/tvOrderType"
+                app:ms_multiline="false" />
+
+            <com.rspl.sf.msfa.ui.MaterialDesignSpinner
+                android:id="@+id/spPlant"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:ms_alwaysShowFloatingLabel="true"
+                app:ms_enableFloatingLabel="true"
+                app:ms_floatingLabelText="@string/tvPlant"
+                android:visibility="gone"
+                app:ms_multiline="true" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tiPoNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/MyEditTextTheme">
+                <!--app:hintTextAppearance="@style/EditTextHintStyle"-->
+
+                <com.rspl.sf.msfa.edit_text_custom.EdittextMenu
+                    android:id="@+id/etPONumber"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLength="10"
+                    android:hint="@string/tvPO"
+                    android:singleLine="true" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tiPoDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/MyEditTextTheme">
+
+                <EditText
+                    android:id="@+id/etPODate"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:cursorVisible="false"
+                    android:editable="false"
+                    android:focusable="false"
+                    android:hint="@string/tvDate"
+                    android:inputType="date"
+                    android:singleLine="true" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- <LinearLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:orientation="horizontal"
+                 android:id="@+id/llSalesArea"
+                 android:padding="@dimen/padding_four_dip">
+
+                 <LinearLayout
+                     android:layout_width="@dimen/width_zero_dip"
+                     android:layout_height="wrap_content"
+                     android:layout_gravity="center_vertical"
+                     android:layout_weight=".4"
+                     android:orientation="horizontal">
+
+                     <TextView
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:gravity="start"
+                         android:paddingEnd="@dimen/padding_zero_dip"
+                         android:paddingLeft="@dimen/padding_three_dip"
+                         android:paddingRight="@dimen/padding_zero_dip"
+                         android:paddingStart="@dimen/padding_zero_dip"
+                         android:text="@string/tvSalesArea"
+                         android:textColor="@color/TEXT_COLOR"
+                         android:textSize="@dimen/util_normal_text_sp" />
+
+                     <TextView
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_gravity="top|center"
+                         android:paddingLeft="@dimen/padding_three_dip"
+                         android:text="@string/lbl_star"
+                         android:textColor="@color/RED"
+                         android:textSize="@dimen/util_normal_text_sp" />
+                 </LinearLayout>
+
+                 <TextView
+                     android:layout_width="@dimen/width_zero_dip"
+                     android:layout_height="wrap_content"
+                     android:layout_gravity="center"
+                     android:layout_weight="0.1"
+                     android:text="@string/lbl_semi_colon"
+                     android:textColor="@android:color/black"
+                     android:textSize="@dimen/util_normal_text_sp" />
+
+
+                 <com.arteriatech.sf.mdc.ui.MaterialDesignSpinner
+                     android:id="@+id/spSalesArea"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_weight="0.75"
+                      />
+             </LinearLayout>-->
+            <LinearLayout
+                android:id="@+id/llShipToParty"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/padding_four_dip"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="@dimen/width_zero_dip"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight=".4"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/lblShipToParty"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:paddingEnd="@dimen/padding_zero_dip"
+                        android:paddingLeft="@dimen/padding_three_dip"
+                        android:paddingRight="@dimen/padding_zero_dip"
+                        android:paddingStart="@dimen/padding_zero_dip"
+                        android:text="@string/tvShipTo"
+                        android:textColor="@color/TEXT_COLOR"
+                        android:textSize="@dimen/util_normal_text_sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="@dimen/width_zero_dip"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.1"
+                    android:text="@string/lbl_semi_colon"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/util_normal_text_sp" />
+
+
+                <Spinner
+                    android:id="@+id/spShipTo"
+                    style="@style/spinner_style"
+                    android:layout_width="@dimen/width_zero_dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.75"
+                    android:paddingEnd="@dimen/padding_zero_dip"
+                    android:paddingLeft="@dimen/padding_three_dip"
+                    android:paddingRight="@dimen/padding_three_dip"
+                    android:paddingStart="@dimen/padding_zero_dip"
+                    android:textSize="@dimen/util_normal_text_sp" />
+            </LinearLayout>
+            <!-- <LinearLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:visibility="gone"
+                 android:id="@+id/llOrderType"
+                 android:orientation="horizontal"
+                 android:padding="@dimen/padding_four_dip">
+
+                 <LinearLayout
+                     android:layout_width="@dimen/width_zero_dip"
+                     android:layout_height="wrap_content"
+                     android:layout_gravity="center_vertical"
+                     android:layout_weight=".4"
+                     android:orientation="horizontal">
+
+                     <TextView
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:gravity="start"
+                         android:paddingEnd="@dimen/padding_zero_dip"
+                         android:paddingLeft="@dimen/padding_three_dip"
+                         android:paddingRight="@dimen/padding_zero_dip"
+                         android:paddingStart="@dimen/padding_zero_dip"
+                         android:text="@string/tvOrderType"
+                         android:textColor="@color/TEXT_COLOR"
+                         android:textSize="@dimen/util_normal_text_sp" />
+
+                     <TextView
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_gravity="top|center"
+                         android:paddingLeft="@dimen/padding_three_dip"
+                         android:text="@string/lbl_star"
+                         android:textColor="@color/RED"
+                         android:textSize="@dimen/util_normal_text_sp" />
+                 </LinearLayout>
+
+                 <TextView
+                     android:layout_width="@dimen/width_zero_dip"
+                     android:layout_height="wrap_content"
+                     android:layout_gravity="center"
+                     android:layout_weight="0.1"
+                     android:text="@string/lbl_semi_colon"
+                     android:textColor="@android:color/black"
+                     android:textSize="@dimen/util_normal_text_sp" />
+
+
+                 <Spinner
+                     android:id="@+id/spOrderType"
+                     style="@style/spinner_style"
+                     android:layout_width="@dimen/width_zero_dip"
+                     android:layout_height="wrap_content"
+                     android:layout_weight="0.75"
+                     android:paddingEnd="@dimen/padding_zero_dip"
+                     android:paddingLeft="@dimen/padding_three_dip"
+                     android:paddingRight="@dimen/padding_three_dip"
+                     android:paddingStart="@dimen/padding_zero_dip"
+                     android:textSize="@dimen/util_normal_text_sp" />
+             </LinearLayout>-->
+            <!--<LinearLayout
+                android:layout_width="match_parent"
+                android:id="@+id/llPlant"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/padding_four_dip">
+
+                <LinearLayout
+                    android:layout_width="@dimen/width_zero_dip"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight=".4"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:paddingEnd="@dimen/padding_zero_dip"
+                        android:paddingLeft="@dimen/padding_three_dip"
+                        android:paddingRight="@dimen/padding_zero_dip"
+                        android:paddingStart="@dimen/padding_zero_dip"
+                        android:text="@string/tvPlant"
+                        android:textColor="@color/TEXT_COLOR"
+                        android:textSize="@dimen/util_normal_text_sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top|center"
+                        android:paddingLeft="@dimen/padding_three_dip"
+                        android:text="@string/lbl_star"
+                        android:textColor="@color/RED"
+                        android:textSize="@dimen/util_normal_text_sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="@dimen/width_zero_dip"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.1"
+                    android:text="@string/lbl_semi_colon"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/util_normal_text_sp" />
+
+
+                <Spinner
+                    android:id="@+id/spPlant"
+                    style="@style/spinner_style"
+                    android:layout_width="@dimen/width_zero_dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.75"
+                    android:paddingEnd="@dimen/padding_zero_dip"
+                    android:paddingLeft="@dimen/padding_three_dip"
+                    android:paddingRight="@dimen/padding_three_dip"
+                    android:paddingStart="@dimen/padding_zero_dip"
+                    android:textSize="@dimen/util_normal_text_sp" />
+            </LinearLayout>-->
+
+           <!-- <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/padding_four_dip"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="@dimen/width_zero_dip"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight=".4"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:paddingEnd="@dimen/padding_zero_dip"
+                        android:paddingLeft="@dimen/padding_three_dip"
+                        android:paddingRight="@dimen/padding_zero_dip"
+                        android:paddingStart="@dimen/padding_zero_dip"
+                        android:text="@string/tvPO"
+                        android:textColor="@color/TEXT_COLOR"
+                        android:textSize="@dimen/util_normal_text_sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="@dimen/width_zero_dip"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.1"
+                    android:text="@string/lbl_semi_colon"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/util_normal_text_sp" />
+
+                <EditText
+                    android:id="@+id/etPONum"
+                    style="@style/EditBookTextEdit"
+                    android:layout_width="@dimen/width_zero_dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.75"
+                    android:inputType="text"
+                    android:textSize="@dimen/util_normal_text_sp" />
+            </LinearLayout>-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/padding_four_dip"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="@dimen/width_zero_dip"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight=".4"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:paddingEnd="@dimen/padding_zero_dip"
+                        android:paddingLeft="@dimen/padding_three_dip"
+                        android:paddingRight="@dimen/padding_zero_dip"
+                        android:paddingStart="@dimen/padding_zero_dip"
+                        android:text="@string/tvDate"
+                        android:textColor="@color/TEXT_COLOR"
+                        android:textSize="@dimen/util_normal_text_sp" />
+                    <!-- <TextView
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_gravity="top|center"
+                         android:paddingLeft="@dimen/padding_three_dip"
+                         android:text="@string/lbl_star"
+                         android:textColor="@color/RED"
+                         android:textSize="@dimen/util_normal_text_sp" />-->
+
+                    <!-- <TextView
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_gravity="top|center"
+                         android:paddingLeft="@dimen/padding_three_dip"
+                         android:text="@string/lbl_star"
+                         android:textColor="@color/RED"
+                         android:textSize="@dimen/util_normal_text_sp" />-->
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="@dimen/width_zero_dip"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.1"
+                    android:text="@string/lbl_semi_colon"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/util_normal_text_sp" />
+
+                <LinearLayout
+                    android:layout_width="@dimen/width_zero_dip"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/padding_three_dip"
+                    android:layout_weight="0.75"
+                    android:gravity="center|left"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvPoDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/ic_calendar"
+                        android:hint="Select Date"
+                        android:paddingEnd="@dimen/padding_zero_dip"
+                        android:paddingLeft="@dimen/padding_three_dip"
+                        android:paddingRight="@dimen/padding_three_dip"
+                        android:paddingStart="@dimen/padding_zero_dip"
+                        android:textSize="@dimen/util_normal_text_sp" />
+
+                    <ImageView
+                        android:id="@+id/ivPODate"
+                        android:layout_width="@dimen/clear_date_width"
+                        android:layout_height="@dimen/clear_date_height"
+                        android:layout_marginLeft="@dimen/margin_nine_dip"
+                        android:background="@drawable/ic_clear_text"
+                        android:contentDescription="@string/clear_date" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llPaymentTerm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/padding_four_dip"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="@dimen/width_zero_dip"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight=".4"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/lblPaymentTerm"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:paddingEnd="@dimen/padding_zero_dip"
+                        android:paddingLeft="@dimen/padding_three_dip"
+                        android:paddingRight="@dimen/padding_zero_dip"
+                        android:paddingStart="@dimen/padding_zero_dip"
+                        android:text="@string/tvPaymentTerm"
+                        android:textColor="@color/TEXT_COLOR"
+                        android:textSize="@dimen/util_normal_text_sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="@dimen/width_zero_dip"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.1"
+                    android:text="@string/lbl_semi_colon"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/util_normal_text_sp" />
+
+
+                <Spinner
+                    android:id="@+id/spPaymentTerm"
+                    style="@style/spinner_style"
+                    android:layout_width="@dimen/width_zero_dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.75"
+                    android:background="@drawable/spinner_bg"
+                    android:paddingEnd="@dimen/padding_zero_dip"
+                    android:paddingLeft="@dimen/padding_three_dip"
+                    android:paddingRight="@dimen/padding_three_dip"
+                    android:paddingStart="@dimen/padding_zero_dip"
+                    android:textSize="@dimen/util_normal_text_sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llIncoTerm1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/padding_four_dip"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="@dimen/width_zero_dip"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight=".4"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:paddingEnd="@dimen/padding_zero_dip"
+                        android:paddingLeft="@dimen/padding_three_dip"
+                        android:paddingRight="@dimen/padding_zero_dip"
+                        android:paddingStart="@dimen/padding_zero_dip"
+                        android:text="@string/tvIncoTerm"
+                        android:textColor="@color/TEXT_COLOR"
+                        android:textSize="@dimen/util_normal_text_sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top|center"
+                        android:paddingLeft="@dimen/padding_three_dip"
+                        android:text="@string/lbl_star"
+                        android:textColor="@color/RED"
+                        android:textSize="@dimen/util_normal_text_sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="@dimen/width_zero_dip"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.1"
+                    android:text="@string/lbl_semi_colon"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/util_normal_text_sp" />
+
+
+                <Spinner
+                    android:id="@+id/spIncoTerm1"
+                    style="@style/spinner_style"
+                    android:layout_width="@dimen/width_zero_dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.75"
+                    android:paddingEnd="@dimen/padding_zero_dip"
+                    android:paddingLeft="@dimen/padding_three_dip"
+                    android:paddingRight="@dimen/padding_three_dip"
+                    android:paddingStart="@dimen/padding_zero_dip"
+                    android:textSize="@dimen/util_normal_text_sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llIncoTerm2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/padding_four_dip"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="@dimen/width_zero_dip"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight=".4"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:paddingEnd="@dimen/padding_zero_dip"
+                        android:paddingLeft="@dimen/padding_three_dip"
+                        android:paddingRight="@dimen/padding_zero_dip"
+                        android:paddingStart="@dimen/padding_zero_dip"
+                        android:text="@string/tvIncoTerm2"
+                        android:textColor="@color/TEXT_COLOR"
+                        android:textSize="@dimen/util_normal_text_sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top|center"
+                        android:paddingLeft="@dimen/padding_three_dip"
+                        android:text="@string/lbl_star"
+                        android:textColor="@color/RED"
+                        android:textSize="@dimen/util_normal_text_sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="@dimen/width_zero_dip"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.1"
+                    android:text="@string/lbl_semi_colon"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/util_normal_text_sp" />
+
+
+                <EditText
+                    android:id="@+id/etIncoTerm2"
+                    style="@style/EditBookTextEdit"
+                    android:layout_width="@dimen/width_zero_dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.75"
+                    android:inputType="text"
+                    android:textSize="@dimen/util_normal_text_sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llShippingCondition"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/padding_four_dip"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="@dimen/width_zero_dip"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight=".4"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/lblShippingCondition"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:paddingEnd="@dimen/padding_zero_dip"
+                        android:paddingLeft="@dimen/padding_three_dip"
+                        android:paddingRight="@dimen/padding_zero_dip"
+                        android:paddingStart="@dimen/padding_zero_dip"
+                        android:text="@string/tvShippingCondition"
+                        android:textColor="@color/TEXT_COLOR"
+                        android:textSize="@dimen/util_normal_text_sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="@dimen/width_zero_dip"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.1"
+                    android:text="@string/lbl_semi_colon"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/util_normal_text_sp" />
+
+
+                <Spinner
+                    android:id="@+id/spSpingCondition"
+                    style="@style/spinner_style"
+                    android:layout_width="@dimen/width_zero_dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.75"
+                    android:paddingEnd="@dimen/padding_zero_dip"
+                    android:paddingLeft="@dimen/padding_three_dip"
+                    android:paddingRight="@dimen/padding_three_dip"
+                    android:paddingStart="@dimen/padding_zero_dip"
+                    android:textSize="@dimen/util_normal_text_sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/padding_four_dip"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="@dimen/width_zero_dip"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight=".4"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/lblUnloading"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:paddingEnd="@dimen/padding_zero_dip"
+                        android:paddingLeft="@dimen/padding_three_dip"
+                        android:paddingRight="@dimen/padding_zero_dip"
+                        android:paddingStart="@dimen/padding_zero_dip"
+                        android:text="@string/tvUnloading"
+                        android:textColor="@color/TEXT_COLOR"
+                        android:textSize="@dimen/util_normal_text_sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="@dimen/width_zero_dip"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.1"
+                    android:text="@string/lbl_semi_colon"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/util_normal_text_sp" />
+
+
+                <Spinner
+                    android:id="@+id/spUnloading"
+                    style="@style/spinner_style"
+                    android:layout_width="@dimen/width_zero_dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.75"
+                    android:paddingEnd="@dimen/padding_zero_dip"
+                    android:paddingLeft="@dimen/padding_three_dip"
+                    android:paddingRight="@dimen/padding_three_dip"
+                    android:paddingStart="@dimen/padding_zero_dip"
+                    android:textSize="@dimen/util_normal_text_sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/padding_four_dip"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="@dimen/width_zero_dip"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight=".4"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/lblReceiving"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:paddingEnd="@dimen/padding_zero_dip"
+                        android:paddingLeft="@dimen/padding_three_dip"
+                        android:paddingRight="@dimen/padding_zero_dip"
+                        android:paddingStart="@dimen/padding_zero_dip"
+                        android:text="@string/tvReceiving"
+                        android:textColor="@color/TEXT_COLOR"
+                        android:textSize="@dimen/util_normal_text_sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="@dimen/width_zero_dip"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.1"
+                    android:text="@string/lbl_semi_colon"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/util_normal_text_sp" />
+
+
+                <Spinner
+                    android:id="@+id/spReceiving"
+                    style="@style/spinner_style"
+                    android:layout_width="@dimen/width_zero_dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.75"
+                    android:paddingEnd="@dimen/padding_zero_dip"
+                    android:paddingLeft="@dimen/padding_three_dip"
+                    android:paddingRight="@dimen/padding_three_dip"
+                    android:paddingStart="@dimen/padding_zero_dip"
+                    android:textSize="@dimen/util_normal_text_sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/padding_four_dip"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="@dimen/width_zero_dip"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight=".4"
+                    android:gravity="left|top"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingEnd="@dimen/padding_zero_dip"
+                        android:paddingLeft="@dimen/padding_three_dip"
+                        android:paddingRight="@dimen/padding_zero_dip"
+                        android:paddingStart="@dimen/padding_zero_dip"
+                        android:text="@string/tvRemarks"
+                        android:textColor="@color/TEXT_COLOR"
+                        android:textSize="@dimen/util_normal_text_sp" />
+                    <!--
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="top|center"
+                                                android:paddingLeft="@dimen/padding_three_dip"
+                                                android:text="@string/lbl_star"
+                                                android:textColor="@color/RED"
+                                                android:textSize="@dimen/util_normal_text_sp" />-->
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="@dimen/width_zero_dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.1"
+                    android:gravity="left|top"
+                    android:text="@string/lbl_semi_colon"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/util_normal_text_sp" />
+
+                <EditText
+                    android:id="@+id/etRemarks"
+                    style="@style/EditBookTextEdit"
+                    android:layout_width="@dimen/width_zero_dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.75"
+                    android:gravity="left|top"
+                    android:inputType="textMultiLine"
+                    android:maxLength="200"
+                    android:minLines="3"
+                    android:textSize="@dimen/util_normal_text_sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/WHITE">
+
+    <include layout="@layout/appbar_layout"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/WHITE"
+        android:orientation="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_marginTop="@dimen/margin_five_dip"
+        android:layout_height="fill_parent">
+
+        <RelativeLayout
+            android:id="@+id/header3"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/WHITE">
+
+            <Spinner
+                android:id="@+id/spSearch"
+                style="@style/spinner_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical"
+                android:paddingLeft="4dp"
+                android:paddingRight="20dp"
+                android:layout_alignBottom="@+id/ss_list" />
+
+            <LinearLayout
+                android:id="@+id/ss_list"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/spSearch"
+                android:focusableInTouchMode="true"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/etSearchInput"
+                    style="@style/EditBookTextEdit"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/search_hint"
+                    android:inputType="text" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+
+        <RelativeLayout
+            android:id="@+id/header4"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/bottom_control_bar"
+            android:layout_below="@+id/header3">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_view"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/bottom_control_bar"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true">
+
+            <TableLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@color/colorPrimary">
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_column="0"
+                        android:gravity="right"
+                        android:paddingLeft="@dimen/padding_three_dip"
+                        android:text="@string/selected_item_count"
+                        android:textColor="@color/BLACK"
+                        android:textSize="@dimen/sevnteen_sp" />
+
+                    <TextView
+                        android:layout_column="1"
+                        android:width="@dimen/width_twenty"
+                        android:gravity="left"
+                        android:text=":"
+                        android:textColor="@color/text_red"
+                        android:textSize="@dimen/sevnteen_sp" />
+
+                    <TextView
+                        android:id="@+id/tv_item_count"
+                        android:layout_column="2"
+                        android:layout_marginRight="15dip"
+                        android:width="@dimen/width_one_fifty_dip"
+                        android:paddingLeft="@dimen/margin_fifteen_dip"
+                        android:text=""
+                        android:textColor="@color/BLACK"
+                        android:textSize="@dimen/sevnteen_sp" />
+                </TableRow>
+            </TableLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llFilterLayout"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:visibility="gone">
+    <LinearLayout
+        android:id="@+id/llFilterType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/padding_normal_4"
+        android:paddingLeft="@dimen/padding_normal_16"
+        android:paddingRight="@dimen/padding_normal_16"
+        android:paddingTop="@dimen/padding_normal_4">
+        <com.rspl.sf.msfa.ui.FlowLayout
+            android:id="@+id/llFlowLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="start" />
+    </LinearLayout>
+
+    <include layout="@layout/single_line_lay" />
+
+</LinearLayout>

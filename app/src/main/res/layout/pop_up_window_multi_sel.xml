@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/PopUpView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/light_custom_spinner_bg_clr">
+
+   <!-- <ListView
+        android:id="@+id/list_drop_down"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:cacheColorHint="#00000000"
+        android:choiceMode="singleChoice"
+        android:divider="@color/BLACK"
+        android:dividerHeight="0.1dp" >
+    </ListView>-->
+
+
+    <ScrollView
+        android:id="@+id/scroll_my_stock_list"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+    </ScrollView>
+        <Button
+            android:id="@+id/btn_submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/submit_menu"
+            android:layout_gravity="center_horizontal"
+            />
+
+</LinearLayout>

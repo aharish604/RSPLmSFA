@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="@color/BLACK"
+   >
+
+
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Customer No"
+        android:background="@color/GREY"
+        android:textColor="@color/BLACK"
+        android:gravity="center"
+        android:textSize="@dimen/small_text"
+        android:layout_weight="1"
+        />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Customer Name"
+        android:background="@color/GREY"
+        android:textColor="@color/BLACK"
+        android:textSize="@dimen/small_text"
+        android:gravity="center"
+        android:layout_marginLeft="@dimen/margin_two_dip"
+        android:layout_weight="1"
+       />
+
+
+   <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Customer City"
+        android:background="@color/GREY"
+        android:textColor="@color/BLACK"
+        android:textSize="@dimen/small_text"
+       android:gravity="center"
+       android:layout_marginLeft="@dimen/margin_two_dip"
+       android:layout_weight="1"
+       />
+
+
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="TelePhone"
+        android:background="@color/GREY"
+        android:textColor="@color/BLACK"
+        android:textSize="@dimen/small_text"
+        android:gravity="center"
+        android:layout_marginLeft="@dimen/margin_two_dip"
+        android:layout_weight="1"
+       />
+
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Dist.Channel"
+        android:background="@color/GREY"
+        android:textColor="@color/BLACK"
+        android:textSize="@dimen/small_text"
+        android:gravity="center"
+        android:layout_marginLeft="@dimen/margin_two_dip"
+        android:layout_weight="1"/>
+
+
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Security Deposit"
+        android:background="@color/GREY"
+        android:textColor="@color/BLACK"
+        android:textSize="@dimen/small_text"
+        android:gravity="center"
+        android:layout_marginLeft="@dimen/margin_two_dip"
+        android:layout_weight="1"/>
+
+
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Credit Limit"
+        android:background="@color/GREY"
+        android:textColor="@color/BLACK"
+        android:textSize="@dimen/small_text"
+        android:gravity="center"
+        android:layout_marginLeft="@dimen/margin_two_dip"
+        android:layout_weight="1"/>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Total Debit Bal"
+        android:background="@color/GREY"
+        android:textColor="@color/BLACK"
+        android:textSize="@dimen/small_text"
+        android:gravity="center"
+        android:layout_marginLeft="@dimen/margin_two_dip"
+        android:layout_weight="1"/>
+
+
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="0-7 Days"
+        android:background="@color/GREY"
+        android:textColor="@color/BLACK"
+        android:textSize="@dimen/small_text"
+        android:gravity="center"
+        android:layout_marginLeft="@dimen/margin_two_dip"
+        android:layout_weight="1"/>
+
+
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="7-15 Days"
+        android:background="@color/GREY"
+        android:textColor="@color/BLACK"
+        android:textSize="@dimen/small_text"
+        android:gravity="center"
+        android:layout_marginLeft="@dimen/margin_two_dip"
+        android:layout_weight="1"/>
+
+
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="15-30 Days"
+        android:background="@color/GREY"
+        android:textColor="@color/BLACK"
+        android:textSize="@dimen/small_text"
+        android:gravity="center"
+        android:layout_marginLeft="@dimen/margin_two_dip"
+        android:layout_weight="1"/>
+
+
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="30-45 Days"
+        android:background="@color/GREY"
+        android:textColor="@color/BLACK"
+        android:textSize="@dimen/small_text"
+        android:gravity="center"
+        android:layout_marginLeft="@dimen/margin_two_dip"
+        android:layout_weight="1"/>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="45-60 Days"
+        android:background="@color/GREY"
+        android:textColor="@color/BLACK"
+        android:textSize="@dimen/small_text"
+        android:gravity="center"
+        android:layout_marginLeft="@dimen/margin_two_dip"
+        android:layout_weight="1"/>
+
+
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="60-90 Days"
+        android:background="@color/GREY"
+        android:textColor="@color/BLACK"
+        android:textSize="@dimen/small_text"
+        android:gravity="center"
+        android:layout_marginLeft="@dimen/margin_two_dip"
+        android:layout_weight="1"/>
+
+
+
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="90-120 Days"
+        android:background="@color/GREY"
+        android:textColor="@color/BLACK"
+        android:textSize="@dimen/small_text"
+        android:gravity="center"
+        android:layout_marginLeft="@dimen/margin_two_dip"
+        android:layout_weight="1"/>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="120-180 Days"
+        android:background="@color/GREY"
+        android:textColor="@color/BLACK"
+        android:textSize="@dimen/small_text"
+        android:gravity="center"
+        android:layout_marginLeft="@dimen/margin_two_dip"
+        android:layout_weight="1"/>
+
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text=">180 Days"
+        android:background="@color/GREY"
+        android:textColor="@color/BLACK"
+        android:textSize="@dimen/small_text"
+        android:gravity="center"
+        android:layout_marginLeft="@dimen/margin_two_dip"
+        android:layout_weight="1"/>
+
+    />
+
+
+
+
+</LinearLayout>

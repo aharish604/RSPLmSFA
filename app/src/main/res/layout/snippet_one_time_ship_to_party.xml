@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tiFirstName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/MyEditTextTheme">
+        <!--app:hintTextAppearance="@style/EditTextHintStyle"-->
+
+        <EditText
+            android:id="@+id/etFirstName"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/first_name"
+            android:singleLine="true" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tiLasttName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/MyEditTextTheme">
+        <!--app:hintTextAppearance="@style/EditTextHintStyle"-->
+
+        <EditText
+            android:id="@+id/etLastName"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/last_name"
+            android:singleLine="true" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tiAddrName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/MyEditTextTheme">
+        <!--app:hintTextAppearance="@style/EditTextHintStyle"-->
+
+        <EditText
+            android:id="@+id/etAddrName"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/addr_name"
+            android:singleLine="true" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tiStreet2Name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/MyEditTextTheme">
+        <!--app:hintTextAppearance="@style/EditTextHintStyle"-->
+
+        <EditText
+            android:id="@+id/etStreet2Name"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/street2_name"
+            android:singleLine="true" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tiStreet3Name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/MyEditTextTheme">
+        <!--app:hintTextAppearance="@style/EditTextHintStyle"-->
+
+        <EditText
+            android:id="@+id/etStreet3Name"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/street3_name"
+            android:singleLine="true" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tiStreet4Name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/MyEditTextTheme">
+        <!--app:hintTextAppearance="@style/EditTextHintStyle"-->
+
+        <EditText
+            android:id="@+id/etStreet4Name"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/street4_name"
+            android:singleLine="true" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tiDistrict"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/MyEditTextTheme">
+        <!--app:hintTextAppearance="@style/EditTextHintStyle"-->
+
+        <EditText
+            android:id="@+id/etDistrict"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/ship_district"
+            android:singleLine="true" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tiCity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/MyEditTextTheme">
+        <!--app:hintTextAppearance="@style/EditTextHintStyle"-->
+
+        <EditText
+            android:id="@+id/etCity"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/ship_city"
+            android:singleLine="true" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+   <!-- <android.support.design.widget.TextInputLayout
+        android:id="@+id/tiCountry"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/MyEditTextTheme">
+        &lt;!&ndash;app:hintTextAppearance="@style/EditTextHintStyle"&ndash;&gt;
+
+        <EditText
+            android:id="@+id/etCountry"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/ship_country"
+            android:singleLine="true" />
+    </android.support.design.widget.TextInputLayout>-->
+    <com.rspl.sf.msfa.ui.MaterialDesignSpinner
+        android:id="@+id/spCountry"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/padding_normal_16"
+        app:ms_alwaysShowFloatingLabel="true"
+        app:ms_enableFloatingLabel="true"
+        app:ms_floatingLabelText="@string/so_hint_country"
+        app:ms_multiline="false" />
+    <com.rspl.sf.msfa.ui.MaterialDesignSpinner
+        android:id="@+id/spRegion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/padding_normal_16"
+        app:ms_alwaysShowFloatingLabel="true"
+        app:ms_enableFloatingLabel="true"
+        app:ms_floatingLabelText="@string/so_hint_region"
+        app:ms_multiline="false" />
+
+  <!--  <android.support.design.widget.TextInputLayout
+        android:id="@+id/tiRegion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/MyEditTextTheme">
+        &lt;!&ndash;app:hintTextAppearance="@style/EditTextHintStyle"&ndash;&gt;
+
+        <EditText
+            android:id="@+id/etRegion"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/ship_Region"
+            android:singleLine="true" />
+    </android.support.design.widget.TextInputLayout>-->
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tiPostalCode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/MyEditTextTheme">
+        <!--app:hintTextAppearance="@style/EditTextHintStyle"-->
+
+        <EditText
+            android:id="@+id/etPostalCode"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/ship_postalcode"
+            android:singleLine="true" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+</LinearLayout>

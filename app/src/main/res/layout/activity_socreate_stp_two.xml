@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/appbar_layout" />
+
+    <LinearLayout
+        android:id="@+id/llListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <!--<LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/padding_normal_16"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <com.arteriatech.sf.mdc.ui.MaterialDesignSpinner
+                android:id="@+id/spSearch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/ss_list"
+                android:layout_weight="2"
+                app:ms_alwaysShowFloatingLabel="false"
+                app:ms_enableErrorLabel="false"
+                app:ms_enableFloatingLabel="false"
+                app:ms_multiline="false" />
+
+            <LinearLayout
+                android:id="@+id/ss_list"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/spSearch"
+                android:layout_weight="1"
+                android:focusableInTouchMode="true"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/etSearchInput"
+                    style="@style/EditBookTextEdit"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/search_material_hint"
+                    android:inputType="text"
+                    android:textSize="@dimen/util_normal_text_sp" />
+            </LinearLayout>
+
+        </LinearLayout>-->
+        <include layout="@layout/select_so_header" />
+        <include layout="@layout/filter_display_layout"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <include layout="@layout/no_record_found" />
+    </LinearLayout>
+
+   <!-- <com.arteriatech.sf.mdc.ui.MovableFrameLayout
+        android:id="@+id/flMovableView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|end"
+        android:layout_marginRight="@dimen/so_details_fab_margin"
+        android:layout_marginTop="108dp"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/flDisplaySelectedItem"
+                style="@style/FloatingActionButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:backgroundTint="@color/floatingActionButtonColor"
+                app:srcCompat="@drawable/ic_shopping_cart_black_24dp" />
+
+            <LinearLayout
+                android:id="@+id/llCartCount"
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:layout_gravity="right|top"
+                android:layout_marginTop="@dimen/padding_normal_8"
+                android:layout_marginRight="@dimen/padding_normal_8"
+                android:background="@drawable/so_circle_red"
+                android:elevation="16dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvCartCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="4"
+                    android:textColor="@color/secondaryTextColor"
+                    android:textSize="10sp" />
+
+            </LinearLayout>
+        </FrameLayout>
+    </com.arteriatech.sf.mdc.ui.MovableFrameLayout>-->
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,1223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/UtilsItemSpacing"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingTop="0dp">
+
+    <!-- <TextView
+         android:id="@+id/textView13"
+         style="@style/Header"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:paddingLeft="0dp"
+         android:text="Ship to Party" />-->
+
+
+    <!--sales area-->
+    <TextView
+        android:id="@+id/tvTitleShip"
+        style="@style/Header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="0dp"
+        android:paddingLeft="0dp"
+        android:paddingTop="@dimen/padding_normal_16"
+        android:text="@string/so_details_sales" />
+    <!--order date-->
+    <LinearLayout
+        android:id="@+id/llOrderDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:paddingBottom="@dimen/padding_normal_16"
+            android:paddingTop="@dimen/padding_normal_16">
+
+            <TextView
+                android:id="@+id/tvOrderDate"
+                style="@style/UtilsMediumTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="56dp"
+                android:layout_marginStart="56dp"
+                android:text="@string/so_details_sub_title_order_date"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="0dp"
+                android:visibility="gone"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_store_mall_directory_black_24dp" />
+
+            <TextView
+                android:id="@+id/tvOrderDateDesc"
+                style="@style/SubItemTextStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="56dp"
+                android:layout_marginRight="0dp"
+                android:layout_marginStart="56dp"
+                android:layout_marginTop="4dp"
+                android:text=""
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvOrderDate" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="56dp"
+            android:orientation="vertical">
+
+            <include layout="@layout/single_line_lay" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llSalesArea"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clSalesArea"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:paddingBottom="@dimen/padding_normal_16"
+            android:paddingTop="@dimen/padding_normal_16">
+
+            <TextView
+                android:id="@+id/tvSalesArea"
+                style="@style/UtilsMediumTextStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="56dp"
+                android:layout_marginRight="0dp"
+                android:layout_marginStart="56dp"
+                android:text="@string/so_details_sub_title_sales_area"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="0dp"
+                android:visibility="gone"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_store_mall_directory_black_24dp" />
+
+            <TextView
+                android:id="@+id/tvSalesAreaDesc"
+                style="@style/SubItemTextStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="56dp"
+                android:layout_marginRight="0dp"
+                android:layout_marginStart="56dp"
+                android:layout_marginTop="4dp"
+                android:text=""
+                android:textSize="@dimen/util_normal_text_sp"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvSalesArea" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="56dp"
+            android:orientation="vertical">
+
+            <include layout="@layout/single_line_lay" />
+        </LinearLayout>
+    </LinearLayout>
+    <!--sales group-->
+    <LinearLayout
+        android:id="@+id/llSalesGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clSalesGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:paddingBottom="@dimen/padding_normal_16"
+            android:paddingTop="@dimen/padding_normal_16">
+
+            <TextView
+                android:id="@+id/tvSalesGroup"
+                style="@style/UtilsMediumTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="56dp"
+                android:layout_marginStart="56dp"
+                android:text="Sales Group"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="0dp"
+                android:visibility="gone"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_store_mall_directory_black_24dp" />
+
+            <TextView
+                android:id="@+id/tvSalesGroupDesc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="56dp"
+                android:layout_marginStart="56dp"
+                android:layout_marginTop="4dp"
+                android:text="Sales Area"
+                android:textSize="@dimen/util_normal_text_sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvSalesGroup" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="56dp"
+            android:orientation="vertical">
+
+            <include layout="@layout/single_line_lay" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!--sales office-->
+    <LinearLayout
+        android:id="@+id/llSalesOffice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:paddingBottom="@dimen/padding_normal_16"
+            android:paddingTop="@dimen/padding_normal_16">
+
+            <TextView
+                android:id="@+id/tvSalesOffice"
+                style="@style/UtilsMediumTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="56dp"
+                android:layout_marginStart="56dp"
+                android:text="Sales Office"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="0dp"
+                android:visibility="gone"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_store_mall_directory_black_24dp" />
+
+            <TextView
+                android:id="@+id/tvSalesOfficeDesc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="56dp"
+                android:layout_marginStart="56dp"
+                android:layout_marginTop="4dp"
+                android:text="Sales Area"
+                android:textSize="@dimen/util_normal_text_sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvSalesOffice" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="56dp"
+            android:orientation="vertical">
+
+            <include layout="@layout/single_line_lay" />
+        </LinearLayout>
+    </LinearLayout>
+    <!--plant-->
+    <LinearLayout
+        android:id="@+id/llPlant"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clPlant"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:paddingBottom="@dimen/padding_normal_16"
+            android:paddingTop="@dimen/padding_normal_16">
+
+            <TextView
+                android:id="@+id/tvPlant"
+                style="@style/UtilsMediumTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="56dp"
+                android:layout_marginStart="56dp"
+                android:text="@string/so_details_sub_title_plant"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="0dp"
+                android:visibility="gone"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_store_mall_directory_black_24dp" />
+
+            <TextView
+                android:id="@+id/tvPlantDesc"
+                style="@style/SubItemTextStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="56dp"
+                android:layout_marginRight="0dp"
+                android:layout_marginStart="56dp"
+                android:layout_marginTop="4dp"
+                android:text=""
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvPlant" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="56dp"
+            android:orientation="vertical">
+
+            <include layout="@layout/single_line_lay" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llRefDoc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:paddingBottom="@dimen/padding_normal_16"
+            android:paddingTop="@dimen/padding_normal_16">
+
+            <TextView
+                android:id="@+id/tvRefDoc"
+                style="@style/UtilsMediumTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="56dp"
+                android:layout_marginStart="56dp"
+                android:text="@string/so_details_sub_title_ref_doc"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="0dp"
+                android:visibility="gone"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_store_mall_directory_black_24dp" />
+
+            <TextView
+                android:id="@+id/tvRefDocDesc"
+                style="@style/SubItemTextStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="56dp"
+                android:layout_marginRight="0dp"
+                android:layout_marginStart="56dp"
+                android:layout_marginTop="4dp"
+                android:text=""
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvRefDoc" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="56dp"
+            android:orientation="vertical">
+
+            <include layout="@layout/single_line_lay" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvReferenceHeader"
+        style="@style/Header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="bottom|left"
+        android:paddingBottom="0dp"
+        android:paddingLeft="0dp"
+        android:paddingTop="@dimen/padding_normal_16"
+        android:text="@string/so_details_reference" />
+
+    <LinearLayout
+        android:id="@+id/llCustomerPo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:paddingBottom="@dimen/padding_normal_16"
+            android:paddingTop="@dimen/padding_normal_16">
+
+            <TextView
+                android:id="@+id/tvCustomerPO"
+                style="@style/UtilsMediumTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="56dp"
+                android:layout_marginStart="56dp"
+                android:text="@string/so_details_sub_title_customer_po"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="0dp"
+                android:visibility="gone"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_store_mall_directory_black_24dp" />
+
+            <TextView
+                android:id="@+id/tvCustomerPODesc"
+                style="@style/SubItemTextStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="56dp"
+                android:layout_marginRight="0dp"
+                android:layout_marginStart="56dp"
+                android:layout_marginTop="4dp"
+                android:text=""
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvCustomerPO" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="56dp"
+            android:orientation="vertical">
+
+            <include layout="@layout/single_line_lay" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llCustomerPoDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:paddingBottom="@dimen/padding_normal_16"
+            android:paddingTop="@dimen/padding_normal_16">
+
+            <TextView
+                android:id="@+id/tvCustomerPODate"
+                style="@style/UtilsMediumTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="56dp"
+                android:layout_marginStart="56dp"
+                android:text="@string/so_details_sub_title_customer_po_date"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="0dp"
+                android:visibility="gone"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_store_mall_directory_black_24dp" />
+
+            <TextView
+                android:id="@+id/tvCustomerPODateDesc"
+                style="@style/SubItemTextStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="56dp"
+                android:layout_marginRight="0dp"
+                android:layout_marginStart="56dp"
+                android:layout_marginTop="4dp"
+                android:text="Sales Area"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvCustomerPODate" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="56dp"
+            android:orientation="vertical">
+
+            <include layout="@layout/single_line_lay" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/padding_normal_16">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginBottom="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginTop="0dp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_local_shipping_black_24dp" />
+
+        <TextView
+            android:id="@+id/tvShippingHeader"
+            style="@style/Header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="left|center"
+            android:paddingLeft="0dp"
+            android:text="@string/so_details_shipping" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <LinearLayout
+        android:id="@+id/llShipToAdd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clShipToParty"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:paddingBottom="@dimen/padding_normal_16"
+            android:paddingTop="@dimen/padding_normal_16">
+
+            <TextView
+                android:id="@+id/tvShipToPartyName"
+                style="@style/UtilsMediumTextStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="56dp"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginStart="56dp"
+                android:text="@string/ship_to_address"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="0dp"
+                android:visibility="gone"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_local_shipping_black_24dp" />
+
+            <TextView
+                android:id="@+id/tvAddress"
+                style="@style/SubItemTextStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="56dp"
+                android:layout_marginRight="0dp"
+                android:layout_marginStart="56dp"
+                android:layout_marginTop="4dp"
+                android:text=""
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvShipToPartyName" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="56dp"
+            android:orientation="vertical">
+
+            <include layout="@layout/single_line_lay" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llShippingType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:paddingBottom="@dimen/padding_normal_16"
+            android:paddingTop="@dimen/padding_normal_16">
+
+            <TextView
+                android:id="@+id/tvShippingType"
+                style="@style/UtilsMediumTextStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="56dp"
+                android:layout_marginStart="56dp"
+                android:text="@string/so_details_sub_title_shipping_type"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="0dp"
+                android:visibility="gone"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_store_mall_directory_black_24dp" />
+
+            <TextView
+                android:id="@+id/tvShippingTypeDesc"
+                style="@style/SubItemTextStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="56dp"
+                android:layout_marginRight="0dp"
+                android:layout_marginStart="56dp"
+                android:layout_marginTop="4dp"
+                android:text="Sales Area"
+                android:textSize="@dimen/util_normal_text_sp"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvShippingType" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="56dp"
+            android:orientation="vertical">
+
+            <include layout="@layout/single_line_lay" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llIncoTerm1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:paddingBottom="@dimen/padding_normal_16"
+            android:paddingTop="@dimen/padding_normal_16">
+
+            <TextView
+                android:id="@+id/tvIncoterm1"
+                style="@style/UtilsMediumTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="56dp"
+                android:layout_marginStart="56dp"
+                android:text="@string/so_details_sub_title_incoterm1"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="0dp"
+                android:visibility="gone"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_store_mall_directory_black_24dp" />
+
+            <TextView
+                android:id="@+id/tvIncoterm1Desc"
+                style="@style/SubItemTextStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="56dp"
+                android:layout_marginRight="0dp"
+                android:layout_marginStart="56dp"
+                android:layout_marginTop="4dp"
+                android:text="Sales Area"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvIncoterm1" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="56dp"
+            android:orientation="vertical">
+
+            <include layout="@layout/single_line_lay" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llIncoTerm2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:paddingBottom="@dimen/padding_normal_16"
+            android:paddingTop="@dimen/padding_normal_16">
+
+            <TextView
+                android:id="@+id/tvIncoterm2"
+                style="@style/UtilsMediumTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="56dp"
+                android:layout_marginStart="56dp"
+                android:text="@string/so_details_sub_title_incoterm2"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="0dp"
+                android:visibility="gone"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_store_mall_directory_black_24dp" />
+
+            <TextView
+                android:id="@+id/tvIncoterm2Desc"
+                style="@style/SubItemTextStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="56dp"
+                android:layout_marginRight="0dp"
+                android:layout_marginStart="56dp"
+                android:layout_marginTop="4dp"
+                android:text="Sales Area"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvIncoterm2" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="56dp"
+            android:orientation="vertical">
+
+            <include layout="@layout/single_line_lay" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llUnloadingPoint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:paddingBottom="@dimen/padding_normal_16"
+            android:paddingTop="@dimen/padding_normal_16">
+
+            <TextView
+                android:id="@+id/tvUnloadingPoint"
+                style="@style/UtilsMediumTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="56dp"
+                android:layout_marginStart="56dp"
+                android:text="@string/so_details_sub_title_unloading_point"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="0dp"
+                android:visibility="gone"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_store_mall_directory_black_24dp" />
+
+            <TextView
+                android:id="@+id/tvUnloadingPointDesc"
+                style="@style/SubItemTextStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="56dp"
+                android:layout_marginRight="0dp"
+                android:layout_marginStart="56dp"
+                android:layout_marginTop="4dp"
+                android:text="Sales Area"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvUnloadingPoint" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="56dp"
+            android:orientation="vertical">
+
+            <include layout="@layout/single_line_lay" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llReceivingPoint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:paddingBottom="@dimen/padding_normal_16"
+            android:paddingTop="@dimen/padding_normal_16">
+
+            <TextView
+                android:id="@+id/tvReceivingPoint"
+                style="@style/UtilsMediumTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="56dp"
+                android:layout_marginStart="56dp"
+                android:text="@string/so_details_sub_title_receiving_point"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="0dp"
+                android:visibility="gone"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_store_mall_directory_black_24dp" />
+
+            <TextView
+                android:id="@+id/tvReceivingPointDesc"
+                style="@style/SubItemTextStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="56dp"
+                android:layout_marginRight="0dp"
+                android:layout_marginStart="56dp"
+                android:layout_marginTop="4dp"
+                android:text="Sales Area"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvReceivingPoint" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="56dp"
+            android:orientation="vertical">
+
+            <include layout="@layout/single_line_lay" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llMeansOfTranst"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:paddingBottom="@dimen/padding_normal_16"
+            android:paddingTop="@dimen/padding_normal_16">
+
+            <TextView
+                android:id="@+id/tvMeansOfTranst"
+                style="@style/UtilsMediumTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="56dp"
+                android:layout_marginStart="56dp"
+                android:text="@string/so_details_sub_title_means_of_transport"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="0dp"
+                android:visibility="gone"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_store_mall_directory_black_24dp" />
+
+            <TextView
+                android:id="@+id/tvMeansOfTranstDesc"
+                style="@style/SubItemTextStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="56dp"
+                android:layout_marginRight="0dp"
+                android:layout_marginStart="56dp"
+                android:layout_marginTop="4dp"
+                android:text="Sales Area"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvMeansOfTranst" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="56dp"
+            android:orientation="vertical">
+
+            <include layout="@layout/single_line_lay" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/padding_normal_16">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginBottom="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginTop="0dp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_account_balance_wallet_black_24dp" />
+
+        <TextView
+            android:id="@+id/tvTerms"
+            style="@style/Header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="left|center"
+            android:paddingLeft="0dp"
+            android:text="@string/so_details_terms" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <!-- <TextView
+         style="@style/Header"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:gravity="bottom|left"
+         android:paddingBottom="0dp"
+         android:paddingLeft="0dp"
+         android:paddingTop="@dimen/padding_normal_16"
+         android:text="Terms" />-->
+    <LinearLayout
+        android:id="@+id/llBillTo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:paddingBottom="@dimen/padding_normal_16"
+            android:paddingTop="@dimen/padding_normal_16">
+
+            <TextView
+                android:id="@+id/tvBillTo"
+                style="@style/UtilsMediumTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="56dp"
+                android:layout_marginStart="56dp"
+                android:text="@string/so_details_sub_title_bill_to_party"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="0dp"
+                android:visibility="gone"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_account_balance_wallet_black_24dp" />
+
+            <TextView
+                android:id="@+id/tvBillToDesc"
+                style="@style/SubItemTextStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="56dp"
+                android:layout_marginRight="0dp"
+                android:layout_marginStart="56dp"
+                android:layout_marginTop="4dp"
+                android:text="Sales Area"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvBillTo" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="56dp"
+            android:orientation="vertical">
+
+            <include layout="@layout/single_line_lay" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llPaymentTerm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:paddingBottom="@dimen/padding_normal_16"
+            android:paddingTop="@dimen/padding_normal_16">
+
+            <TextView
+                android:id="@+id/tvPayterm"
+                style="@style/UtilsMediumTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="56dp"
+                android:layout_marginStart="56dp"
+                android:text="@string/so_details_sub_title_payment_term"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="0dp"
+                android:visibility="gone"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_attach_money_black_24dp" />
+
+            <TextView
+                android:id="@+id/tvPaytermDesc"
+                style="@style/SubItemTextStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="56dp"
+                android:layout_marginRight="0dp"
+                android:layout_marginStart="56dp"
+                android:layout_marginTop="4dp"
+                android:text="Sales Area"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvPayterm" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="56dp"
+            android:orientation="vertical">
+
+            <include layout="@layout/single_line_lay" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llSalesDist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:paddingBottom="@dimen/padding_normal_16"
+            android:paddingTop="@dimen/padding_normal_16">
+
+            <TextView
+                android:id="@+id/tvSalesDist"
+                style="@style/UtilsMediumTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="56dp"
+                android:layout_marginStart="56dp"
+                android:text="@string/so_details_sub_title_sales_dist"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="0dp"
+                android:visibility="gone"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_store_mall_directory_black_24dp" />
+
+            <TextView
+                android:id="@+id/tvSalesDistDesc"
+                style="@style/SubItemTextStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="56dp"
+                android:layout_marginRight="0dp"
+                android:layout_marginStart="56dp"
+                android:layout_marginTop="4dp"
+                android:text="Sales Area"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvSalesDist" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+
+</LinearLayout>

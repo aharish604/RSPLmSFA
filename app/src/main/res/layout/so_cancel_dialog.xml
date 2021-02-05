@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/_250sdp"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="@dimen/_5sdp"
+    android:layout_marginRight="@dimen/_5sdp"
+    android:orientation="vertical">
+
+    <TextView
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/title_cancel_order"
+        android:textColor="@color/BLACK"
+        android:gravity="center"
+        android:textSize="@dimen/large_text"/>
+
+    <include layout="@layout/single_line_lay"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:padding="@dimen/padding_four_dip">
+
+        <LinearLayout
+            android:layout_width="@dimen/width_zero_dip"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight=".4"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|center"
+                android:paddingLeft="@dimen/padding_three_dip"
+                android:text="@string/lbl_star"
+                android:textColor="@color/RED"
+                android:textSize="@dimen/medium_text" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:paddingEnd="@dimen/padding_zero_dip"
+                android:paddingLeft="@dimen/padding_three_dip"
+                android:paddingRight="@dimen/padding_zero_dip"
+                android:paddingStart="@dimen/padding_zero_dip"
+                android:text="@string/reject_reason"
+                android:textColor="@color/TEXT_COLOR"
+                android:textSize="@dimen/medium_text" />
+
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="@dimen/width_zero_dip"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="0.1"
+            android:text="@string/lbl_semi_colon"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/medium_text" />
+
+        <Spinner
+            android:id="@+id/spRejectReason"
+            style="@style/spinner_style"
+            android:layout_width="@dimen/width_zero_dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.75"
+            android:paddingEnd="@dimen/padding_zero_dip"
+            android:paddingLeft="@dimen/padding_three_dip"
+            android:paddingRight="@dimen/padding_three_dip"
+            android:paddingStart="@dimen/padding_zero_dip"
+            android:textSize="@dimen/medium_text" />
+    </LinearLayout>
+    <include layout="@layout/single_line_lay"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:paddingBottom="@dimen/_10sdp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btYes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/yes" />
+
+        <Button
+            android:id="@+id/btNo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/no" />
+    </LinearLayout>
+
+
+</LinearLayout>

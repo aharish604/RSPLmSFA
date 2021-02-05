@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/appbar_layout"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@+id/linearLayout"
+        android:background="@color/light_blue_color"
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/textViewMaterial"
+            android:text="Material"
+            android:layout_gravity="center"
+            android:gravity="start|center"
+            android:layout_width="0dp"
+            android:textStyle="bold"
+            android:layout_weight="2"
+            android:layout_height="match_parent" />
+        <View
+            android:layout_width="1dp"
+            android:background="@color/BLACK"
+            android:layout_height="match_parent"/>
+        <TextView
+            android:id="@+id/textViewTarget"
+            android:text="Target"
+            android:layout_width="0dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:layout_weight="1"
+            android:layout_height="match_parent" />
+        <View
+            android:layout_width="1dp"
+            android:background="@color/BLACK"
+            android:layout_height="match_parent"/>
+        <TextView
+            android:id="@+id/textViewMtd"
+            android:text="MTD"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent" />
+        <View
+            android:layout_width="1dp"
+            android:background="@color/BLACK"
+            android:layout_height="match_parent"/>
+        <TextView
+            android:id="@+id/textViewLysMtd"
+            android:text="LYSMTD"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_height="match_parent" />
+        <View
+            android:layout_width="1dp"
+            android:background="@color/BLACK"
+            android:layout_height="match_parent"/>
+        <TextView
+            android:id="@+id/textViewLysmAchieved"
+            android:text="LYSM Achieved"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <View
+        android:id="@+id/view"
+        android:layout_below="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:background="@color/BLACK"
+        android:layout_height="1dp"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_below="@+id/view"
+        android:id="@+id/recyclerViewAllDealerTarget"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </androidx.recyclerview.widget.RecyclerView>
+
+</LinearLayout>

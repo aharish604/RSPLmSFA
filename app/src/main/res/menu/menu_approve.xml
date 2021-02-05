@@ -1,0 +1,17 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        app:showAsAction="collapseActionView"
+        android:id="@+id/menu_approve"
+        android:orderInCategory="100"
+
+        android:title="@string/menu_approve"/>
+
+    <item
+        app:showAsAction="collapseActionView"
+        android:id="@+id/menu_reject"
+        android:orderInCategory="100"
+        android:title="@string/menu_reject"/>
+
+</menu>

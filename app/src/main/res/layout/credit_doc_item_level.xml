@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        style="@style/UtilsItemSpacing"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/icCreditStatus"
+            android:layout_width="@dimen/so_list_delv_image"
+            android:layout_height="@dimen/so_list_delv_image"
+            android:tint="@color/support_image"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <ImageView
+            android:id="@+id/ic_GRStatus"
+            android:layout_width="@dimen/so_list_delv_image"
+            android:layout_height="@dimen/so_list_delv_image"
+            android:tint="@color/support_image"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginLeft="5dp"
+            android:visibility="gone"
+            app:layout_constraintLeft_toRightOf="@+id/icCreditStatus"
+            app:layout_constraintVertical_bias="0.513" />
+
+        <!--       android:layout_marginLeft="16dp" -->
+        <TextView
+            android:id="@+id/tvCreditDocNo"
+            style="@style/UtilsMediumTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            app:layout_constraintLeft_toRightOf="@+id/ic_GRStatus"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvCreditDocDate"
+            style="@style/UtilsMediumTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="4dp"
+            android:text="TextView"
+            app:layout_constraintLeft_toRightOf="@+id/ic_GRStatus"
+            app:layout_constraintTop_toBottomOf="@+id/tvCreditDocNo" />
+
+        <TextView
+            android:id="@+id/tvCreditDocAmt"
+            style="@style/UtilsMediumTextStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginTop="0dp"
+            android:gravity="right"
+            android:text="TextView"
+            app:layout_constraintLeft_toRightOf="@+id/tvCreditDocDate"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvCreditDocDate" />
+
+        <TextView
+            android:id="@+id/tvMaterialName"
+            style="@style/UtilsMediumTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:layout_marginTop="0dp"
+            android:text="TextView"
+            android:visibility="gone"
+            app:layout_constraintLeft_toRightOf="@+id/tvCreditDocDate"
+            app:layout_constraintTop_toTopOf="@+id/tvCreditDocDate" />
+
+        <TextView
+            android:id="@+id/tv_so_qty"
+            style="@style/UtilsMediumTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="0dp"
+            android:text="TextView"
+            android:textColor="@color/nav_text_color"
+            android:visibility="gone"
+            app:layout_constraintHorizontal_bias="0.502"
+            app:layout_constraintLeft_toRightOf="@+id/tvCreditDocDate"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvCreditDocDate" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <include layout="@layout/single_line_lay" />
+</LinearLayout>

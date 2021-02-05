@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffffff"
+    android:orientation="horizontal" 
+    >
+
+
+        <CheckBox
+            android:id="@+id/so_checkBx"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+           android:layout_centerInParent="true"/>
+
+        <TextView
+            android:id="@+id/item_create_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/so_checkBx"
+            android:gravity="left"
+            android:paddingTop="5dp"
+            android:singleLine="false"
+            android:text="matcode"
+            android:textColor="#000000"
+            android:textSize="@dimen/medium_text" />
+
+        <TextView
+            android:id="@+id/item_create_value1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/item_create_value"
+            android:layout_toRightOf="@+id/so_checkBx"
+            android:singleLine="false"
+            android:text="matdesc"
+            android:textColor="#000000"
+            android:textSize="@dimen/medium_text" />
+
+    <ImageView
+        android:id="@+id/arrow"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="14dp"
+        android:gravity="right"
+        android:paddingBottom="6dp"
+        android:visibility="gone"
+        android:paddingTop="12dp" />
+
+    <TextView
+        android:id="@+id/count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/arrow"
+        android:gravity="center"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingTop="12dp"
+        android:text="0"
+        android:visibility="gone"
+        android:textColor="#000000"
+        android:textSize="@dimen/medium_text" />
+
+</RelativeLayout>

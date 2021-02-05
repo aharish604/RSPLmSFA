@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/appbar_layout" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:paddingTop="@dimen/padding_normal_16"
+            android:paddingBottom="@dimen/padding_normal_16"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/iv_show_details"
+                android:layout_width="@dimen/visit_image_hdr"
+                android:layout_height="@dimen/visit_image_hdr"
+                android:layout_marginStart="16dp"
+                android:tint="@color/secondaryColor"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_people_black_24dp"
+                android:layout_marginLeft="16dp" />
+
+            <TextView
+                android:id="@+id/tv_RetailerName"
+                style="@style/UtilsSubHeaderStyles"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:text="TextView"
+                app:layout_constraintEnd_toStartOf="@+id/iv_visit_status"
+                app:layout_constraintStart_toEndOf="@+id/iv_show_details"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/iv_visit_status"
+                android:layout_width="@dimen/visit_image_item_hdr"
+                android:layout_height="@dimen/visit_image_item_hdr"
+                android:layout_marginEnd="16dp"
+                android:tint="@color/secondaryColor"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/start"
+                android:layout_marginRight="16dp" />
+
+            <TextView
+                android:id="@+id/tv_RetailerID"
+                style="@style/UtilsMediumTextStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="4dp"
+                android:text=""
+                app:layout_constraintEnd_toStartOf="@+id/iv_visit_status"
+                app:layout_constraintStart_toEndOf="@+id/iv_show_details"
+                app:layout_constraintTop_toBottomOf="@+id/tv_RetailerName" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <!--<LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/padding_normal_16">
+
+            <RelativeLayout
+                android:layout_width="@dimen/width_zero_dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3">
+
+                <ImageView
+                    android:id="@+id/iv_show_details"
+                    android:layout_width="@dimen/visit_image_item_hdr"
+                    android:layout_height="@dimen/visit_image_item_hdr"
+                    android:contentDescription="@null"
+                    android:src="@drawable/ic_people_black_24dp"
+                    android:tint="@color/secondaryColor" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="@dimen/width_zero_dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_ret_cat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="@color/text_red"
+                    android:textSize="@dimen/medium_text"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tv_ret_behaviour"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="false"
+                    android:text=""
+                    android:textColor="@color/text_red"
+                    android:textSize="@dimen/medium_text"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tv_RetailerName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="bottom"
+                    android:text="Retailer Name"
+                    android:textColor="@color/BLACK"
+                    android:textSize="@dimen/medium_text"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/title_UID"
+                        android:textColor="@color/BLACK"
+                        android:textSize="@dimen/medium_text"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/str_colon"
+                        android:textColor="@color/BLACK"
+                        android:textSize="@dimen/medium_text"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/tv_RetailerID"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Od -15362"
+                        android:textColor="@color/BLACK"
+                        android:textSize="@dimen/medium_text" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="@dimen/width_zero_dip"
+                android:layout_height="match_parent"
+                android:layout_weight="0.3"
+                android:gravity="center|center_vertical"
+                android:orientation="vertical">
+
+
+                <ImageView
+                    android:id="@+id/iv_visit_status"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:contentDescription="@null"
+                    android:padding="2dp"
+                    android:src="@drawable/start"
+                    android:tint="@color/secondaryColor" />
+            </LinearLayout>
+
+
+        </LinearLayout>-->
+
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tabs"
+                style="@style/MyCustomTabLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:tabGravity="fill"
+                app:tabMaxWidth="0dp"
+                app:tabMode="fixed" />
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

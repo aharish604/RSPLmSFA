@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_return_order_details2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/retailer_detail_header_lay" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/height_one_dip"
+        android:background="@color/line_color" />
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_five_dip"
+        android:layout_marginBottom="@dimen/margin_four_dip"
+        android:paddingLeft="@dimen/padding_four_dip"
+        android:paddingRight="4dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+
+            <LinearLayout
+                android:layout_width="@dimen/width_zero_dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.8"
+                android:orientation="horizontal" >
+
+
+                <TextView
+                    android:id="@+id/tv_inv_history_status"
+                    android:layout_width="20dp"
+                    android:layout_height="match_parent" />
+
+                <LinearLayout
+                    android:layout_marginLeft="4dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/tv_inv_date"
+                        style="@style/Label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textSize="@dimen/medium_text"/>
+
+                    <TextView
+                        android:id="@+id/tv_invoice_document_number"
+                        style="@style/Label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textSize="@dimen/medium_text"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/width_zero_dip"
+                    android:layout_weight="1"
+                    android:orientation="horizontal" >
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_bill_out_days"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/width_zero_dip"
+                    android:layout_weight="1"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:visibility="gone"
+                        android:gravity="right"
+                        android:paddingRight="@dimen/padding_three_dip"
+                        android:text="@string/lbl_BillOutstandingDays"
+                        android:textSize="@dimen/medium_text"
+                        android:textColor="@color/BLACK"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:visibility="gone"
+                        android:text="@string/lbl_semi_colon"
+                        android:textSize="@dimen/medium_text"
+                        android:textColor="@color/BLACK"/>
+                    <TextView
+                        android:id="@+id/tv_bill_out_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="right"
+                        android:paddingLeft="@dimen/padding_three_dip"
+                        android:text="31/06/2016"
+                        android:textColor="@color/BLACK"
+                        android:textSize="@dimen/medium_text"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:id="@+id/iv_expand__header_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:padding="@dimen/padding_four_dip"
+                    android:src="@drawable/down" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/height_one_dip"
+        android:background="@color/line_color" />
+
+    <LinearLayout
+        android:id="@+id/ll_header_det"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:gravity="right"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:paddingLeft="5dp"
+                android:gravity="left"
+                android:text="@string/lbl_material"
+                android:textColor="@color/BLACK" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+
+                android:text="@string/lbl_semi_colon"
+                android:textColor="@color/BLACK" />
+
+            <TextView
+                android:id="@+id/tv_invoice_details_mat_code_ex"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:gravity="left"
+                android:text=""
+                android:textColor="@color/BLACK" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:paddingLeft="5dp"
+                android:gravity="left"
+                android:text="@string/lbl_description"
+                android:textColor="@color/BLACK" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+
+                android:text="@string/lbl_semi_colon"
+                android:textColor="@color/BLACK" />
+
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_invoice_details_mat_desc_ex"
+                android:paddingLeft="10dp"
+                android:gravity="left"
+                android:text=""
+                android:textColor="@color/BLACK" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:paddingLeft="5dp"
+                android:gravity="left"
+                android:text="@string/lbl_quantity"
+                android:textColor="@color/BLACK" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/lbl_semi_colon"
+                android:textColor="@color/BLACK" />
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_invoice_details_inv_qty_ex"
+                android:paddingLeft="10dp"
+                android:gravity="right"
+                android:text=""
+                android:textColor="@color/BLACK" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:paddingLeft="5dp"
+                android:gravity="left"
+                android:text="@string/lbl_net_amt"
+                android:textColor="@color/BLACK" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/lbl_semi_colon"
+                android:textColor="@color/BLACK" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_invoice_details_net_amt_ex"
+                android:paddingLeft="10dp"
+                android:gravity="right"
+                android:text=""
+                android:textColor="@color/BLACK" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/bg_title"
+            android:orientation="horizontal"
+            android:padding="@dimen/_5sdp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center|left"
+                    android:text="@string/so_header_details_one"
+                    android:textColor="@color/BLACK"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+
+                android:gravity="end"
+                >
+
+                <ImageView
+                    android:id="@+id/iv_header_expand_icon"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:layout_gravity="end"
+                    android:src="@drawable/down" />
+
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/header_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:visibility="gone"
+                android:orientation="vertical" />
+
+
+
+        </LinearLayout>
+
+        <include layout="@layout/single_line_lay" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/bg_title"
+                android:orientation="horizontal"
+                android:padding="@dimen/_5sdp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center|left"
+                        android:text="@string/so_item_details_one"
+                        android:textColor="@color/BLACK"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <include layout="@layout/single_line_lay" />
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/scroll_invoice_his_list"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:id="@+id/ll_invoice_detail_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"/>
+    </ScrollView>
+
+</LinearLayout>

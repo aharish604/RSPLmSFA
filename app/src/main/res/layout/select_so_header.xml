@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="0dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/UtilsItemSpacing">
+
+        <TextView
+            android:id="@+id/tvNewOrder"
+            style="@style/UtilsSubHeaderStyles"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:text="@string/so_new_order"
+            android:textSize="@dimen/xlarge_text_size"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="0dp"
+            app:layout_constraintRight_toLeftOf="@+id/guideline"
+            android:layout_marginRight="8dp" />
+
+        <TextView
+            android:id="@+id/tvAmount"
+            style="@style/UtilsMediumTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvOrderType"
+            style="@style/UtilsMediumTextStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:layout_marginTop="8dp"
+            android:gravity="start"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvNewOrder"
+            app:layout_constraintRight_toLeftOf="@+id/guideline"
+            android:layout_marginRight="8dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            app:layout_constraintGuide_percent="0.8" />
+
+        <com.rspl.sf.msfa.ui.MovableFrameLayout
+            android:id="@+id/flMovableView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|end"
+            app:layout_constraintLeft_toRightOf="@+id/guideline"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/flDisplaySelectedItem"
+                    style="@style/FloatingActionButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:backgroundTint="@color/floatingActionButtonColor"
+                    app:srcCompat="@drawable/ic_shopping_cart_black_24dp" />
+
+                <LinearLayout
+                    android:id="@+id/llCartCount"
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    android:layout_gravity="right|top"
+                    android:layout_marginTop="@dimen/padding_normal_8"
+                    android:layout_marginRight="@dimen/padding_normal_8"
+                    android:background="@drawable/so_circle_red"
+                    android:elevation="16dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvCartCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="4"
+                        android:textColor="@color/secondaryTextColor"
+                        android:textSize="10sp" />
+
+                </LinearLayout>
+            </FrameLayout>
+        </com.rspl.sf.msfa.ui.MovableFrameLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <include layout="@layout/single_line_lay" />
+    <!--<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/padding_normal_8"
+        android:orientation="vertical">
+
+    </LinearLayout>-->
+
+</LinearLayout>

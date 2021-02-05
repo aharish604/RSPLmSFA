@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:id="@+id/ll_expense_item"
+            android:padding="4dp"
+            android:layout_marginRight="4dp"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:background="@color/WHITE">
+
+            <LinearLayout
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_exp_claim_no"
+                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_weight="1.2"
+                    android:gravity="left"
+                    android:layout_gravity="bottom"
+                    android:paddingLeft="@dimen/padding_zero_dip"
+                    android:paddingRight="@dimen/padding_zero_dip"
+                    android:paddingEnd="@dimen/padding_zero_dip"
+                    android:paddingStart="@dimen/padding_zero_dip"
+                    android:text="@string/lbl_expense_claim_no"
+                    android:textColor="@color/TEXT_COLOR"
+                    android:textStyle="normal"
+                    android:textSize="@dimen/medium_text"/>
+
+                <TextView
+                    android:id="@+id/tv_exp_type"
+                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_weight=".8"
+                    android:gravity="right"
+                    android:layout_gravity="bottom"
+                    android:paddingLeft="@dimen/padding_zero_dip"
+                    android:paddingRight="@dimen/padding_zero_dip"
+                    android:paddingEnd="@dimen/padding_zero_dip"
+                    android:paddingStart="@dimen/padding_zero_dip"
+                    android:text="@string/lbl_expense_type"
+                    android:textColor="@color/TEXT_COLOR"
+                    android:textStyle="normal"
+                    android:textSize="@dimen/medium_text"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_exp_raised_date"
+                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_weight="1.2"
+                    android:gravity="left"
+                    android:layout_gravity="bottom"
+                    android:paddingLeft="@dimen/padding_zero_dip"
+                    android:paddingRight="@dimen/padding_zero_dip"
+                    android:paddingEnd="@dimen/padding_zero_dip"
+                    android:paddingStart="@dimen/padding_zero_dip"
+                    android:text="@string/lbl_expense_date"
+                    android:textColor="@color/TEXT_COLOR"
+                    android:textStyle="normal"
+                    android:textSize="@dimen/medium_text"/>
+
+                <TextView
+                    android:id="@+id/tv_exp_amt"
+                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_weight=".8"
+                    android:gravity="right"
+                    android:layout_gravity="bottom|center_horizontal"
+                    android:paddingLeft="@dimen/padding_zero_dip"
+                    android:paddingRight="@dimen/padding_zero_dip"
+                    android:paddingEnd="@dimen/padding_zero_dip"
+                    android:paddingStart="@dimen/padding_zero_dip"
+                    android:text="@string/lbl_amount"
+                    android:textColor="@color/TEXT_COLOR"
+                    android:textSize="@dimen/medium_text"
+                    android:textStyle="normal" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/ll_status"
+            android:layout_width="20dp"
+            android:layout_height="match_parent"
+            android:background="@color/YELLOW">
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <include layout="@layout/single_line_lay"/>
+
+</LinearLayout>

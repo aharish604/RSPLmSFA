@@ -1,0 +1,127 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@color/BLACK"
+            android:orientation="horizontal" />
+
+        <EditText
+            android:drawableRight="@android:drawable/ic_menu_search"
+            android:id="@+id/ed_collection_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/EditBookTextEdit"
+            android:hint="@string/lbl_coll_doc_num_search" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/BLACK"
+            />
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:padding="4dp"
+            android:background="@color/light_alice_blue"
+            android:orientation="horizontal">
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:background="@color/light_alice_blue"
+                android:paddingLeft="@dimen/padding_three_dip"
+                android:orientation="vertical">
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/lbl_doc_date"
+                    android:textStyle="bold"
+                    android:textColor="@color/BLACK"
+                    android:textSize="@dimen/medium_text" />
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/lbl_doc_no"
+                    android:textStyle="bold"
+                    android:textColor="@color/BLACK"
+                    android:textSize="@dimen/medium_text" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:paddingRight="@dimen/padding_three_dip"
+                android:gravity="right"
+                android:orientation="vertical"
+                >
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:text="@string/lbl_amount"
+                    android:textColor="@color/BLACK"
+                    android:textSize="@dimen/medium_text" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:text="@string/lbl_coll_type_dec"
+                    android:textColor="@color/BLACK"
+                    android:textSize="@dimen/medium_text" />
+            </LinearLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/BLACK"
+            />
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <ListView
+                android:id="@+id/lv_coll_list"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="true"
+                android:focusableInTouchMode="true" />
+
+          <!--  <include layout="@layout/empty_list_lay" />-->
+            <TextView
+                android:id="@+id/tv_empty_layone"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="60dp"
+                android:gravity="center"
+                android:text="@string/lbl_no_records_found"
+                android:textColor="@android:color/black" />
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

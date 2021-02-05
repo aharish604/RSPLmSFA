@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/textViewDealer"
+            android:layout_gravity="center"
+            android:gravity="start|center"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="wrap_content" />
+        <View
+            android:layout_width="1dp"
+            android:background="@color/BLACK"
+            android:layout_height="match_parent"/>
+        <TextView
+            android:id="@+id/textViewTarget"
+            android:layout_width="0dp"
+            android:layout_gravity="center"
+            android:gravity="end|center"
+            android:layout_weight="1"
+            android:layout_height="match_parent" />
+        <View
+            android:layout_width="1dp"
+            android:background="@color/BLACK"
+            android:layout_height="match_parent"/>
+        <TextView
+            android:id="@+id/textViewMtd"
+            android:layout_gravity="center"
+            android:gravity="end|center"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent" />
+        <View
+            android:layout_width="1dp"
+            android:background="@color/BLACK"
+            android:layout_height="match_parent"/>
+        <TextView
+            android:id="@+id/textViewLysMtd"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:gravity="end|center"
+            android:layout_height="match_parent" />
+        <View
+            android:layout_width="1dp"
+            android:background="@color/BLACK"
+            android:layout_height="match_parent"/>
+        <TextView
+            android:id="@+id/textViewLysmAchieved"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:gravity="end|center"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:background="@color/BLACK"
+        android:layout_height="0.5dp"/>
+</LinearLayout>

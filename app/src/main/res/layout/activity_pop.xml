@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".visit.PopActivity">
+
+    <include layout="@layout/appbar_layout"/>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="20dp">
+    <include layout="@layout/retailer_detail_header_lay"/>
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="1dip"
+            android:background="#000000" >
+        </LinearLayout>
+
+    <TextView
+        android:id="@+id/textViewStockPosition"
+        android:padding="@dimen/six_sp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:background="@color/light_alice_blue"
+        android:text="@string/pop_distributed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="1dip"
+            android:background="#000000" >
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/padding_four_dip"
+            >
+            <CheckBox
+                android:id="@+id/checkBoxDiary"
+                android:layout_width="wrap_content"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content"
+                />
+            <TextView
+                android:id="@+id/textViewDiary"
+                android:text="@string/diary"
+                android:layout_gravity="center"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+               />
+
+            <LinearLayout
+                android:id="@+id/ll_TextDiary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                >
+                <EditText
+                    android:id="@+id/editTextDiary"
+                    android:layout_width="150dp"
+                    android:inputType="numberPassword"
+                    android:digits="0123456789"
+                    android:maxLines="1"
+                    android:maxLength="3"
+                    android:enabled="false"
+                    android:gravity="right"
+                    style="@style/EditBookTextEdit"
+                    android:paddingStart="@dimen/three_sp"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="NOs"
+                    android:paddingStart="@dimen/three_sp"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/padding_four_dip">
+            <CheckBox
+                android:id="@+id/checkBoxChitPad"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/textViewChitPad"
+                android:text="@string/chitpad"
+                android:layout_gravity="center"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"/>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:id="@+id/ll_ChitPad"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/editChitPad"
+                    android:layout_width="150dp"
+                    android:inputType="numberPassword"
+                    android:digits="0123456789"
+                    android:maxLines="1"
+                    android:maxLength="3"
+                    android:gravity="right"
+                    android:enabled="false"
+                    style="@style/EditBookTextEdit"
+                    android:paddingStart="@dimen/three_sp"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="NOs"
+                    android:paddingStart="@dimen/three_sp"
+                    android:layout_height="wrap_content" />
+                </LinearLayout>/>
+            </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/padding_four_dip">
+            <CheckBox
+                android:id="@+id/checkBoxBanner"
+                android:layout_width="wrap_content"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content"
+               />
+            <TextView
+                android:id="@+id/textViewBanner"
+                android:text="@string/banner"
+                android:layout_gravity="center"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+               />
+
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:id="@+id/ll_Banner"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:id="@+id/editBanner"
+                    android:layout_width="150dp"
+                    android:inputType="numberPassword"
+                    android:digits="0123456789"
+                    android:maxLines="1"
+                    android:enabled="false"
+                    android:gravity="right"
+                    android:maxLength="3"
+                    style="@style/EditBookTextEdit"
+                    android:paddingStart="@dimen/three_sp"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="NOs"
+                    android:paddingStart="@dimen/three_sp"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

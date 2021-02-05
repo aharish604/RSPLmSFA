@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: :odataoffline-android-4.1.15:@aar">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/24b87ab330f2874913d24924189bd0a1/jetified-odataoffline-android-4.1.15/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/24b87ab330f2874913d24924189bd0a1/jetified-odataoffline-android-4.1.15/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/24b87ab330f2874913d24924189bd0a1/jetified-odataoffline-android-4.1.15/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

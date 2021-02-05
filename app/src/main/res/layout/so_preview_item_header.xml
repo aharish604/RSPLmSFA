@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/scheme_header_background"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_5sdp"
+        android:layout_marginRight="@dimen/_5sdp"
+        android:background="@color/scheme_header_background"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_description"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="@dimen/util_normal_text_sp"
+            android:text="@string/so_preview_description"
+            android:textColor="@color/BLACK"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_amount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:textSize="@dimen/util_normal_text_sp"
+                android:text="@string/so_preview_amount"
+                android:textColor="@color/BLACK"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_percentage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_1sdp"
+                android:gravity="right"
+                android:textSize="@dimen/util_normal_text_sp"
+                android:textColor="@color/BLACK"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_total_anount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text="@string/so_preview_total_amt"
+                android:textSize="@dimen/util_normal_text_sp"
+                android:textColor="@color/BLACK"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_total_amt_curr"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:textSize="@dimen/util_normal_text_sp"
+                android:textColor="@color/BLACK"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <include layout="@layout/single_line_lay" />
+</LinearLayout>

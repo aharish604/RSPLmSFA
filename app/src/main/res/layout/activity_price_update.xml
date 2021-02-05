@@ -1,0 +1,1635 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/appbar_layout"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/title_bg"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/padding_one_dip"
+                    android:background="@color/MainColor"
+
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/padding_fifteen_dip"
+                    android:layout_marginBottom="@dimen/padding_fifteen_dip"
+                    android:layout_marginLeft="@dimen/padding_five_dip"
+                    android:layout_marginRight="@dimen/padding_five_dip"
+                    android:text="HDPE"
+                    android:textSize="@dimen/medium_text"
+                    android:textColor="@color/MainColor" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/padding_one_dip"
+                    android:background="@color/MainColor" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/MainColor"
+                    android:orientation="horizontal">
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/sub_title_bg"
+                        android:layout_marginRight="@dimen/margin_one_dip"
+                        android:layout_weight="1.1">
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="?attr/editTextBackground"
+                            android:gravity="center_vertical"
+                            android:text="Brand"
+                            android:textSize="@dimen/medium_text"
+                            android:backgroundTint="@color/transperant"
+                            android:textAppearance="?android:attr/textAppearanceMediumInverse"
+                            android:textColor="?attr/editTextColor"
+
+                            />
+
+                    </FrameLayout>
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/sub_title_bg"
+                        android:layout_marginRight="@dimen/margin_one_dip"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/transperant"
+                            android:background="?attr/editTextBackground"
+                            android:gravity="center_vertical"
+                            android:text="BP (EX)"
+                            android:textSize="@dimen/medium_text"
+                            android:textAppearance="?android:attr/textAppearanceMediumInverse"
+                            android:textColor="?attr/editTextColor" />
+                    </FrameLayout>
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/sub_title_bg"
+                        android:layout_marginRight="@dimen/margin_one_dip"
+                        android:layout_weight="1">
+
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/padding_five_dip"
+                            android:layout_marginRight="@dimen/padding_five_dip"
+                            android:backgroundTint="@color/transperant"
+                            android:background="?attr/editTextBackground"
+                            android:textSize="@dimen/medium_text"
+                            android:gravity="center_vertical"
+                            android:text="BP (For)"
+                            android:textAppearance="?android:attr/textAppearanceMediumInverse"
+                            android:textColor="?attr/editTextColor" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/sub_title_bg"
+                        android:layout_marginRight="@dimen/margin_one_dip"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/padding_five_dip"
+                            android:layout_marginRight="@dimen/padding_five_dip"
+                            android:layout_weight="1"
+                            android:textSize="@dimen/medium_text"
+                            android:background="?attr/editTextBackground"
+                            android:backgroundTint="@color/transperant"
+                            android:gravity="center_vertical"
+                            android:text="WSP"
+                            android:textAppearance="?android:attr/textAppearanceMediumInverse"
+                            android:textColor="?attr/editTextColor" />
+                    </FrameLayout>
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/sub_title_bg"
+                        android:layout_marginRight="@dimen/margin_one_dip"
+                        android:layout_weight="1">
+
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:backgroundTint="@color/transperant"
+                            android:layout_marginLeft="@dimen/padding_five_dip"
+                            android:layout_marginRight="@dimen/padding_five_dip"
+                            android:textSize="@dimen/medium_text"
+                            android:background="?attr/editTextBackground"
+                            android:gravity="center_vertical"
+                            android:text="RSP"
+                            android:textAppearance="?android:attr/textAppearanceMediumInverse"
+                            android:textColor="?attr/editTextColor" />
+                    </FrameLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/padding_one_dip"
+                android:background="@color/MainColor" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:background="@color/MainColor">
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:layout_marginRight="@dimen/margin_one_dip"
+                        android:layout_weight="1.1">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:textSize="@dimen/medium_text"
+                            android:background="?attr/editTextBackground"
+                            android:backgroundTint="@color/white"
+                            android:gravity="center_vertical"
+                            android:text="BG"
+                            android:textAppearance="?android:attr/textAppearanceMediumInverse"
+                            android:textColor="?attr/editTextColor" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:layout_marginRight="@dimen/margin_one_dip"
+                        android:layout_weight="1">
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="number"
+                            android:backgroundTint="@color/white"
+                            android:id="@+id/bg1"
+                            android:textSize="@dimen/medium_text"
+                            android:background="?attr/editTextBackground"
+                            android:gravity="right"
+                            android:textAppearance="?android:attr/textAppearanceMediumInverse"
+                            android:textColor="?attr/editTextColor" />
+                    </FrameLayout>
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:layout_marginRight="@dimen/margin_one_dip"
+                        android:layout_weight="1">
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/bg2"
+                            android:textSize="@dimen/medium_text"
+                            android:backgroundTint="@color/white"
+                            android:inputType="number"
+                            android:background="?attr/editTextBackground"
+                            android:gravity="right"
+                            android:textAppearance="?android:attr/textAppearanceMediumInverse"
+                            android:textColor="?attr/editTextColor" />
+                    </FrameLayout>
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:layout_marginRight="@dimen/margin_one_dip"
+                        android:layout_weight="1">
+
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/bg3"
+                            android:backgroundTint="@color/white"
+                            android:inputType="number"
+                            android:gravity="right"
+                            android:textSize="@dimen/medium_text"
+                            android:background="?attr/editTextBackground"
+
+                            android:textAppearance="?android:attr/textAppearanceMediumInverse"
+                            android:textColor="?attr/editTextColor" />
+                    </FrameLayout>
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:layout_marginRight="@dimen/margin_one_dip"
+                        android:layout_weight="1">
+
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/bg4"
+                            android:backgroundTint="@color/white"
+                            android:layout_weight="1"
+                            android:textSize="@dimen/medium_text"
+                            android:background="?attr/editTextBackground"
+                            android:inputType="number"
+                            android:gravity="right"
+                            android:textAppearance="?android:attr/textAppearanceMediumInverse"
+                            android:textColor="?attr/editTextColor" />
+                    </FrameLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/padding_one_dip"
+                android:background="@color/MainColor" />
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:background="@color/MainColor">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:layout_marginRight="@dimen/margin_one_dip"
+                        android:layout_weight="1.1">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/medium_text"
+                            android:background="?attr/editTextBackground"
+                            android:backgroundTint="@color/white"
+                            android:gravity="center_vertical"
+                            android:text="UTCL"
+                            android:textAppearance="?android:attr/textAppearanceMediumInverse"
+                            android:textColor="?attr/editTextColor" />
+                    </FrameLayout>
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:layout_marginRight="@dimen/margin_one_dip"
+                        android:layout_weight="1">
+
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/medium_text"
+                            android:backgroundTint="@color/white"
+                            android:id="@+id/utcl1"
+                            android:background="?attr/editTextBackground"
+                            android:inputType="number"
+                            android:gravity="right"
+                            android:textAppearance="?android:attr/textAppearanceMediumInverse"
+                            android:textColor="?attr/editTextColor" />
+                    </FrameLayout>
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:layout_marginRight="@dimen/margin_one_dip"
+                        android:layout_weight="1">
+
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/utcl2"
+                            android:textSize="@dimen/medium_text"
+                            android:backgroundTint="@color/white"
+                            android:background="?attr/editTextBackground"
+                            android:inputType="number"
+                            android:gravity="right"
+                            android:textAppearance="?android:attr/textAppearanceMediumInverse"
+                            android:textColor="?attr/editTextColor" />
+                    </FrameLayout>
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:layout_marginRight="@dimen/margin_one_dip"
+                        android:layout_weight="1">
+
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:textSize="@dimen/medium_text"
+                            android:id="@+id/utcl3"
+                            android:backgroundTint="@color/white"
+                            android:background="?attr/editTextBackground"
+                            android:inputType="number"
+                            android:gravity="right"
+                            android:textAppearance="?android:attr/textAppearanceMediumInverse"
+                            android:textColor="?attr/editTextColor" />
+                    </FrameLayout>
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:layout_marginRight="@dimen/margin_one_dip"
+                        android:layout_weight="1">
+
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/utcl4"
+                            android:backgroundTint="@color/white"
+
+                            android:textSize="@dimen/medium_text"
+                            android:background="?attr/editTextBackground"
+                            android:inputType="number"
+                            android:gravity="right"
+                            android:textAppearance="?android:attr/textAppearanceMediumInverse"
+                            android:textColor="?attr/editTextColor" />
+                    </FrameLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/padding_one_dip"
+                android:background="@color/MainColor" />
+
+
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:background="@color/MainColor">
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:layout_marginRight="@dimen/margin_one_dip"
+                        android:layout_weight="1.1">
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/white"
+
+                            android:background="?attr/editTextBackground"
+                            android:textSize="@dimen/medium_text"
+                            android:gravity="center_vertical"
+                            android:text="OCL"
+                            android:textAppearance="?android:attr/textAppearanceMediumInverse"
+                            android:textColor="?attr/editTextColor" />
+                    </FrameLayout>
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:layout_marginRight="@dimen/margin_one_dip"
+                        android:layout_weight="1">
+
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/ocl1"
+                            android:backgroundTint="@color/white"
+
+                            android:textSize="@dimen/medium_text"
+                            android:background="?attr/editTextBackground"
+                            android:inputType="number"
+                            android:gravity="right"
+                            android:textAppearance="?android:attr/textAppearanceMediumInverse"
+                            android:textColor="?attr/editTextColor" />
+                    </FrameLayout>
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:layout_marginRight="@dimen/margin_one_dip"
+                        android:layout_weight="1">
+
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:id="@+id/ocl2"
+                            android:textSize="@dimen/medium_text"
+                            android:backgroundTint="@color/white"
+                            android:background="?attr/editTextBackground"
+                            android:inputType="number"
+                            android:gravity="right"
+                            android:textAppearance="?android:attr/textAppearanceMediumInverse"
+                            android:textColor="?attr/editTextColor" />
+                    </FrameLayout>
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:layout_marginRight="@dimen/margin_one_dip"
+                        android:layout_weight="1">
+
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:id="@+id/ocl3"
+                            android:textSize="@dimen/medium_text"
+                            android:backgroundTint="@color/white"
+                            android:background="?attr/editTextBackground"
+                            android:inputType="number"
+                            android:gravity="right"
+                            android:textAppearance="?android:attr/textAppearanceMediumInverse"
+                            android:textColor="?attr/editTextColor" />
+                    </FrameLayout>
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:layout_marginRight="@dimen/margin_one_dip"
+                        android:layout_weight="1">
+
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:textSize="@dimen/medium_text"
+                            android:id="@+id/ocl4"
+                            android:backgroundTint="@color/white"
+                            android:background="?attr/editTextBackground"
+                            android:inputType="number"
+                            android:gravity="right"
+                            android:textAppearance="?android:attr/textAppearanceMediumInverse"
+                            android:textColor="?attr/editTextColor" />
+                    </FrameLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/padding_one_dip"
+                android:background="@color/MainColor" />
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:background="@color/MainColor">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:layout_marginRight="@dimen/margin_one_dip"
+                        android:layout_weight="1.1">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/white"
+                            android:textSize="@dimen/medium_text"
+                            android:background="?attr/editTextBackground"
+
+                            android:gravity="center_vertical"
+                            android:text="LAF"
+                            android:textAppearance="?android:attr/textAppearanceMediumInverse"
+                            android:textColor="?attr/editTextColor" />
+                    </FrameLayout>
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:layout_marginRight="@dimen/margin_one_dip"
+                        android:layout_weight="1">
+
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:textSize="@dimen/medium_text"
+                            android:id="@+id/laf1"
+                            android:backgroundTint="@color/white"
+                            android:background="?attr/editTextBackground"
+                            android:inputType="number"
+                            android:gravity="right"
+                            android:textAppearance="?android:attr/textAppearanceMediumInverse"
+                            android:textColor="?attr/editTextColor" />
+                    </FrameLayout>
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:layout_marginRight="@dimen/margin_one_dip"
+                        android:layout_weight="1">
+
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:id="@+id/laf2"
+                            android:textSize="@dimen/medium_text"
+                            android:backgroundTint="@color/white"
+                            android:background="?attr/editTextBackground"
+                            android:inputType="number"
+                            android:gravity="right"
+                            android:textAppearance="?android:attr/textAppearanceMediumInverse"
+                            android:textColor="?attr/editTextColor" />
+                    </FrameLayout>
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:layout_marginRight="@dimen/margin_one_dip"
+                        android:layout_weight="1">
+
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:textSize="@dimen/medium_text"
+                            android:id="@+id/laf3"
+                            android:backgroundTint="@color/white"
+                            android:background="?attr/editTextBackground"
+                            android:inputType="number"
+                            android:gravity="right"
+                            android:textAppearance="?android:attr/textAppearanceMediumInverse"
+                            android:textColor="?attr/editTextColor" />
+                    </FrameLayout>
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:layout_marginRight="@dimen/margin_one_dip"
+                        android:layout_weight="1">
+
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/medium_text"
+
+                            android:id="@+id/laf4"
+                            android:backgroundTint="@color/white"
+                            android:background="?attr/editTextBackground"
+                            android:inputType="number"
+                            android:gravity="right"
+                            android:textAppearance="?android:attr/textAppearanceMediumInverse"
+                            android:textColor="?attr/editTextColor" />
+                    </FrameLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/padding_one_dip"
+                android:background="@color/MainColor" />
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:background="@color/MainColor">
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:layout_marginRight="@dimen/margin_one_dip"
+                        android:layout_weight="1.1">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/white"
+
+                            android:background="?attr/editTextBackground"
+                            android:textSize="@dimen/medium_text"
+                            android:gravity="center_vertical"
+                            android:text="ACC"
+                            android:textAppearance="?android:attr/textAppearanceMediumInverse"
+                            android:textColor="?attr/editTextColor" />
+                    </FrameLayout>
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:layout_marginRight="@dimen/margin_one_dip"
+                        android:layout_weight="1">
+
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/white"
+                            android:textSize="@dimen/medium_text"
+
+                            android:id="@+id/acc1"
+                            android:background="?attr/editTextBackground"
+                            android:inputType="number"
+                            android:gravity="right"
+                            android:textAppearance="?android:attr/textAppearanceMediumInverse"
+                            android:textColor="?attr/editTextColor" />
+                    </FrameLayout>
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:layout_marginRight="@dimen/margin_one_dip"
+                        android:layout_weight="1">
+
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:textSize="@dimen/medium_text"
+                            android:id="@+id/acc2"
+                            android:backgroundTint="@color/white"
+                            android:background="?attr/editTextBackground"
+                            android:inputType="number"
+                            android:gravity="right"
+                            android:textAppearance="?android:attr/textAppearanceMediumInverse"
+                            android:textColor="?attr/editTextColor" />
+                    </FrameLayout>
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:layout_marginRight="@dimen/margin_one_dip"
+                        android:layout_weight="1">
+
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/medium_text"
+                            android:id="@+id/acc3"
+                            android:backgroundTint="@color/white"
+                            android:background="?attr/editTextBackground"
+                            android:inputType="number"
+                            android:gravity="right"
+                            android:textAppearance="?android:attr/textAppearanceMediumInverse"
+                            android:textColor="?attr/editTextColor" />
+                    </FrameLayout>
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:layout_marginRight="@dimen/margin_one_dip"
+                        android:layout_weight="1">
+
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:textSize="@dimen/medium_text"
+                            android:id="@+id/acc4"
+                            android:backgroundTint="@color/white"
+                            android:background="?attr/editTextBackground"
+                            android:inputType="number"
+                            android:gravity="right"
+                            android:textAppearance="?android:attr/textAppearanceMediumInverse"
+                            android:textColor="?attr/editTextColor" />
+                    </FrameLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/padding_one_dip"
+                android:background="@color/MainColor" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/title_bg"
+                android:orientation="vertical">
+
+                <!-- <View
+                     android:layout_width="match_parent"
+                     android:layout_height="@dimen/padding_one_dip"
+                     android:background="@color/MainColor"
+
+                     />-->
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/padding_five_dip"
+                    android:text="PAPER BAG"
+                    android:layout_marginTop="@dimen/padding_fifteen_dip"
+                    android:layout_marginBottom="@dimen/padding_fifteen_dip"
+                    android:textColor="@color/MainColor"
+                    android:textSize="@dimen/medium_text" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/padding_one_dip"
+                    android:background="@color/MainColor" />
+
+            </LinearLayout>
+
+
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/MainColor"
+                    android:orientation="horizontal">
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/sub_title_bg"
+                        android:layout_marginRight="@dimen/margin_one_dip"
+                        android:layout_weight="1.1">
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/medium_text"
+                            android:background="?attr/editTextBackground"
+                            android:gravity="center_vertical"
+                            android:text="Brand"
+                            android:backgroundTint="@color/transperant"
+                            android:textAppearance="?android:attr/textAppearanceMediumInverse"
+                            android:textColor="?attr/editTextColor"
+
+                            />
+
+                    </FrameLayout>
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/sub_title_bg"
+                        android:layout_marginRight="@dimen/margin_one_dip"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/transperant"
+                            android:background="?attr/editTextBackground"
+                            android:gravity="center_vertical"
+                            android:text="BP (EX)"
+                            android:textSize="@dimen/medium_text"
+                            android:textAppearance="?android:attr/textAppearanceMediumInverse"
+                            android:textColor="?attr/editTextColor" />
+                    </FrameLayout>
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/sub_title_bg"
+                        android:layout_marginRight="@dimen/margin_one_dip"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/padding_five_dip"
+                            android:layout_marginRight="@dimen/padding_five_dip"
+                            android:layout_weight="1"
+                            android:textSize="@dimen/medium_text"
+                            android:background="?attr/editTextBackground"
+                            android:backgroundTint="@color/transperant"
+                            android:gravity="center_vertical"
+                            android:text="BP (For)"
+                            android:textAppearance="?android:attr/textAppearanceMediumInverse"
+                            android:textColor="?attr/editTextColor" />
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/sub_title_bg"
+                        android:layout_marginRight="@dimen/margin_one_dip"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/padding_five_dip"
+                            android:layout_marginRight="@dimen/padding_five_dip"
+                            android:layout_weight="1"
+                            android:background="?attr/editTextBackground"
+                            android:backgroundTint="@color/transperant"
+                            android:gravity="center_vertical"
+                            android:text="WSP"
+                            android:textSize="@dimen/medium_text"
+                            android:textAppearance="?android:attr/textAppearanceMediumInverse"
+                            android:textColor="?attr/editTextColor" />
+                    </FrameLayout>
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/sub_title_bg"
+                        android:layout_marginRight="@dimen/margin_one_dip"
+                        android:layout_weight="1">
+
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/transperant"
+                            android:layout_marginLeft="@dimen/padding_five_dip"
+                            android:layout_marginRight="@dimen/padding_five_dip"
+                            android:textSize="@dimen/medium_text"
+                            android:background="?attr/editTextBackground"
+                            android:gravity="center_vertical"
+                            android:text="RSP"
+                            android:textAppearance="?android:attr/textAppearanceMediumInverse"
+                            android:textColor="?attr/editTextColor" />
+                    </FrameLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/padding_one_dip"
+                android:background="@color/MainColor" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:background="@color/MainColor">
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:layout_marginRight="@dimen/margin_one_dip"
+                        android:layout_weight="1.1">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:background="?attr/editTextBackground"
+                            android:backgroundTint="@color/white"
+                            android:textSize="@dimen/medium_text"
+                            android:text="BG"
+                            android:textAppearance="?android:attr/textAppearanceMediumInverse"
+                            android:textColor="?attr/editTextColor" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:layout_marginRight="@dimen/margin_one_dip"
+                        android:layout_weight="1">
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/medium_text"
+                            android:backgroundTint="@color/white"
+                            android:id="@+id/pb_bg1"
+                            android:inputType="number"
+                            android:gravity="right"
+                            android:background="?attr/editTextBackground"
+
+                            android:textAppearance="?android:attr/textAppearanceMediumInverse"
+                            android:textColor="?attr/editTextColor" />
+                    </FrameLayout>
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:layout_marginRight="@dimen/margin_one_dip"
+                        android:layout_weight="1">
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/medium_text"
+                            android:backgroundTint="@color/white"
+
+                            android:id="@+id/pb_bg2"
+                            android:background="?attr/editTextBackground"
+                            android:inputType="number"
+                            android:gravity="right"
+                            android:textAppearance="?android:attr/textAppearanceMediumInverse"
+                            android:textColor="?attr/editTextColor" />
+                    </FrameLayout>
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:layout_marginRight="@dimen/margin_one_dip"
+                        android:layout_weight="1">
+
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:backgroundTint="@color/white"
+                            android:id="@+id/pb_bg3"
+                            android:textSize="@dimen/medium_text"
+                            android:background="?attr/editTextBackground"
+                            android:inputType="number"
+                            android:gravity="right"
+                            android:textAppearance="?android:attr/textAppearanceMediumInverse"
+                            android:textColor="?attr/editTextColor" />
+                    </FrameLayout>
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:layout_marginRight="@dimen/margin_one_dip"
+                        android:layout_weight="1">
+
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/medium_text"
+                            android:backgroundTint="@color/white"
+                            android:layout_weight="1"
+                            android:id="@+id/pb_bg4"
+                            android:background="?attr/editTextBackground"
+                            android:inputType="number"
+                            android:gravity="right"
+                            android:textAppearance="?android:attr/textAppearanceMediumInverse"
+                            android:textColor="?attr/editTextColor" />
+                    </FrameLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/padding_one_dip"
+                android:background="@color/MainColor" />
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:background="@color/MainColor">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:layout_marginRight="@dimen/margin_one_dip"
+                        android:layout_weight="1.1">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:textSize="@dimen/medium_text"
+                            android:background="?attr/editTextBackground"
+                            android:backgroundTint="@color/white"
+                            android:gravity="center_vertical"
+                            android:text="UTCL"
+                            android:textAppearance="?android:attr/textAppearanceMediumInverse"
+                            android:textColor="?attr/editTextColor" />
+                    </FrameLayout>
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:layout_marginRight="@dimen/margin_one_dip"
+                        android:layout_weight="1">
+
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/medium_text"
+                            android:backgroundTint="@color/white"
+
+                            android:id="@+id/pb_utcl1"
+                            android:background="?attr/editTextBackground"
+                            android:inputType="number"
+                            android:gravity="right"
+                            android:textAppearance="?android:attr/textAppearanceMediumInverse"
+                            android:textColor="?attr/editTextColor" />
+                    </FrameLayout>
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:layout_marginRight="@dimen/margin_one_dip"
+                        android:layout_weight="1">
+
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/medium_text"
+
+                            android:id="@+id/pb_utcl2"
+                            android:backgroundTint="@color/white"
+                            android:background="?attr/editTextBackground"
+                            android:inputType="number"
+                            android:gravity="right"
+                            android:textAppearance="?android:attr/textAppearanceMediumInverse"
+                            android:textColor="?attr/editTextColor" />
+                    </FrameLayout>
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:layout_marginRight="@dimen/margin_one_dip"
+                        android:layout_weight="1">
+
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/medium_text"
+
+                            android:id="@+id/pb_utcl3"
+                            android:backgroundTint="@color/white"
+                            android:background="?attr/editTextBackground"
+                            android:inputType="number"
+                            android:gravity="right"
+                            android:textAppearance="?android:attr/textAppearanceMediumInverse"
+                            android:textColor="?attr/editTextColor" />
+                    </FrameLayout>
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:layout_marginRight="@dimen/margin_one_dip"
+                        android:layout_weight="1">
+
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/medium_text"
+                            android:backgroundTint="@color/white"
+
+                            android:id="@+id/pb_utcl4"
+                            android:background="?attr/editTextBackground"
+                            android:inputType="number"
+                            android:gravity="right"
+                            android:textAppearance="?android:attr/textAppearanceMediumInverse"
+                            android:textColor="?attr/editTextColor" />
+                    </FrameLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/padding_one_dip"
+                android:background="@color/MainColor" />
+
+
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:background="@color/MainColor">
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:layout_marginRight="@dimen/margin_one_dip"
+                        android:layout_weight="1.1">
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/white"
+                            android:textSize="@dimen/medium_text"
+                            android:background="?attr/editTextBackground"
+
+                            android:gravity="center_vertical"
+                            android:text="OCL"
+                            android:textAppearance="?android:attr/textAppearanceMediumInverse"
+                            android:textColor="?attr/editTextColor" />
+                    </FrameLayout>
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:layout_marginRight="@dimen/margin_one_dip"
+                        android:layout_weight="1">
+
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/medium_text"
+                            android:backgroundTint="@color/white"
+
+                            android:id="@+id/pb_ocl1"
+                            android:background="?attr/editTextBackground"
+                            android:inputType="number"
+                            android:gravity="right"
+                            android:textAppearance="?android:attr/textAppearanceMediumInverse"
+                            android:textColor="?attr/editTextColor" />
+                    </FrameLayout>
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:layout_marginRight="@dimen/margin_one_dip"
+                        android:layout_weight="1">
+
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/medium_text"
+
+                            android:id="@+id/pb_ocl2"
+                            android:backgroundTint="@color/white"
+                            android:background="?attr/editTextBackground"
+                            android:inputType="number"
+                            android:gravity="right"
+                            android:textAppearance="?android:attr/textAppearanceMediumInverse"
+                            android:textColor="?attr/editTextColor" />
+                    </FrameLayout>
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:layout_marginRight="@dimen/margin_one_dip"
+                        android:layout_weight="1">
+
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/medium_text"
+                            android:id="@+id/pb_ocl3"
+
+                            android:backgroundTint="@color/white"
+                            android:background="?attr/editTextBackground"
+                            android:inputType="number"
+                            android:gravity="right"
+                            android:textAppearance="?android:attr/textAppearanceMediumInverse"
+                            android:textColor="?attr/editTextColor" />
+                    </FrameLayout>
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:layout_marginRight="@dimen/margin_one_dip"
+                        android:layout_weight="1">
+
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:textSize="@dimen/medium_text"
+                            android:id="@+id/pb_ocl4"
+                            android:backgroundTint="@color/white"
+                            android:background="?attr/editTextBackground"
+                            android:inputType="number"
+                            android:gravity="right"
+                            android:textAppearance="?android:attr/textAppearanceMediumInverse"
+                            android:textColor="?attr/editTextColor" />
+                    </FrameLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/padding_one_dip"
+                android:background="@color/MainColor" />
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:background="@color/MainColor">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:layout_marginRight="@dimen/margin_one_dip"
+                        android:layout_weight="1.1">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/white"
+                            android:textSize="@dimen/medium_text"
+                            android:background="?attr/editTextBackground"
+
+                            android:gravity="center_vertical"
+                            android:text="LAF"
+                            android:textAppearance="?android:attr/textAppearanceMediumInverse"
+                            android:textColor="?attr/editTextColor" />
+                    </FrameLayout>
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:layout_marginRight="@dimen/margin_one_dip"
+                        android:layout_weight="1">
+
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/medium_text"
+
+                            android:id="@+id/pb_laf1"
+                            android:backgroundTint="@color/white"
+                            android:background="?attr/editTextBackground"
+                            android:inputType="number"
+                            android:gravity="right"
+                            android:textAppearance="?android:attr/textAppearanceMediumInverse"
+                            android:textColor="?attr/editTextColor" />
+                    </FrameLayout>
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:layout_marginRight="@dimen/margin_one_dip"
+                        android:layout_weight="1">
+
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/medium_text"
+
+                            android:id="@+id/pb_laf2"
+                            android:backgroundTint="@color/white"
+                            android:background="?attr/editTextBackground"
+                            android:inputType="number"
+                            android:gravity="right"
+                            android:textAppearance="?android:attr/textAppearanceMediumInverse"
+                            android:textColor="?attr/editTextColor" />
+                    </FrameLayout>
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:layout_marginRight="@dimen/margin_one_dip"
+                        android:layout_weight="1">
+
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/medium_text"
+                            android:id="@+id/pb_laf3"
+
+                            android:backgroundTint="@color/white"
+                            android:background="?attr/editTextBackground"
+                            android:inputType="number"
+                            android:gravity="right"
+                            android:textAppearance="?android:attr/textAppearanceMediumInverse"
+                            android:textColor="?attr/editTextColor" />
+                    </FrameLayout>
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:layout_marginRight="@dimen/margin_one_dip"
+                        android:layout_weight="1">
+
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:textSize="@dimen/medium_text"
+                            android:id="@+id/pb_laf4"
+                            android:backgroundTint="@color/white"
+                            android:background="?attr/editTextBackground"
+                            android:inputType="number"
+                            android:gravity="right"
+                            android:textAppearance="?android:attr/textAppearanceMediumInverse"
+                            android:textColor="?attr/editTextColor" />
+                    </FrameLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/padding_one_dip"
+                android:background="@color/MainColor" />
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:background="@color/MainColor">
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:layout_marginRight="@dimen/margin_one_dip"
+                        android:layout_weight="1.1">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/white"
+
+                            android:background="?attr/editTextBackground"
+                            android:textSize="@dimen/medium_text"
+                            android:gravity="center_vertical"
+                            android:text="ACC"
+                            android:textAppearance="?android:attr/textAppearanceMediumInverse"
+                            android:textColor="?attr/editTextColor" />
+                    </FrameLayout>
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:layout_marginRight="@dimen/margin_one_dip"
+                        android:layout_weight="1">
+
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/white"
+                            android:textSize="@dimen/medium_text"
+
+                            android:id="@+id/pb_acc1"
+                            android:background="?attr/editTextBackground"
+                            android:inputType="number"
+                            android:gravity="right"
+                            android:textAppearance="?android:attr/textAppearanceMediumInverse"
+                            android:textColor="?attr/editTextColor" />
+                    </FrameLayout>
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:layout_marginRight="@dimen/margin_one_dip"
+                        android:layout_weight="1">
+
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/medium_text"
+
+                            android:id="@+id/pb_acc2"
+                            android:backgroundTint="@color/white"
+                            android:background="?attr/editTextBackground"
+                            android:inputType="number"
+                            android:gravity="right"
+                            android:textAppearance="?android:attr/textAppearanceMediumInverse"
+                            android:textColor="?attr/editTextColor" />
+                    </FrameLayout>
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:layout_marginRight="@dimen/margin_one_dip"
+                        android:layout_weight="1">
+
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/medium_text"
+                            android:id="@+id/pb_acc3"
+                            android:backgroundTint="@color/white"
+                            android:background="?attr/editTextBackground"
+                            android:inputType="number"
+                            android:gravity="right"
+                            android:textAppearance="?android:attr/textAppearanceMediumInverse"
+                            android:textColor="?attr/editTextColor" />
+                    </FrameLayout>
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:layout_marginRight="@dimen/margin_one_dip"
+                        android:layout_weight="1">
+
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/medium_text"
+
+                            android:id="@+id/pb_acc4"
+                            android:backgroundTint="@color/white"
+                            android:background="?attr/editTextBackground"
+                            android:inputType="number"
+                            android:gravity="right"
+                            android:textAppearance="?android:attr/textAppearanceMediumInverse"
+                            android:textColor="?attr/editTextColor" />
+                    </FrameLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+

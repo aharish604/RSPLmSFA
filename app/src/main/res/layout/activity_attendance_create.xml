@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/appbar_layout" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            style="@style/UtilsItemSpacing"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/WHITE">
+
+            <TextView
+                android:id="@+id/tvName"
+                style="@style/UtilsSubHeaderStyles"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="4dp"
+                android:layout_marginRight="4dp"
+                android:text="Day Start"
+                android:textSize="@dimen/xlarge_text_size"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/ivStatus"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <ImageView
+                android:id="@+id/ivStatus"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:tint="@color/secondaryColor"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_play_circle_filled_black_24dp" />
+
+            <TextView
+                android:id="@+id/tvDate"
+                style="@style/UtilsMediumTextStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="4dp"
+                android:layout_marginRight="4dp"
+                android:layout_marginTop="6dp"
+                android:gravity="start"
+                android:text="TextView"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/ivStatus"
+                app:layout_constraintTop_toBottomOf="@+id/tvName" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <include layout="@layout/single_line_lay" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:paddingBottom="@dimen/padding_normal_16"
+                        android:paddingLeft="@dimen/padding_normal_8"
+                        android:paddingRight="@dimen/padding_normal_8"
+                        android:paddingTop="@dimen/padding_normal_16">
+
+                        <com.rspl.sf.msfa.ui.toggleButton.MultiStateToggleButton
+                            android:id="@+id/mSTBAttendanceType"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llFullDay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/UtilsMediumTextStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="@dimen/padding_normal_16"
+                        android:text="@string/lbl_full_day" />
+
+                    <include layout="@layout/single_line_lay" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:paddingBottom="@dimen/padding_normal_16"
+                        android:paddingLeft="@dimen/padding_normal_8"
+                        android:paddingRight="@dimen/padding_normal_8"
+                        android:paddingTop="@dimen/padding_normal_16">
+
+                        <com.rspl.sf.msfa.ui.toggleButton.MultiStateToggleButton
+                            android:id="@+id/mSTBFullDay"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                        <com.rspl.sf.msfa.ui.MaterialDesignSpinner
+                            android:id="@+id/spFullDay"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:ms_alwaysShowFloatingLabel="true"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginRight="8dp"
+                            android:layout_marginLeft="8dp"
+                            android:visibility="gone"
+                            app:ms_enableFloatingLabel="true"
+                            app:ms_floatingLabelText="@string/other_Att_tpye"
+                            app:ms_multiline="true" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llSplitView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/llFirstHalf"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/UtilsMediumTextStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="@dimen/padding_normal_16"
+                            android:text="@string/lbl_half_day" />
+
+                        <include layout="@layout/single_line_lay" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:paddingBottom="@dimen/padding_normal_16"
+                            android:paddingLeft="@dimen/padding_normal_8"
+                            android:paddingTop="@dimen/padding_normal_16">
+
+                            <com.rspl.sf.msfa.ui.toggleButton.MultiStateToggleButton
+                                android:id="@+id/mSTBFirstHalf"
+                                android:layout_width="match_parent" android:layout_height="wrap_content" />
+
+                            <com.rspl.sf.msfa.ui.MaterialDesignSpinner
+                                android:id="@+id/spFirstHalf"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:ms_alwaysShowFloatingLabel="true"
+                                android:layout_marginTop="8dp"
+                                android:visibility="gone"
+                                android:layout_marginLeft="8dp"
+                                android:layout_marginRight="8dp"
+                                app:ms_enableFloatingLabel="true"
+                                app:ms_floatingLabelText="@string/other_Att_tpye"
+                                app:ms_multiline="true" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llSecondHalf"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/UtilsMediumTextStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="@dimen/padding_normal_16"
+                            android:text="@string/lbl_second_day" />
+
+                        <include layout="@layout/single_line_lay" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:paddingBottom="@dimen/padding_normal_16"
+                            android:paddingRight="@dimen/padding_normal_8"
+                            android:paddingTop="@dimen/padding_normal_16">
+
+                            <com.rspl.sf.msfa.ui.toggleButton.MultiStateToggleButton
+                                android:id="@+id/mSTBSecondHalf"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+                            <com.rspl.sf.msfa.ui.MaterialDesignSpinner
+                                android:id="@+id/spSecondHalf"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:ms_alwaysShowFloatingLabel="true"
+                                android:layout_marginTop="8dp"
+                                android:visibility="gone"
+                                app:ms_enableFloatingLabel="true"
+                                app:ms_floatingLabelText="@string/other_Att_tpye"
+                                android:layout_marginLeft="8dp"
+                                android:layout_marginRight="8dp"
+                                app:ms_multiline="true" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/padding_normal_16">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tiRemarks"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/padding_normal_16"
+                        android:hint="@string/tvRemarks_not_mandatory">
+                        <!--app:counterEnabled="true"
+                            app:counterMaxLength="20"-->
+                        <EditText
+                            android:id="@+id/editRemraks"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="top|left"
+                            android:inputType="textMultiLine"
+                            android:maxLength="250"
+                            android:maxLines="6"
+                            android:overScrollMode="always"
+                            android:scrollHorizontally="false"
+                            android:scrollbarStyle="insideInset"
+                            android:scrollbars="vertical" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

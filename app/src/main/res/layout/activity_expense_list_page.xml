@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <include layout="@layout/appbar_layout"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/black"
+        android:layout_marginTop="5dp"
+        ></View>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tab_layout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/MyCustomTabLayout"
+        android:elevation="6dp"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"/>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/pager1"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        />
+</LinearLayout>

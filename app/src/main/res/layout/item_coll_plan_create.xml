@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cvItem"
+    style="@style/CardViewStyle"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/padding_normal_2"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
+            android:id="@+id/llName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:paddingBottom="@dimen/padding_normal_16"
+                android:paddingTop="@dimen/padding_normal_16">
+
+                <TextView
+                    android:id="@+id/tvPlanName"
+                    style="@style/UtilsMediumTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="56dp"
+                    android:layout_marginStart="56dp"
+                    android:text="@string/ll_plan_name"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="0dp"
+                    android:visibility="gone"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_store_mall_directory_black_24dp" />
+
+                <TextView
+                    android:id="@+id/tvPlanNameDesc"
+                    style="@style/SubItemTextStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="56dp"
+                    android:layout_marginRight="0dp"
+                    android:layout_marginStart="56dp"
+                    android:layout_marginTop="4dp"
+                    android:text="RK"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvPlanName" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="56dp"
+                android:orientation="vertical">
+
+                <include layout="@layout/single_line_lay" />
+            </LinearLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clCollectionAmount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:paddingBottom="@dimen/padding_normal_16"
+                android:visibility="gone"
+                android:paddingTop="@dimen/padding_normal_16">
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tiCollectionAmount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/MyEditTextTheme"
+                    android:layout_marginLeft="56dp"
+                    android:layout_marginStart="56dp">
+
+                    <EditText
+                        android:id="@+id/edtCollectionAmount"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/ll_colle_create_amount_manda"
+                        android:maxLength="13"
+                        android:inputType="number"
+                        android:singleLine="true" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_achivedValue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:paddingBottom="@dimen/padding_normal_16"
+                android:paddingTop="@dimen/padding_normal_16">
+
+                <TextView
+                    android:id="@+id/tvActualName"
+                    style="@style/UtilsMediumTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="56dp"
+                    android:layout_marginStart="56dp"
+                    android:text="@string/ll_actual_name"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="0dp"
+                    android:visibility="gone"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_store_mall_directory_black_24dp" />
+
+                <TextView
+                    android:id="@+id/tvActualNameDesc"
+                    style="@style/SubItemTextStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="56dp"
+                    android:layout_marginRight="0dp"
+                    android:layout_marginStart="56dp"
+                    android:layout_marginTop="4dp"
+                    android:text="RK"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvActualName" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_achivedline"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="56dp"
+                android:orientation="vertical">
+
+                <include layout="@layout/single_line_lay" />
+            </LinearLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clCollectionRemarks"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:paddingBottom="@dimen/padding_normal_16"
+                android:visibility="gone"
+                android:paddingTop="@dimen/padding_normal_16">
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tiCollectionRemarks"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/MyEditTextTheme"
+                    android:layout_marginLeft="56dp"
+                    android:layout_marginStart="56dp">
+
+                    <EditText
+                        android:id="@+id/edtCollectionRemarks"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/lbl_remarks"
+                        android:inputType="text"
+                        android:singleLine="true" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:id="@+id/clCollectionAmount1"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:visibility="gone"
+            android:paddingBottom="@dimen/padding_normal_16"
+            android:paddingTop="@dimen/padding_normal_16">
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tiCollectionAmount1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/MyEditTextTheme"
+                android:layout_marginLeft="56dp"
+                android:layout_marginStart="56dp">
+
+                <EditText
+                    android:id="@+id/edtCollectionAmount1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/ll_colle_create_amount_manda"
+                    android:maxLength="13"
+                    android:inputType="number"
+                    android:singleLine="true" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clCollectionRemarks1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:paddingBottom="@dimen/padding_normal_16"
+            android:paddingTop="@dimen/padding_normal_16">
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tiCollectionRemarks1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/MyEditTextTheme"
+                android:layout_marginLeft="56dp"
+                android:layout_marginStart="56dp">
+
+                <EditText
+                    android:id="@+id/edtCollectionRemarks1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/lbl_remarks"
+                    android:inputType="text"
+                    android:singleLine="true" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
+

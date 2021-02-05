@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tvTimeDiff"
+            style="@style/UtilsMediumTextStyle"
+            android:layout_width="0dp"
+            android:layout_weight="0.5"
+            android:layout_height="match_parent"
+            android:text="00:00"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:textColor="@color/RED"
+            android:textStyle="bold"/>
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.5"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/tvSPName"
+                style="@style/UtilsMediumTextStyle"
+                android:layout_width="match_parent"
+                android:textColor="#c8000000"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="TextView"
+                />
+
+            <TextView
+                android:id="@+id/tvRSCode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="TextView"
+                android:textColor="#99000000"
+                android:textSize="@dimen/small_text" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginBottom="8dp"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/tvStartTime"
+                style="@style/UtilsMediumTextStyle"
+                android:layout_width="match_parent"
+                android:textColor="#c8000000"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:text="00:00"
+                />
+
+            <TextView
+                android:id="@+id/tvEndTime"
+                style="@style/UtilsMediumTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="00:00"
+                android:gravity="center"
+                android:textColor="#c8000000" />
+        </LinearLayout>
+    </LinearLayout>
+    <include layout="@layout/single_line_lay"/>
+</LinearLayout>

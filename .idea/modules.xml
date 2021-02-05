@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/RSPLArteriaProject.iml" filepath="$PROJECT_DIR$/.idea/modules/RSPLArteriaProject.iml" group="RSPLArteriaProject" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/RSPLArteriaProject-app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/RSPLArteriaProject-app.iml" group="RSPLArteriaProject/app" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/RSPLmSFA.iml" filepath="$PROJECT_DIR$/.idea/modules/RSPLmSFA.iml" group="RSPLmSFA" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/RSPLmSFA-app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/RSPLmSFA-app.iml" group="RSPLmSFA/app" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/app.iml" group="msfaandroid31_DEV_RSPL/app" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/msfaandroid31_DEV_RSPL.iml" filepath="$PROJECT_DIR$/.idea/msfaandroid31_DEV_RSPL.iml" group="msfaandroid31_DEV_RSPL" />
+    </modules>
+  </component>
+</project>

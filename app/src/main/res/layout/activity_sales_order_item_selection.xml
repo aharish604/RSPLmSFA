@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_sales_order_item_selection"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".socreate.SalesOrderItemSelection">
+    <include layout="@layout/appbar_layout"/>
+    <include layout="@layout/retailer_detail_header_lay" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/line_height_one_dip"
+        android:background="@color/BLACK" />
+    <TableLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/WHITE" >
+        <LinearLayout
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/padding_four_dip" >
+            <LinearLayout
+                android:layout_width="@dimen/width_zero_dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:orientation="horizontal"
+                android:layout_weight="1"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:paddingStart="@dimen/padding_three_dip"
+                    android:paddingLeft="@dimen/padding_three_dip"
+                    android:paddingRight="@dimen/padding_three_dip"
+                    android:paddingEnd="@dimen/padding_zero_dip"
+                    android:text="@string/lbl_material_group"
+                    android:textColor="@color/TEXT_COLOR"
+                    android:textSize="@dimen/medium_text" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top|center"
+                    android:paddingLeft="@dimen/padding_three_dip"
+                    android:text="@string/lbl_star"
+                    android:textColor="@color/RED"
+                    android:textSize="@dimen/medium_text" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="@dimen/width_zero_dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1"
+                android:layout_gravity="center"
+                android:text="@string/lbl_semi_colon"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/medium_text" />
+
+
+            <Spinner
+                android:id="@+id/sp_soi_material_group"
+                android:layout_width="@dimen/width_zero_dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.98"
+                android:paddingLeft="@dimen/padding_three_dip"
+                android:paddingRight="@dimen/padding_three_dip"
+                android:paddingStart="@dimen/padding_zero_dip"
+                android:paddingEnd="@dimen/padding_zero_dip"
+                android:textSize="@dimen/medium_text"
+                style="@style/spinner_style"/>
+        </LinearLayout>
+
+    </TableLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/line_height_one_dip"
+        android:background="@color/BLACK" />
+    <EditText
+        android:drawableRight="@android:drawable/ic_menu_search"
+        android:id="@+id/et_material_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/lbl_search_by_mat_name"
+        style="@style/EditBookTextEdit"/>
+
+
+
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/line_height_one_dip"
+        android:background="@color/BLACK" />
+    <ScrollView
+        android:id="@+id/scrollLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+         >
+
+        <LinearLayout
+            android:id="@+id/ll_material_container"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

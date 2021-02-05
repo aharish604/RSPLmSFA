@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:baselineAligned="false"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include layout="@layout/swipe_delete_layout"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/view_foreground"
+            style="@style/UtilsItemSpacing"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/WHITE"
+            android:orientation="vertical">
+            a
+
+            <ImageView
+                android:id="@+id/ivSelectedImg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:tint="@color/secondaryDarkColor"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_shopping_cart_black_24dp"
+                tools:layout_editor_absoluteX="16dp" />
+
+            <TextView
+                android:id="@+id/tvMatDesc"
+                style="@style/UtilsSubHeaderStyles"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="TextView"
+                app:layout_constraintEnd_toStartOf="@+id/guideline7"
+                app:layout_constraintStart_toEndOf="@+id/ivSelectedImg"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:layout_editor_absoluteY="11dp" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.60" />
+
+            <LinearLayout
+                android:id="@+id/cBt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center|right"
+                android:orientation="vertical"
+                android:text="TextView"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/guideline7"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <LinearLayout
+                    android:id="@+id/clView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:gravity="right"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:id="@+id/iv_deleted"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:visibility="gone"
+                        android:src="@drawable/ic_delete_black_24dp"/>
+
+                    <com.rspl.sf.msfa.ui.EditextClearButton
+                        android:id="@+id/etQty"
+                        style="@style/UtilsMediumTextStyle"
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:inputType="numberDecimal" />
+
+                    <TextView
+                        android:id="@+id/tvUom"
+                        style="@style/UtilsMediumTextStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/padding_normal_4"
+                        android:layout_marginRight="@dimen/padding_normal_4"
+                        android:gravity="right"
+                        android:text="PC"
+                        tools:layout_editor_absoluteX="317dp"
+                        tools:layout_editor_absoluteY="36dp" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvSelQty"
+                    style="@style/UtilsSubHeaderStyles"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="TextViewdfdfdf dd "
+                    android:textColor="@color/secondaryDarkColor"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/tvMatDesc"
+                    app:layout_constraintTop_toTopOf="parent" />
+                <!-- <Button
+                     android:id="@+id/btAdd"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:text="ADD"
+                     android:visibility="gone" />-->
+            </LinearLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </FrameLayout>
+
+
+    <include layout="@layout/single_line_lay" />
+</LinearLayout>

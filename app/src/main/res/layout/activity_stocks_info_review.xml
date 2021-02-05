@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".visit.StocksInfoReviewActivity">
+    <include layout="@layout/appbar_layout"/>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <include layout="@layout/retailer_detail_header_lay"/>
+
+        <EditText
+            android:id="@+id/editTextDealerStockSearch"
+            style="@style/EditBookTextEdit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableEnd="@android:drawable/ic_menu_search"
+            android:hint="@string/lbl_Search_by_Material_Name"
+            android:textColor="@color/BLACK" />
+
+        <View
+            android:background="@color/BLACK"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"/>
+        <LinearLayout
+            android:id="@+id/linearLayoutHeader"
+            android:background="@color/light_alice_blue"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/textViewRetailBrand"
+                android:layout_width="0dp"
+                android:layout_weight="1.5"
+                android:padding="@dimen/_5sdp"
+                android:text="@string/tvMaterial"
+                android:layout_gravity="center"
+                android:textColor="@color/BLACK"
+                android:gravity="center"
+                android:layout_height="wrap_content" />
+            <View
+                android:background="@color/BLACK"
+                android:layout_width="@dimen/_1sdp"
+                android:layout_height="match_parent"/>
+
+            <TextView
+                android:id="@+id/textViewQuantity"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="@string/qty"
+                android:textColor="@color/BLACK"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_height="wrap_content" />
+            <View
+                android:background="@color/BLACK"
+                android:layout_width="@dimen/_1sdp"
+                android:layout_height="match_parent"/>
+            <TextView
+                android:id="@+id/textViewNos"
+                android:layout_width="0dp"
+                android:layout_weight="0.4"
+                android:text="UOM"
+                android:textColor="@color/BLACK"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_height="wrap_content" />
+
+
+        </LinearLayout>
+        <View
+            android:background="@color/BLACK"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"/>
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/linearLayoutStocks"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewStockInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            </androidx.recyclerview.widget.RecyclerView>
+            <TextView
+                android:id="@+id/textViewNoRecordFound"
+                android:text="@string/lbl_no_records_found"
+                android:gravity="center"
+                android:padding="@dimen/_5sdp"
+                android:textColor="@color/BLACK"
+                android:visibility="invisible"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

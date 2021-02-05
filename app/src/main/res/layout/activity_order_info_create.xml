@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_sales_order_create"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/WHITE"
+    tools:context=".socreate.SalesOrderCreate">
+    <include layout="@layout/appbar_layout"/>
+
+    <include layout="@layout/retailer_detail_header_lay" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/line_height_one_dip"
+        android:background="@color/BLACK" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TableLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/WHITE" >
+            <LinearLayout
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/padding_four_dip" >
+                <LinearLayout
+                    android:layout_width="@dimen/width_zero_dip"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:layout_weight="1"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:paddingStart="@dimen/padding_three_dip"
+                        android:paddingLeft="@dimen/padding_three_dip"
+                        android:paddingRight="@dimen/padding_three_dip"
+                        android:paddingEnd="@dimen/padding_zero_dip"
+                        android:text="@string/lbl_sales_expected_order_to_recevie"
+                        android:textColor="@color/TEXT_COLOR"
+                        android:textSize="@dimen/medium_text" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top|center"
+                        android:paddingLeft="@dimen/padding_three_dip"
+                        android:text="@string/lbl_star"
+                        android:textColor="@color/RED"
+                        android:textSize="@dimen/medium_text" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="@dimen/width_zero_dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.1"
+                    android:layout_gravity="center"
+                    android:text="@string/lbl_semi_colon"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/medium_text" />
+
+
+                <EditText
+                    android:id="@+id/sp_order_info_recevive"
+                    android:layout_width="@dimen/width_zero_dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.85"
+                    android:paddingLeft="@dimen/padding_three_dip"
+                    android:paddingRight="@dimen/padding_three_dip"
+                    android:paddingStart="@dimen/padding_zero_dip"
+                    android:paddingEnd="@dimen/padding_zero_dip"
+                    android:textSize="@dimen/medium_text"
+                    android:gravity="end"
+                    android:inputType="number"
+                    android:maxLines="1"
+                    android:hint="@string/quantity"
+                    style="@style/EditBookTextEdit"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="MT"
+                    android:layout_margin="@dimen/_1sdp"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/padding_four_dip" >
+                <LinearLayout
+                    android:layout_width="@dimen/width_zero_dip"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:layout_weight="1"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:paddingStart="@dimen/padding_three_dip"
+                        android:paddingLeft="@dimen/padding_three_dip"
+                        android:paddingRight="@dimen/padding_three_dip"
+                        android:paddingEnd="@dimen/padding_zero_dip"
+                        android:text="@string/expected_date_of_dispatch"
+                        android:textColor="@color/TEXT_COLOR"
+                        android:textSize="@dimen/medium_text" />
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="@dimen/width_zero_dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.1"
+                    android:layout_gravity="center"
+                    android:text="@string/lbl_semi_colon"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/medium_text" />
+
+
+                <TextView
+                    android:id="@+id/tv_orders_date_date_of_dispatch"
+                    android:layout_width="@dimen/width_zero_dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.98"
+                    android:hint=""
+                    android:maxLength="16"
+                    android:paddingLeft="@dimen/padding_three_dip"
+                    android:paddingRight="@dimen/padding_three_dip"
+                    android:drawableRight="@drawable/ic_calendar"
+                    android:textSize="@dimen/medium_text"
+                    android:gravity="right"
+                    android:paddingEnd="@dimen/padding_ten_dip"
+                   />
+               <!-- <TextView
+
+                    android:layout_width="@dimen/width_zero_dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.25"
+                    android:paddingLeft="@dimen/padding_four_dip"
+                    android:gravity="center_vertical"
+                    android:text=""
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/medium_text" />-->
+            </LinearLayout>
+            <LinearLayout
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/padding_four_dip" >
+
+                <LinearLayout
+                    android:layout_width="@dimen/width_zero_dip"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:layout_weight="1"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:paddingStart="@dimen/padding_three_dip"
+                        android:paddingLeft="@dimen/padding_three_dip"
+                        android:paddingRight="@dimen/padding_three_dip"
+                        android:paddingEnd="@dimen/padding_zero_dip"
+                        android:text="@string/lbl_sales_info_payment_followup"
+                        android:textColor="@color/TEXT_COLOR"
+                        android:textSize="@dimen/medium_text" />
+
+
+                </LinearLayout>
+                <TextView
+                    android:id="@+id/sp_so_ship_to"
+                    android:layout_width="@dimen/width_zero_dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.98"
+                    android:paddingLeft="@dimen/padding_three_dip"
+                    android:paddingRight="@dimen/padding_three_dip"
+                    android:paddingStart="@dimen/padding_zero_dip"
+                    android:paddingEnd="@dimen/padding_zero_dip"
+                    android:textSize="@dimen/medium_text"
+                   />
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:padding="1dp"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@color/GREY"
+               >
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/large_text"
+                    android:maxLength="100"
+                    android:textColor="#000000"
+                    android:layout_weight="1"
+                    android:text="Amount"
+                    android:gravity="center"
+                   />
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/large_text"
+                    android:maxLength="100"
+                    android:textColor="#000000"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:text="Date"
+                   />
+            </LinearLayout>
+
+            <LinearLayout
+                android:padding="1dp"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+
+                <EditText
+                    android:id="@+id/edit_so_info_amount1"
+                    android:layout_width="@dimen/width_zero_dip"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/large_text"
+                    android:maxLength="100"
+                    android:gravity="right"
+                    android:textColor="#000000"
+                    android:layout_weight="1"
+                    android:hint="Amount"
+                    android:inputType="number"
+                    android:maxLines="1"
+                    style="@style/EditBookTextEdit"/>
+                <TextView
+                    android:layout_width="@dimen/width_zero_dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"/>
+                <TextView
+                    android:id="@+id/tv_so_info_date1"
+                    android:layout_width="@dimen/width_zero_dip"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:textSize="@dimen/large_text"
+                    android:maxLength="100"
+                    android:textColor="#000000"
+                    android:drawableRight="@drawable/ic_calendar"
+                    android:layout_weight="1"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:padding="1dp"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+
+                <EditText
+                    android:id="@+id/edit_so_info_amount2"
+                    android:layout_width="@dimen/width_zero_dip"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/large_text"
+                    android:maxLength="100"
+                    android:textColor="#000000"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:hint="Amount"
+                    android:inputType="number"
+                    android:maxLines="1"
+                    style="@style/EditBookTextEdit"/>
+                <TextView
+                    android:layout_width="@dimen/width_zero_dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"/>
+                <TextView
+                    android:id="@+id/tv_so_info_date2"
+                    android:layout_width="@dimen/width_zero_dip"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/large_text"
+                    android:maxLength="100"
+                    android:textColor="#000000"
+                    android:drawableRight="@drawable/ic_calendar"
+                    android:layout_weight="1"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:padding="1dp"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+
+                <EditText
+                    android:id="@+id/edit_so_info_amount3"
+                    android:layout_width="@dimen/width_zero_dip"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/large_text"
+                    android:maxLength="100"
+                    android:textColor="#000000"
+                    android:layout_weight="1"
+                    android:hint="Amount"
+                    android:gravity="right"
+                    android:inputType="number"
+                    android:maxLines="1"
+                    style="@style/EditBookTextEdit"/>
+                <TextView
+                    android:layout_width="@dimen/width_zero_dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"/>
+                <TextView
+                    android:id="@+id/tv_so_info_date3"
+                    android:layout_width="@dimen/width_zero_dip"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/large_text"
+                    android:maxLength="100"
+                    android:textColor="#000000"
+                    android:drawableRight="@drawable/ic_calendar"
+                    android:layout_weight="1"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:padding="1dp"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+
+                <EditText
+                    android:id="@+id/edit_so_info_amount4"
+                    android:layout_width="@dimen/width_zero_dip"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/large_text"
+                    android:maxLength="100"
+                    android:textColor="#000000"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:hint="Amount"
+                    android:inputType="number"
+                    android:maxLines="1"
+                    style="@style/EditBookTextEdit"
+                    />
+                <TextView
+                    android:layout_width="@dimen/width_zero_dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"/>
+                <TextView
+                    android:id="@+id/tv_so_info_date4"
+                    android:layout_width="@dimen/width_zero_dip"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/large_text"
+                    android:maxLength="100"
+                    android:textColor="#000000"
+                    android:drawableRight="@drawable/ic_calendar"
+                    android:layout_weight="1"
+                    />
+            </LinearLayout>
+        </TableLayout>
+    </ScrollView>
+
+</LinearLayout>

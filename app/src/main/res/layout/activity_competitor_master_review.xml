@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".visit.CompetitorMasterReviewActivity">
+    <include layout="@layout/appbar_layout"/>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <include layout="@layout/retailer_detail_header_lay"/>
+        <View
+            android:layout_width="match_parent"
+            android:background="@color/BLACK"
+            android:layout_height="1dp"/>
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/linearLayoutStocks"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewCompetitor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            </androidx.recyclerview.widget.RecyclerView>
+            <TextView
+                android:id="@+id/textViewNoRecordFound"
+                android:text="@string/lbl_no_records_found"
+                android:gravity="center"
+                android:padding="@dimen/_5sdp"
+                android:textColor="@color/BLACK"
+                android:visibility="invisible"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

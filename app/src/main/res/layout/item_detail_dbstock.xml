@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+
+
+        <LinearLayout
+            android:layout_weight="1.5"
+            android:layout_width="@dimen/width_zero_dip"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:id="@+id/item_detail_dbstk_batch"
+                android:layout_weight="1"
+                android:textColor="@color/BLACK"
+                android:text="xcxc" />
+
+            <TextView
+                android:text="xcxc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/item_detail_dbstk_mfd"
+                android:textColor="@color/BLACK"
+                android:gravity="left"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_weight="1.5"
+            android:layout_width="@dimen/width_zero_dip"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/item_dbstk_mrp"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|center_vertical"
+
+                android:text="@string/lbl_MRP"
+                android:textColor="@color/BLACK"
+                android:textSize="@dimen/medium_text" />
+
+            <TextView
+                android:id="@+id/item_dbstk_ret_price"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|center_vertical"
+                android:text="@string/lbl_ret_price"
+                android:textColor="@color/BLACK"
+                android:textSize="@dimen/medium_text" />
+        </LinearLayout>
+
+
+                <TextView
+                    android:text="fffff"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/item_detail_dbstk_quantity"
+                    android:textColor="@color/BLACK"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="right"
+                    android:paddingRight="@dimen/padding_four_dip"
+                    android:layout_weight="1" />
+</LinearLayout>

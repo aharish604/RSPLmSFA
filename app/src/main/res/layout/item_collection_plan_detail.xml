@@ -1,0 +1,446 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cvItem"
+    style="@style/CardViewStyle"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/padding_normal_2"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
+            android:id="@+id/llName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:paddingBottom="@dimen/padding_normal_16"
+                android:paddingTop="@dimen/padding_normal_16">
+
+                <TextView
+                    android:id="@+id/tvPlanName"
+                    style="@style/UtilsMediumTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="56dp"
+                    android:layout_marginStart="56dp"
+                    android:text="@string/ll_plan_name"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="0dp"
+                    android:visibility="gone"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_store_mall_directory_black_24dp" />
+
+                <TextView
+                    android:id="@+id/tvPlanNameDesc"
+                    style="@style/SubItemTextStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="56dp"
+                    android:layout_marginRight="0dp"
+                    android:layout_marginStart="56dp"
+                    android:layout_marginTop="4dp"
+                    android:text="RK"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvPlanName" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="56dp"
+                android:orientation="vertical">
+
+                <include layout="@layout/single_line_lay" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+        android:id="@+id/llActivity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:paddingBottom="@dimen/padding_normal_16"
+            android:paddingTop="@dimen/padding_normal_16">
+
+            <TextView
+                android:id="@+id/tvActivity"
+                style="@style/UtilsMediumTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="18dp"
+                android:layout_marginLeft="56dp"
+                android:text="@string/ll_activity_name"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="0dp"
+                android:visibility="gone"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_store_mall_directory_black_24dp" />
+
+            <TextView
+                android:id="@+id/tvPlanActivityDesc"
+                style="@style/SubItemTextStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="56dp"
+                android:layout_marginRight="0dp"
+                android:layout_marginStart="56dp"
+                android:layout_marginTop="4dp"
+                android:text="RK"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvActivity" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="56dp"
+            android:orientation="vertical">
+
+            <include layout="@layout/single_line_lay" />
+        </LinearLayout>
+    </LinearLayout>
+        <LinearLayout
+            android:id="@+id/llActivityActual"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:paddingBottom="@dimen/padding_normal_16"
+                android:paddingTop="@dimen/padding_normal_16">
+
+                <TextView
+                    android:id="@+id/tvActivityActual"
+                    style="@style/UtilsMediumTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="56dp"
+                    android:layout_marginStart="56dp"
+                    android:text="@string/ll_actual_name"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="0dp"
+                    android:visibility="gone"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_store_mall_directory_black_24dp" />
+
+                <TextView
+                    android:id="@+id/tvActualActivityDesc"
+                    style="@style/SubItemTextStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="56dp"
+                    android:layout_marginRight="0dp"
+                    android:layout_marginStart="56dp"
+                    android:layout_marginTop="4dp"
+                    android:text=""
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvActivityActual" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="56dp"
+                android:orientation="vertical">
+
+                <include layout="@layout/single_line_lay" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/llRemarks"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:paddingBottom="@dimen/padding_normal_16"
+            android:paddingTop="@dimen/padding_normal_16">
+
+            <TextView
+                android:id="@+id/tvRemarks"
+                style="@style/UtilsMediumTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="56dp"
+                android:layout_marginStart="56dp"
+                android:text="@string/ll_remarks"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="0dp"
+                    android:visibility="gone"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_store_mall_directory_black_24dp" />
+
+                <TextView
+                    android:id="@+id/tvPlanRemarksDesc"
+                    style="@style/SubItemTextStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="56dp"
+                    android:layout_marginRight="0dp"
+                    android:layout_marginStart="56dp"
+                    android:layout_marginTop="4dp"
+                    android:text="Textview "
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvRemarks" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+             <LinearLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_marginLeft="56dp"
+                 android:orientation="vertical">
+
+                 <include layout="@layout/single_line_lay" />
+             </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llActivity1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:paddingBottom="@dimen/padding_normal_16"
+                android:paddingTop="@dimen/padding_normal_16">
+
+                <TextView
+                    android:id="@+id/tvActivity1"
+                    style="@style/UtilsMediumTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="18dp"
+                    android:layout_marginLeft="56dp"
+                    android:text="@string/ll_activity_name"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="0dp"
+                    android:visibility="gone"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_store_mall_directory_black_24dp" />
+
+                <TextView
+                    android:id="@+id/tvPlanActivityDesc1"
+                    style="@style/SubItemTextStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="56dp"
+                    android:layout_marginRight="0dp"
+                    android:layout_marginStart="56dp"
+                    android:layout_marginTop="4dp"
+                    android:text="RK"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvActivity1" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="56dp"
+                android:orientation="vertical">
+
+                <include layout="@layout/single_line_lay" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/llActivityActual1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:paddingBottom="@dimen/padding_normal_16"
+                android:paddingTop="@dimen/padding_normal_16">
+
+                <TextView
+                    android:id="@+id/tvActivityActual1"
+                    style="@style/UtilsMediumTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="56dp"
+                    android:layout_marginStart="56dp"
+                    android:text="@string/ll_actual_name"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="0dp"
+                    android:visibility="gone"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_store_mall_directory_black_24dp" />
+
+                <TextView
+                    android:id="@+id/tvActualActivityDesc1"
+                    style="@style/SubItemTextStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="56dp"
+                    android:layout_marginRight="0dp"
+                    android:layout_marginStart="56dp"
+                    android:layout_marginTop="4dp"
+                    android:text="Textview "
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvActivityActual1" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!-- <LinearLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_marginLeft="56dp"
+                 android:orientation="vertical">
+
+                 <include layout="@layout/single_line_lay" />
+             </LinearLayout>-->
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/llRemarks1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:paddingBottom="@dimen/padding_normal_16"
+                android:paddingTop="@dimen/padding_normal_16">
+
+                <TextView
+                    android:id="@+id/tvRemarks1"
+                    style="@style/UtilsMediumTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="56dp"
+                    android:layout_marginStart="56dp"
+                    android:text="@string/ll_remarks"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="0dp"
+                    android:visibility="gone"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_store_mall_directory_black_24dp" />
+
+                <TextView
+                    android:id="@+id/tvPlanRemarksDesc1"
+                    style="@style/SubItemTextStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="56dp"
+                    android:layout_marginRight="0dp"
+                    android:layout_marginStart="56dp"
+                    android:layout_marginTop="4dp"
+                    android:text="Textview "
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvRemarks1" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+           <!-- <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="56dp"
+                android:orientation="vertical">
+
+                <include layout="@layout/single_line_lay" />
+            </LinearLayout>-->
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
+

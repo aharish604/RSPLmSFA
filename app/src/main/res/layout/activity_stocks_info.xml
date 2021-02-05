@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".visit.StocksInfoActivity">
+    <include layout="@layout/appbar_layout"/>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <include layout="@layout/retailer_detail_header_lay"/>
+        <EditText
+            android:drawableEnd="@android:drawable/ic_menu_search"
+            android:id="@+id/editTextDealerStockSearch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/lbl_Search_by_Material_Name"
+            android:textColor="@color/BLACK"
+            style="@style/EditBookTextEdit"/>
+    <View
+        android:background="@color/BLACK"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"/>
+    <LinearLayout
+        android:id="@+id/linearLayoutHeader"
+        android:background="@color/light_alice_blue"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/textViewRetailBrand"
+            android:layout_width="0dp"
+            android:layout_weight="1.5"
+            android:padding="@dimen/_5sdp"
+            android:text="@string/tvMaterial"
+            android:layout_gravity="center"
+            android:textColor="@color/BLACK"
+            android:gravity="center"
+            android:layout_height="wrap_content" />
+        <View
+            android:background="@color/BLACK"
+            android:layout_width="@dimen/_1sdp"
+            android:layout_height="match_parent"/>
+        <TextView
+            android:id="@+id/textViewRetailHDPE"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="@string/msg_as_on"
+            android:textColor="@color/BLACK"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_height="wrap_content" />
+        <View
+            android:background="@color/BLACK"
+            android:layout_width="@dimen/_1sdp"
+            android:layout_height="match_parent"/>
+        <TextView
+            android:id="@+id/textViewQuantity"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="@string/qty"
+            android:textColor="@color/BLACK"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_height="wrap_content" />
+        <View
+            android:background="@color/BLACK"
+            android:layout_width="@dimen/_1sdp"
+            android:layout_height="match_parent"/>
+        <TextView
+            android:id="@+id/textViewNos"
+            android:layout_width="0dp"
+            android:layout_weight="0.4"
+            android:text="UOM"
+            android:textColor="@color/BLACK"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_height="wrap_content" />
+        <View
+            android:background="@android:color/transparent"
+            android:padding="@dimen/_3sdp"
+            android:layout_width="0dp"
+            android:layout_weight="0.3"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+    <View
+        android:background="@color/BLACK"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"/>
+        <RelativeLayout
+            android:orientation="vertical"
+            android:id="@+id/linearLayoutStocks"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewStockInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusableInTouchMode="true"
+                android:descendantFocusability="beforeDescendants">
+            </androidx.recyclerview.widget.RecyclerView>
+            <TextView
+                android:id="@+id/textViewNoRecordFound"
+                android:layout_below="@+id/recyclerViewStockInfo"
+                android:text="@string/lbl_no_records_found"
+                android:gravity="center"
+                android:padding="@dimen/_5sdp"
+                android:textColor="@color/BLACK"
+                android:visibility="invisible"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relativeLayoutMaterials"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewMaterialInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            </androidx.recyclerview.widget.RecyclerView>
+            <TextView
+                android:layout_alignParentTop="true"
+                android:id="@+id/textViewNoRecordFoundMaterial"
+                android:text="@string/lbl_no_records_found"
+                android:gravity="center"
+                android:padding="@dimen/_5sdp"
+                android:textColor="@color/BLACK"
+                android:visibility="invisible"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <LinearLayout
+                android:id="@+id/linearLayoutButtons"
+                android:layout_alignParentBottom="true"
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <Button
+                    android:id="@+id/buttonOk"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="@string/ok"
+                    android:layout_height="match_parent" />
+                <Button
+                    android:id="@+id/buttonCancel"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="@string/cancel"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+        </RelativeLayout>
+
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvItem"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/padding_normal_4"
+        android:layout_marginLeft="@dimen/padding_normal_8"
+        android:layout_marginRight="@dimen/padding_normal_8"
+        android:layout_marginTop="@dimen/padding_normal_4"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            style="@style/UtilsItemSpacing">
+
+            <TextView
+                android:id="@+id/tvName"
+                style="@style/UtilsSubHeaderStyles"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/clView"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvInvoiceAge"
+                style="@style/UtilsMediumTextStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:text="TextView"
+                android:visibility="gone"
+                app:layout_constraintRight_toRightOf="parent"
+                tools:layout_editor_absoluteY="16dp" />
+
+            <TextView
+                android:id="@+id/tvDesc"
+                style="@style/UtilsMediumTextStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="4dp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/clView"
+                app:layout_constraintTop_toBottomOf="@+id/tvName" />
+
+            <TextView
+                android:id="@+id/tvRemarks"
+                style="@style/UtilsMediumTextStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="4dp"
+                android:text="good"
+                android:visibility="gone"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/clView"
+                app:layout_constraintTop_toBottomOf="@+id/tvDesc" />
+
+            <!-- <TextView
+                 android:id="@+id/tvInvoiceAmt"
+                 style="@style/UtilsMediumTextStyle"
+                 android:layout_width="0dp"
+                 android:layout_height="wrap_content"
+                 android:layout_marginLeft="4dp"
+                 android:layout_marginRight="0dp"
+                 android:layout_marginTop="0dp"
+                 android:gravity="right"
+                 android:text="TextView"
+                 app:layout_constraintLeft_toRightOf="@+id/tvDesc"
+                 app:layout_constraintRight_toRightOf="parent"
+                 app:layout_constraintTop_toTopOf="@+id/tvDesc" />-->
+
+            <TextView
+                android:id="@+id/tvMaterialName"
+                style="@style/UtilsMediumTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:visibility="gone"
+                app:layout_constraintTop_toTopOf="@+id/tvDesc"
+                tools:layout_editor_absoluteX="352dp" />
+
+            <TextView
+                android:id="@+id/tv_so_qty"
+                style="@style/UtilsMediumTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="0dp"
+                android:text="TextView"
+                android:textColor="@color/nav_text_color"
+                android:visibility="gone"
+                app:layout_constraintHorizontal_bias="0.502"
+                app:layout_constraintLeft_toRightOf="@+id/tvDesc"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tvDesc" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clView"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/tvDate"
+                    style="@android:style/TextAppearance.Large"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLength="2"
+                    android:text="78"
+                    android:textSize="34sp"
+                    android:textStyle="normal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvDay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mar"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvDate" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!-- <include layout="@layout/single_line_lay" />-->
+    </androidx.cardview.widget.CardView>
+
+
+</LinearLayout>

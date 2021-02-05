@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:padding="15dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1.5"
+            android:layout_height="40dp"
+            android:text="Enter Quantity :"
+            android:textSize="22sp"
+            android:gravity="start"
+            android:layout_gravity="start"
+            android:textColor="@color/BLACK"
+            android:textAlignment="textStart" />
+        <EditText
+            android:id="@+id/etd_qnty"
+            android:layout_width="0dp"
+            android:layout_weight="0.5"
+            android:inputType="number"
+            android:layout_height="35dp"
+            android:layout_marginTop="0dp"
+            android:hint="Qty"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/border_edit_qty"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp">
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/secondaryColor"
+            android:text="Cancel"
+            android:textColor="@color/WHITE"
+            android:layout_marginRight="10dp"
+            android:textSize="15sp"
+            android:layout_weight="1"
+            android:id="@+id/btn_cancel"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:backgroundTint="@color/secondaryColor"
+            android:text="Submit"
+            android:textColor="@color/WHITE"
+            android:textSize="15sp"
+            android:layout_weight="1"
+            android:id="@+id/btn_submit"/>
+    </LinearLayout>
+</LinearLayout>

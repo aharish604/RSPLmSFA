@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".visit.StocksInfoActivity">
+    <include layout="@layout/appbar_layout"/>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:paddingBottom="4dp"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/ll_inv_status"
+            android:orientation="horizontal"
+            android:layout_gravity="center_vertical">
+            <ImageView
+                android:id="@+id/icon1"
+                android:padding="4dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/padding_six_dip"
+                android:layout_marginLeft="@dimen/padding_six_dip"
+                android:src="@drawable/ic_retailer"
+                android:contentDescription="@null"/>
+            <LinearLayout
+                android:layout_weight="1.2"
+                android:layout_width="0dp"
+                android:gravity="center_vertical"
+                android:layout_gravity="center_vertical"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/textViewRetailerName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="bottom"
+                    android:text="Retailer Name"
+                    android:textColor="@color/header_tile_text_color"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/medium_text" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:visibility="gone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/title_UID"
+                        android:textColor="@color/header_tile_text_color"
+                        android:textSize="@dimen/medium_text" />
+                    <TextView
+                        android:visibility="gone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/str_colon"
+                        android:textColor="@color/header_tile_text_color"
+                        android:textSize="@dimen/medium_text" />
+                    <TextView
+                        android:id="@+id/textViewRetailerNumber"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Od -15362"
+                        android:textColor="@color/header_tile_text_color"
+                        android:textSize="@dimen/medium_text" />
+                </LinearLayout>
+            </LinearLayout>
+            <Spinner
+                android:layout_gravity="center_vertical"
+                android:layout_margin="@dimen/margin_four_dip"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/spinnerCompetitorMaster"
+                style="@style/spinner_style" />
+        </LinearLayout>
+        <EditText
+            android:drawableEnd="@android:drawable/ic_menu_search"
+            android:id="@+id/editTextCompetitorSearch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/lbl_Search_by_Material_Name"
+            android:textColor="@color/BLACK"
+            style="@style/EditBookTextEdit"/>
+        <View
+            android:background="@color/BLACK"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"/>
+
+        <RelativeLayout
+            android:orientation="vertical"
+            android:id="@+id/linearLayoutStocks"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewCompetitor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusableInTouchMode="true"
+                android:descendantFocusability="beforeDescendants">
+            </androidx.recyclerview.widget.RecyclerView>
+            <TextView
+                android:id="@+id/textViewNoRecordFound"
+                android:layout_below="@+id/recyclerViewCompetitor"
+                android:text="@string/lbl_no_records_found"
+                android:gravity="center"
+                android:padding="@dimen/_5sdp"
+                android:textColor="@color/BLACK"
+                android:visibility="invisible"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

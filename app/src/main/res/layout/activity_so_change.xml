@@ -1,0 +1,868 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/WHITE">
+    <include layout="@layout/appbar_layout"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/WHITE"
+        android:orientation="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <include layout="@layout/retailer_detail_header_lay" />
+
+        <include layout="@layout/single_line_lay" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_five_dip">
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/WHITE"
+                android:stretchColumns="2">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/bg_title"
+                    android:orientation="horizontal" />
+
+                <TableRow
+                    android:padding="@dimen/_5sdp">
+
+                    <TextView
+                        android:layout_column="0"
+                        android:gravity="left"
+                        android:paddingLeft="@dimen/padding_three_dip"
+                        android:text="@string/tvOrderType"
+                        android:textColor="@color/BLACK"
+                        android:textSize="@dimen/fifteen_sp" />
+
+                    <TextView
+                        android:layout_column="1"
+                        android:gravity="left"
+                        android:text="@string/star"
+                        android:textColor="@color/text_red"
+                        android:textSize="@dimen/fifteen_sp" />
+
+                    <Spinner
+                        android:id="@+id/spOrderType"
+                        style="@style/spinner_style"
+                        android:layout_width="@dimen/width_zero_dip"
+                        android:layout_column="2"
+                        android:layout_marginRight="@dimen/padding_five_dip"
+                        android:layout_weight="1"
+                        android:paddingLeft="@dimen/padding_five_dip"
+                        android:paddingRight="12dp" />
+                </TableRow>
+
+
+                <TableRow
+                    android:padding="@dimen/_5sdp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_column="0"
+                        android:gravity="left"
+                        android:paddingLeft="@dimen/padding_three_dip"
+                        android:text="@string/tvSalesArea"
+                        android:textColor="@color/BLACK"
+                        android:textSize="@dimen/fifteen_sp" />
+
+                    <TextView
+                        android:layout_column="1"
+                        android:width="@dimen/width_twenty"
+                        android:gravity="left"
+                        android:text="@string/star"
+                        android:textColor="@color/text_red"
+                        android:textSize="@dimen/fifteen_sp" />
+
+                    <Spinner
+                        android:id="@+id/spSalesArea"
+                        style="@style/spinner_style"
+                        android:layout_width="@dimen/width_zero_dip"
+                        android:layout_column="2"
+                        android:layout_marginRight="@dimen/margin_five_dip"
+                        android:layout_weight="1"
+                        android:paddingLeft="@dimen/padding_five_dip"
+                        android:paddingRight="12dp"
+                        android:text="" />
+                </TableRow>
+
+
+                <TableRow
+                    android:padding="@dimen/_5sdp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_column="0"
+                        android:gravity="left"
+                        android:paddingLeft="@dimen/padding_three_dip"
+                        android:text="@string/tvSoldTo"
+                        android:textColor="@color/BLACK"
+                        android:textSize="@dimen/fifteen_sp"
+                        tools:ignore="RtlSymmetry" />
+
+                    <TextView
+                        android:layout_column="1"
+                        android:width="@dimen/width_twenty_dip"
+                        android:gravity="left"
+                        android:text="@string/star"
+                        android:textColor="@color/text_red"
+                        android:textSize="@dimen/fifteen_sp" />
+
+                    <LinearLayout
+                        android:layout_width="@dimen/width_zero_dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tvSoldToValue"
+                            android:layout_width="@dimen/width_zero_dip"
+                            android:layout_height="wrap_content"
+                            android:layout_column="2"
+                            android:layout_weight="0.80"
+                            android:gravity="left"
+                            android:paddingLeft="@dimen/padding_five_dip"
+
+                            android:text=""
+                            android:textColor="@color/BLACK"
+                            android:textSize="@dimen/fifteen_sp" />
+
+                        <ImageView
+                            android:id="@+id/btSoldTo"
+                            android:layout_width="@dimen/width_zero_dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.20"
+                            android:visibility="gone" />
+                    </LinearLayout>
+                </TableRow>
+
+
+                <TableRow
+                    android:padding="@dimen/_5sdp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_column="0"
+                        android:gravity="left"
+                        android:paddingLeft="@dimen/padding_three_dip"
+                        android:text="@string/lbl_shipping_type"
+                        android:textColor="@color/BLACK"
+                        android:textSize="@dimen/fifteen_sp" />
+
+                    <TextView
+                        android:layout_column="1"
+                        android:width="@dimen/width_twenty"
+                        android:gravity="left"
+                        android:text="@string/star"
+                        android:textColor="@color/text_red"
+                        android:textSize="@dimen/fifteen_sp" />
+
+                    <Spinner
+                        android:id="@+id/sp_shipping_point"
+                        style="@style/spinner_style"
+                        android:layout_width="@dimen/width_zero_dip"
+                        android:layout_column="2"
+                        android:layout_marginRight="@dimen/margin_five_dip"
+                        android:layout_weight="1"
+                        android:paddingLeft="@dimen/padding_five_dip"
+                        android:paddingRight="12dp"
+                        android:text="" />
+                </TableRow>
+
+
+                <TableRow
+                    android:padding="@dimen/_5sdp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_column="0"
+                        android:gravity="left"
+                        android:paddingLeft="@dimen/padding_three_dip"
+                        android:text="@string/tvShipTo"
+                        android:textColor="@color/BLACK"
+                        android:textSize="@dimen/fifteen_sp" />
+
+                    <TextView
+                        android:layout_column="1"
+                        android:width="@dimen/width_twenty_dip"
+                        android:gravity="left"
+                        android:text="@string/star"
+                        android:textColor="@color/text_red"
+                        android:textSize="@dimen/fifteen_sp" />
+
+                    <Spinner
+                        android:id="@+id/sp_ship_to"
+                        style="@style/spinner_style"
+                        android:layout_width="@dimen/width_zero_dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.75"
+                        android:paddingEnd="@dimen/padding_zero_dip"
+                        android:paddingLeft="@dimen/padding_five_dip"
+                        android:paddingRight="12dp"
+                        android:paddingStart="@dimen/padding_zero_dip"
+                        android:textSize="@dimen/medium_text"
+                        android:visibility="gone" />
+
+                    <LinearLayout
+                        android:layout_width="@dimen/width_zero_dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/tvShipToValue"
+                            android:layout_width="@dimen/width_zero_dip"
+                            android:layout_height="wrap_content"
+                            android:layout_column="2"
+                            android:layout_weight="0.80"
+                            android:gravity="left"
+                            android:paddingLeft="@dimen/padding_five_dip"
+                            android:text=""
+                            android:textColor="@color/BLACK"
+                            android:textSize="@dimen/fifteen_sp" />
+
+                        <ImageView
+                            android:id="@+id/btShipTo"
+                            android:layout_width="@dimen/width_zero_dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.20"/>
+                    </LinearLayout>
+                </TableRow>
+
+
+                <TableRow
+                    android:padding="@dimen/_5sdp"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_column="0"
+                        android:gravity="left"
+                        android:paddingLeft="@dimen/padding_three_dip"
+                        android:text="@string/lbl_forwading_agent"
+                        android:textColor="@color/BLACK"
+                        android:textSize="@dimen/fifteen_sp" />
+
+                    <TextView
+                        android:layout_column="1"
+                        android:width="@dimen/width_twenty_dip"
+                        android:gravity="left"
+                        android:text="@string/star"
+                        android:textColor="@color/text_red"
+                        android:textSize="@dimen/fifteen_sp" />
+
+
+                    <LinearLayout
+
+                        android:layout_width="@dimen/width_zero_dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/tvForwardingAgent"
+                            android:layout_width="@dimen/width_zero_dip"
+                            android:layout_height="wrap_content"
+                            android:layout_column="2"
+                            android:layout_weight="0.80"
+                            android:gravity="left"
+                            android:paddingLeft="@dimen/padding_five_dip"
+                            android:text=""
+                            android:textColor="@color/BLACK"
+                            android:textSize="@dimen/fifteen_sp" />
+
+                        <ImageView
+                            android:id="@+id/btForwardingAgent"
+                            android:layout_width="@dimen/width_zero_dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.20"/>
+                    </LinearLayout>
+                </TableRow>
+
+                <TableRow
+                    android:padding="@dimen/_5sdp">
+
+                    <TextView
+                        android:layout_column="0"
+                        android:gravity="left"
+                        android:paddingLeft="@dimen/padding_three_dip"
+                        android:text="@string/tvPlant"
+                        android:textColor="@color/BLACK"
+                        android:textSize="@dimen/fifteen_sp" />
+
+                    <TextView
+                        android:layout_column="1"
+                        android:gravity="left"
+                        android:text="@string/star"
+                        android:textColor="@color/text_red"
+                        android:textSize="@dimen/fifteen_sp" />
+
+                    <Spinner
+                        android:id="@+id/spPlant"
+                        style="@style/spinner_style"
+                        android:layout_width="@dimen/width_zero_dip"
+                        android:layout_height="wrap_content"
+                        android:layout_column="2"
+                        android:layout_marginRight="@dimen/margin_five_dip"
+                        android:layout_weight="1"
+                        android:paddingLeft="@dimen/padding_five_dip"
+                        android:paddingRight="12dp" />
+                </TableRow>
+
+
+                <TableRow
+                    android:padding="@dimen/_5sdp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_column="0"
+                        android:gravity="left"
+                        android:paddingLeft="@dimen/padding_three_dip"
+                        android:text="@string/tvIncoTerm"
+                        android:textColor="@color/BLACK"
+                        android:textSize="@dimen/fifteen_sp" />
+
+                    <TextView
+                        android:layout_column="1"
+                        android:width="@dimen/width_twenty_dip"
+                        android:gravity="left"
+                        android:text=""
+                        android:textColor="@color/text_red"
+                        android:textSize="@dimen/fifteen_sp" />
+
+                    <Spinner
+                        android:id="@+id/spIncoTerm"
+                        style="@style/spinner_style"
+                        android:layout_width="@dimen/width_zero_dip"
+                        android:layout_column="2"
+                        android:layout_marginRight="@dimen/margin_five_dip"
+                        android:layout_weight="1"
+                        android:paddingLeft="@dimen/padding_five_dip"
+                        android:paddingRight="12dp"
+                        android:text="" />
+                </TableRow>
+
+                <TableRow
+                    android:padding="@dimen/_5sdp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_column="0"
+                        android:gravity="left"
+                        android:paddingLeft="@dimen/padding_three_dip"
+                        android:text="@string/lbl_incoterm1"
+                        android:textColor="@color/BLACK"
+                        android:textSize="@dimen/fifteen_sp" />
+
+                    <TextView
+                        android:layout_column="1"
+                        android:width="@dimen/width_twenty_dip"
+                        android:gravity="left"
+                        android:text=""
+                        android:textColor="@color/text_red"
+                        android:textSize="@dimen/fifteen_sp" />
+
+                    <EditText
+                        android:id="@+id/et_incoterms2"
+                        style="@style/EditBookTextEdit"
+                        android:layout_width="@dimen/width_zero_dip"
+                        android:layout_column="2"
+                        android:layout_marginRight="@dimen/margin_five_dip"
+                        android:layout_weight="1"
+                        android:inputType="text"
+                        android:maxLength="28"
+                        android:paddingLeft="@dimen/padding_five_dip"
+                        android:text=""
+                        android:textSize="@dimen/fifteen_sp" />
+                </TableRow>
+
+
+                <TableRow android:visibility="gone"
+                    android:padding="@dimen/_5sdp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_column="0"
+                        android:gravity="left"
+                        android:paddingLeft="@dimen/padding_three_dip"
+                        android:text="@string/lbl_sales_district"
+                        android:textColor="@color/BLACK"
+                        android:textSize="@dimen/fifteen_sp" />
+
+                    <TextView
+                        android:layout_column="1"
+                        android:width="@dimen/width_twenty_dip"
+                        android:gravity="left"
+                        android:text="@string/star"
+                        android:textColor="@color/text_red"
+                        android:textSize="@dimen/fifteen_sp" />
+
+
+                    <LinearLayout
+
+                        android:layout_width="@dimen/width_zero_dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/tvSalesDistrict"
+                            android:layout_width="@dimen/width_zero_dip"
+                            android:layout_height="wrap_content"
+                            android:layout_column="2"
+                            android:layout_weight="0.80"
+                            android:gravity="left"
+                            android:paddingLeft="@dimen/padding_five_dip"
+                            android:text=""
+                            android:textColor="@color/BLACK"
+                            android:textSize="@dimen/fifteen_sp" />
+
+                        <ImageView
+                            android:id="@+id/btSalesDistrict"
+                            android:layout_width="@dimen/width_zero_dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.20" />
+                    </LinearLayout>
+                </TableRow>
+
+
+                <TableRow android:visibility="gone"
+                    android:padding="@dimen/_5sdp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_column="0"
+                        android:gravity="left"
+                        android:paddingLeft="@dimen/padding_three_dip"
+                        android:text="@string/lbl_route"
+                        android:textColor="@color/BLACK"
+                        android:textSize="@dimen/fifteen_sp" />
+
+                    <TextView
+                        android:layout_column="1"
+                        android:width="@dimen/width_twenty_dip"
+                        android:gravity="left"
+                        android:text="@string/star"
+                        android:textColor="@color/text_red"
+                        android:textSize="@dimen/fifteen_sp" />
+
+
+                    <LinearLayout
+
+                        android:layout_width="@dimen/width_zero_dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/tvRoute"
+                            android:layout_width="@dimen/width_zero_dip"
+                            android:layout_height="wrap_content"
+                            android:layout_column="2"
+                            android:layout_weight="0.80"
+                            android:gravity="left"
+                            android:paddingLeft="@dimen/padding_five_dip"
+                            android:text=""
+                            android:textColor="@color/BLACK"
+                            android:textSize="@dimen/fifteen_sp" />
+
+                        <ImageView
+                            android:id="@+id/btRoute"
+                            android:layout_width="@dimen/width_zero_dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.20" />
+                    </LinearLayout>
+                </TableRow>
+
+
+                <TableRow android:visibility="gone"
+                    android:padding="@dimen/_5sdp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_column="0"
+                        android:gravity="left"
+                        android:paddingLeft="@dimen/padding_three_dip"
+                        android:text="@string/lbl_material_fright"
+                        android:textColor="@color/BLACK"
+                        android:textSize="@dimen/fifteen_sp" />
+
+                    <TextView
+                        android:layout_column="1"
+                        android:width="@dimen/width_twenty_dip"
+                        android:gravity="left"
+                        android:text=""
+                        android:textColor="@color/text_red"
+                        android:textSize="@dimen/fifteen_sp" />
+
+                    <Spinner
+                        android:id="@+id/spMaterialFright"
+                        style="@style/spinner_style"
+                        android:layout_width="@dimen/width_zero_dip"
+                        android:layout_height="wrap_content"
+                        android:layout_column="2"
+                        android:layout_marginRight="@dimen/margin_five_dip"
+                        android:layout_weight="1"
+                        android:minHeight="40dp"
+                        android:paddingLeft="@dimen/padding_five_dip"
+                        android:paddingRight="12dp"
+                        android:text="" />
+                </TableRow>
+
+
+                <TableRow android:visibility="gone"
+                    android:padding="@dimen/_5sdp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_column="0"
+                        android:gravity="left"
+                        android:paddingLeft="@dimen/padding_three_dip"
+                        android:text="@string/lbl_means_transp"
+                        android:textColor="@color/BLACK"
+                        android:textSize="@dimen/fifteen_sp" />
+
+                    <TextView
+                        android:layout_column="1"
+                        android:width="@dimen/width_twenty_dip"
+                        android:gravity="left"
+                        android:text=""
+                        android:textColor="@color/text_red"
+                        android:textSize="@dimen/fifteen_sp" />
+
+                    <Spinner
+                        android:id="@+id/spMeanstransp"
+                        style="@style/spinner_style"
+                        android:layout_width="@dimen/width_zero_dip"
+                        android:layout_height="wrap_content"
+                        android:layout_column="2"
+                        android:layout_marginRight="@dimen/margin_five_dip"
+                        android:layout_weight="1"
+                        android:minHeight="40dp"
+                        android:paddingLeft="@dimen/padding_five_dip"
+                        android:paddingRight="12dp"
+                        android:text="" />
+                </TableRow>
+
+
+                <TableRow android:visibility="gone"
+                    android:padding="@dimen/_5sdp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_column="0"
+                        android:gravity="left"
+                        android:paddingLeft="@dimen/padding_three_dip"
+                        android:text="@string/lbl_storage_loc"
+                        android:textColor="@color/BLACK"
+                        android:textSize="@dimen/fifteen_sp" />
+
+                    <TextView
+                        android:layout_column="1"
+                        android:width="@dimen/width_twenty_dip"
+                        android:gravity="left"
+                        android:text=""
+                        android:textColor="@color/text_red"
+                        android:textSize="@dimen/fifteen_sp" />
+
+                    <Spinner
+                        android:id="@+id/spStorageLoc"
+                        style="@style/spinner_style"
+                        android:layout_width="@dimen/width_zero_dip"
+                        android:layout_height="wrap_content"
+                        android:layout_column="2"
+                        android:layout_marginRight="@dimen/margin_five_dip"
+                        android:layout_weight="1"
+                        android:minHeight="40dp"
+                        android:paddingLeft="@dimen/padding_five_dip"
+                        android:paddingRight="12dp"
+                        android:text="" />
+                </TableRow>
+
+
+                <TableRow android:visibility="gone"
+                    android:padding="@dimen/_5sdp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_column="0"
+                        android:gravity="left"
+                        android:paddingLeft="@dimen/padding_three_dip"
+                        android:text="@string/lbl_processing_field"
+                        android:textColor="@color/BLACK"
+                        android:textSize="@dimen/fifteen_sp" />
+
+                    <TextView
+                        android:layout_column="1"
+                        android:width="@dimen/width_twenty_dip"
+                        android:gravity="left"
+                        android:text=""
+                        android:textColor="@color/text_red"
+                        android:textSize="@dimen/fifteen_sp" />
+
+                    <Spinner
+                        android:id="@+id/spProcessingField"
+                        style="@style/spinner_style"
+                        android:layout_width="@dimen/width_zero_dip"
+                        android:layout_height="wrap_content"
+                        android:layout_column="2"
+                        android:layout_marginRight="@dimen/margin_five_dip"
+                        android:layout_weight="1"
+                        android:paddingLeft="@dimen/padding_five_dip"
+                        android:paddingRight="12dp"
+                        android:text="" />
+                </TableRow>
+
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/bg_title"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/padding_three_dip"
+                        android:text="@string/purchase_order"
+                        android:textColor="@color/BLACK"
+                        android:textSize="@dimen/fifteen_sp"
+                        android:textStyle="normal" />
+                </LinearLayout>
+
+                <TableRow
+                    android:focusableInTouchMode="true"
+                    android:padding="@dimen/padding_five_dip">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_column="0"
+
+                        android:text="@string/tvPO"
+                        android:textColor="@color/BLACK"
+                        android:textSize="@dimen/fifteen_sp" />
+
+                    <TextView
+                        android:layout_column="1"
+                        android:width="@dimen/width_twenty_dip"
+                        android:gravity="left"
+                        android:text="*"
+                        android:textColor="@color/RED"
+                        android:textSize="@dimen/fifteen_sp" />
+
+                    <EditText
+                        android:id="@+id/etpo_num"
+                        style="@style/EditBookTextEdit"
+                        android:layout_width="@dimen/width_zero_dip"
+                        android:layout_column="2"
+                        android:layout_marginRight="@dimen/margin_five_dip"
+                        android:layout_weight="1"
+                        android:inputType="number"
+                        android:maxLength="10"
+                        android:paddingLeft="@dimen/padding_five_dip"
+                        android:text=""
+                        android:textSize="@dimen/fifteen_sp" />
+                </TableRow>
+
+                <TableRow
+                    android:padding="@dimen/_5sdp">
+
+                    <TextView
+                        android:layout_column="0"
+                        android:gravity="left"
+                        android:paddingLeft="@dimen/padding_three_dip"
+                        android:text="@string/tvPODate"
+                        android:textColor="@color/BLACK"
+                        android:textSize="@dimen/fifteen_sp" />
+
+                    <TextView
+                        android:layout_column="1"
+                        android:gravity="left"
+                        android:text="@string/star"
+                        android:textColor="@color/text_red"
+                        android:textSize="@dimen/fifteen_sp" />
+
+                    <TextView
+                        android:id="@+id/tvPoDateValue"
+                        android:layout_column="2"
+                        android:layout_marginRight="@dimen/margin_fifteen_dip"
+                        android:width="@dimen/width_one_fifty_dip"
+                        android:paddingLeft="@dimen/margin_fifteen_dip"
+                        android:text=""
+                        android:textColor="@color/BLACK"
+                        android:textSize="@dimen/fifteen_sp" />
+                </TableRow>
+
+
+                <TableRow android:visibility="gone"
+                    android:padding="@dimen/_5sdp">
+
+                    <TextView
+                        android:layout_column="0"
+                        android:gravity="left"
+                        android:paddingLeft="@dimen/padding_three_dip"
+                        android:text="Pricing Date"
+                        android:textColor="@color/BLACK"
+                        android:textSize="@dimen/fifteen_sp" />
+
+                    <TextView
+                        android:layout_column="1"
+                        android:gravity="left"
+                        android:text="@string/star"
+                        android:textColor="@color/text_red"
+                        android:textSize="@dimen/fifteen_sp" />
+
+                    <TextView
+                        android:id="@+id/tvPricingDateValue"
+                        android:layout_column="2"
+                        android:layout_marginRight="@dimen/margin_fifteen_dip"
+                        android:width="@dimen/width_one_fifty_dip"
+                        android:paddingLeft="@dimen/margin_fifteen_dip"
+                        android:text=""
+                        android:textColor="@color/BLACK"
+                        android:textSize="@dimen/fifteen_sp" />
+                </TableRow>
+
+
+                <TableRow android:visibility="gone"
+                    android:padding="@dimen/_5sdp">
+
+                    <TextView
+                        android:layout_column="0"
+                        android:gravity="left"
+                        android:paddingLeft="@dimen/padding_three_dip"
+                        android:text="Delivery Date"
+                        android:textColor="@color/BLACK"
+                        android:textSize="@dimen/fifteen_sp" />
+
+                    <TextView
+                        android:layout_column="1"
+                        android:gravity="left"
+                        android:text="@string/star"
+                        android:textColor="@color/text_red"
+                        android:textSize="@dimen/fifteen_sp" />
+
+                    <TextView
+                        android:id="@+id/tvDeliveryDateValue"
+                        android:layout_column="2"
+                        android:layout_marginRight="@dimen/margin_fifteen_dip"
+                        android:width="@dimen/width_one_fifty_dip"
+                        android:paddingLeft="@dimen/margin_fifteen_dip"
+                        android:text=""
+                        android:textColor="@color/BLACK"
+                        android:textSize="@dimen/fifteen_sp" />
+                </TableRow>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/bg_title"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/padding_three_dip"
+                        android:text="@string/tvTermsHeader"
+                        android:textColor="@color/BLACK"
+                        android:textSize="@dimen/fifteen_sp"
+                        android:textStyle="normal" />
+                </LinearLayout>
+
+                <TableRow android:padding="@dimen/padding_five_dip">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_column="0"
+                        android:gravity="left"
+                        android:paddingLeft="@dimen/padding_three_dip"
+                        android:text="@string/tvPaymentTerm"
+                        android:textColor="@color/BLACK"
+                        android:textSize="@dimen/fifteen_sp" />
+
+                    <TextView
+                        android:layout_column="1"
+                        android:width="@dimen/width_twenty_dip"
+                        android:gravity="left"
+                        android:text=""
+                        android:textColor="@color/text_red"
+                        android:textSize="@dimen/fifteen_sp" />
+
+                    <Spinner
+                        android:id="@+id/spPaymentTerm"
+                        style="@style/spinner_style"
+                        android:layout_width="@dimen/width_zero_dip"
+                        android:layout_column="2"
+                        android:layout_marginRight="@dimen/margin_five_dip"
+                        android:layout_weight="1"
+                        android:paddingLeft="@dimen/padding_five_dip"
+                        android:paddingRight="12dp"
+                        android:text="" />
+                </TableRow>
+
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/bg_title"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/padding_three_dip"
+                        android:text="@string/tvComments"
+                        android:textColor="@color/BLACK"
+                        android:textSize="@dimen/fifteen_sp"
+                        android:textStyle="normal" />
+                </LinearLayout>
+
+                <TableRow
+                    android:focusableInTouchMode="true"
+                    android:padding="@dimen/margin_five_dip">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_column="0"
+                        android:gravity="left"
+                        android:paddingLeft="@dimen/padding_three_dip"
+                        android:text="@string/tvComments"
+                        android:textColor="@color/BLACK"
+                        android:textSize="@dimen/fifteen_sp" />
+
+                    <TextView
+                        android:layout_column="1"
+                        android:width="@dimen/width_twenty"
+                        android:gravity="left"
+                        android:text="@string/star"
+                        android:textColor="@color/text_red"
+                        android:textSize="@dimen/fifteen_sp" />
+
+                    <EditText
+                        android:id="@+id/etComments"
+                        style="@style/EditBookTextEdit"
+                        android:layout_width="@dimen/width_zero_dip"
+                        android:layout_column="2"
+                        android:layout_marginRight="@dimen/margin_five_dip"
+                        android:layout_weight="1"
+                        android:maxLength="35"
+                        android:paddingLeft="@dimen/margin_five_dip"
+                        android:textSize="@dimen/fifteen_sp" />
+                </TableRow>
+            </TableLayout>
+        </ScrollView>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/_5sdp"
+    android:layout_marginRight="@dimen/_5sdp"
+    android:paddingLeft="@dimen/_5sdp"
+    android:paddingRight="@dimen/_5sdp"
+    android:background="@color/WHITE"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/item_lable"
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:textColor="@color/BLACK" />
+
+    <TextView
+        android:id="@+id/item_blank"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="@string/lbl_semi_colon"
+        android:textColor="@color/BLACK" />
+
+    <TextView
+
+        android:id="@+id/item_value"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:paddingLeft="@dimen/_10sdp"
+        android:text=""
+        android:textColor="@color/BLACK" />
+</LinearLayout>

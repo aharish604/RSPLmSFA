@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cardBackgroundColor"
+    tools:context=".attendance.attendancesummary.AttendanceSummaryActivity"
+    android:orientation="vertical">
+    <include layout="@layout/appbar_layout" />
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/llListView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_marginLeft="@dimen/_8sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_marginRight="@dimen/_8sdp"
+                android:layout_marginBottom="@dimen/_4sdp"
+                style="@style/CardViewStyle"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_margin="@dimen/_8sdp"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            style="@style/UtilsMediumTextStyle"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:textStyle="bold"
+                            android:text="Total Claim Amt"/>
+
+                        <TextView
+                            style="@style/UtilsMediumTextStyle"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:textStyle="bold"
+                            android:text="As Per Norms"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_marginRight="@dimen/_8sdp"
+                        android:layout_marginLeft="@dimen/_8sdp"
+                        android:layout_marginBottom="@dimen/_8sdp"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            style="@style/UtilsMediumTextStyle"
+                            android:layout_width="0dp"
+                            android:id="@+id/totalClaim"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:paddingRight="@dimen/_8sdp"
+                            android:gravity="center"
+                            android:text="0.0"/>
+
+                        <TextView
+                            style="@style/UtilsMediumTextStyle"
+                            android:layout_width="0dp"
+                            android:id="@+id/totalMaxClaim"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="0.0"/>
+
+                    </LinearLayout>
+
+              </LinearLayout>
+       </androidx.cardview.widget.CardView>
+                        <!--<include layout="@layout/single_line_lay"/>-->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <include layout="@layout/no_record_found" />
+        </LinearLayout>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</LinearLayout>

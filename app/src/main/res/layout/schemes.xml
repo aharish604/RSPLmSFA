@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="1dp">
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="100"
+        android:id="@+id/ll_pdf"
+        >
+
+        <TextView
+            android:id="@+id/tv_scheme_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="30"
+            android:gravity="center"
+            android:text="HE ON THE GO FACEWASH"
+
+            android:textColor="@color/BLACK"
+
+            />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/LBL_BACKGROUND_ASH_COLOR"
+            ></View>
+
+        <TextView
+
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="30"
+            android:gravity="center"
+            android:text="12-09-2017"
+            android:textColor="@color/BLACK"
+            android:id="@+id/tv_scheme_validfrom"
+
+            />
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/LBL_BACKGROUND_ASH_COLOR"
+            ></View>
+        <TextView
+
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="30"
+            android:gravity="center"
+            android:text="12-10-2017"
+            android:textColor="@color/BLACK"
+            android:id="@+id/tv_scheme_validto"
+            />
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="10"
+            android:layout_gravity="center"
+            android:id="@+id/image_arrow"
+            android:visibility="visible"
+            />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/LBL_BACKGROUND_ASH_COLOR"
+        ></View>
+
+</LinearLayout>

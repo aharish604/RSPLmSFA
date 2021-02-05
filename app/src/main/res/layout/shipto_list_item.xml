@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/WHITE"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/padding_four_dip">
+
+        <TextView
+            android:id="@+id/tvShipToDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="xxxxxx"
+            android:textColor="@color/BLACK"
+            android:textSize="@dimen/medium_text"
+            android:textStyle="bold"
+
+            />
+
+        <TextView
+            android:id="@+id/tvShipToCode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="xxxxxx"
+            android:textColor="@color/BLACK"
+            android:textSize="@dimen/medium_text"
+            android:layout_below="@id/tvShipToDesc"
+            />
+
+
+
+
+    </RelativeLayout>
+
+</LinearLayout>

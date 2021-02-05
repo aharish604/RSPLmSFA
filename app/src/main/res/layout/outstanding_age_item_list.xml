@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="@color/BLACK"
+    android:layout_weight="1"
+    >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="1">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Customer No"
+        android:background="@color/GREY"
+        android:textColor="@color/BLACK"
+        android:gravity="center"
+
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Customer No"
+        android:id="@+id/oa_cust_no"
+        android:textColor="@color/BLACK"
+        android:gravity="center"
+        android:background="@color/WHITE"
+        />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="1">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Customer Name"
+            android:background="@color/GREY"
+            android:textColor="@color/BLACK"
+            android:textSize="@dimen/small_text"
+            android:gravity="center"
+            android:layout_marginLeft="@dimen/margin_two_dip"
+            android:layout_weight="1"
+            />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Customer Name"
+        android:textColor="@color/BLACK"
+        android:textSize="@dimen/small_text"
+        android:gravity="center"
+        android:id="@+id/oa_cust_name"
+        android:layout_marginLeft="@dimen/margin_two_dip"
+
+        android:background="@color/WHITE"
+        />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="1">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Customer City"
+        android:textColor="@color/BLACK"
+        android:textSize="@dimen/small_text"
+        android:gravity="center"
+        android:id="@+id/oa_cust_city"
+        android:layout_marginLeft="@dimen/margin_two_dip"
+
+        android:background="@color/WHITE"
+        />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TelePhone"
+        android:textColor="@color/BLACK"
+        android:textSize="@dimen/small_text"
+        android:gravity="center"
+        android:id="@+id/oa_tele"
+        android:layout_marginLeft="@dimen/margin_two_dip"
+
+        android:background="@color/WHITE"
+        />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dist.Channel"
+        android:textColor="@color/BLACK"
+        android:textSize="@dimen/small_text"
+        android:gravity="center"
+        android:id="@+id/oa_dist_channel"
+        android:layout_marginLeft="@dimen/margin_two_dip"
+        android:background="@color/WHITE"
+        />
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Security Deposit"
+        android:textColor="@color/BLACK"
+        android:textSize="@dimen/small_text"
+        android:gravity="center"
+        android:id="@+id/oa_security_deposit"
+        android:layout_marginLeft="@dimen/margin_two_dip"
+        android:background="@color/WHITE"
+       />
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Credit Limit"
+        android:textColor="@color/BLACK"
+        android:textSize="@dimen/small_text"
+        android:gravity="center"
+        android:id="@+id/oa_credit_limit"
+        android:layout_marginLeft="@dimen/margin_two_dip"
+        android:background="@color/WHITE"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total Debit Bal"
+        android:textColor="@color/BLACK"
+        android:textSize="@dimen/small_text"
+        android:gravity="center"
+        android:id="@+id/oa_total_debit"
+        android:layout_marginLeft="@dimen/margin_two_dip"
+        android:background="@color/WHITE"
+       />
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0-7 Days"
+        android:textColor="@color/BLACK"
+        android:textSize="@dimen/small_text"
+        android:id="@+id/oa_07_days"
+        android:background="@color/WHITE"
+        android:gravity="center"
+        android:layout_marginLeft="@dimen/margin_two_dip"
+       />
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="7-15 Days"
+        android:textColor="@color/BLACK"
+        android:textSize="@dimen/small_text"
+        android:background="@color/WHITE"
+        android:gravity="center"
+        android:id="@+id/oa_715_days"
+        android:layout_marginLeft="@dimen/margin_two_dip"
+        />
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="15-30 Days"
+        android:textColor="@color/BLACK"
+        android:textSize="@dimen/small_text"
+        android:background="@color/WHITE"
+        android:gravity="center"
+        android:id="@+id/oa_1530_days"
+        android:layout_marginLeft="@dimen/margin_two_dip"
+        />
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="30-45 Days"
+        android:textColor="@color/BLACK"
+        android:textSize="@dimen/small_text"
+        android:gravity="center"
+        android:id="@+id/oa_3045_days"
+        android:background="@color/WHITE"
+        android:layout_marginLeft="@dimen/margin_two_dip"
+       />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="45-60 Days"
+        android:textColor="@color/BLACK"
+        android:textSize="@dimen/small_text"
+        android:gravity="center"
+        android:id="@+id/oa_4560_days"
+        android:background="@color/WHITE"
+        android:layout_marginLeft="@dimen/margin_two_dip"
+        />
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="60-90 Days"
+        android:textColor="@color/BLACK"
+        android:textSize="@dimen/small_text"
+        android:gravity="center"
+        android:background="@color/WHITE"
+        android:id="@+id/oa_6090_days"
+        android:layout_marginLeft="@dimen/margin_two_dip"
+        />
+
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="90-120 Days"
+        android:textColor="@color/BLACK"
+        android:textSize="@dimen/small_text"
+        android:background="@color/WHITE"
+        android:gravity="center"
+        android:id="@+id/oa_90120_days"
+        android:layout_marginLeft="@dimen/margin_two_dip"
+       />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="120-180 Days"
+        android:textColor="@color/BLACK"
+        android:textSize="@dimen/small_text"
+        android:gravity="center"
+        android:background="@color/WHITE"
+        android:id="@+id/oa_120180_days"
+        android:layout_marginLeft="@dimen/margin_two_dip"
+        />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=">180 Days"
+        android:textColor="@color/BLACK"
+        android:textSize="@dimen/small_text"
+        android:gravity="center"
+        android:background="@color/WHITE"
+        android:id="@+id/oa_180_days"
+        android:layout_marginLeft="@dimen/margin_two_dip"
+        />
+
+    />
+
+
+
+
+</LinearLayout>

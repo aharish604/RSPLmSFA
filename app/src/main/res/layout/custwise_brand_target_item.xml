@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/cardBackgroundColor"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        style="@style/CardViewStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/padding_normal_4">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:id="@+id/constraintLayout3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_achev_status"
+                android:layout_width="8dp"
+                android:layout_height="match_parent"
+                android:background="@color/primaryColor"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/padding_ten_dip"
+
+                android:paddingTop="@dimen/padding_ten_dip">
+                <TextView
+                    android:id="@+id/tv_kpi_name"
+                    style="@style/UtilsMediumTextStyle"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/padding_normal_16"
+                    android:paddingRight="@dimen/padding_normal_16"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:text=""
+                    android:textSize="@dimen/medium_sixteen_text" />
+                <TextView
+                    android:id="@+id/tv_uom"
+                    style="@style/UtilsMediumTextStyle"
+                    android:visibility="gone"
+                    android:layout_width="0dip"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.3"
+                    android:gravity="center"
+                    android:text=""
+                    android:textSize="@dimen/medium_sixteen_text" />
+            </LinearLayout>
+
+
+            <include layout="@layout/single_line_lay" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:visibility="gone"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <com.github.mikephil.charting.charts.PieChart
+                            android:id="@+id/pieChart_target"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/chart_height"
+                            android:layout_centerInParent="true"
+                            android:layout_margin="0dp"
+                            android:padding="0dp" />
+
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/_4sdp"
+                    android:orientation="vertical">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp">
+
+                        <TextView
+                            android:id="@+id/tv_target_label"
+                            style="@style/UtilsMediumTextStyle"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="4dp"
+                            app:layout_constraintHorizontal_weight="1"
+                            android:text="@string/lbl_target"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toLeftOf="@+id/tv_achived_label"
+                            android:gravity="center"
+
+                            android:layout_marginRight="4dp" />
+
+<!--
+
+                        <TextView
+                            android:id="@+id/tv_target_val"
+                            style="@style/SubItemTextStyle"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:gravity="right"
+                            android:textSize="@dimen/util_normal_text_sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="@+id/guideline4" />
+-->
+
+                        <TextView
+                            android:id="@+id/tv_achived_label"
+                            style="@style/UtilsMediumTextStyle"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="4dp"
+                            app:layout_constraintHorizontal_weight="1"
+                            android:text="@string/lbl_achived"
+                            android:gravity="center"
+                            app:layout_constraintLeft_toRightOf="@+id/tv_target_label"
+                            app:layout_constraintRight_toLeftOf="@+id/tv_bal_label"
+
+                            android:layout_marginRight="4dp" />
+                        <TextView
+                            android:id="@+id/tv_bal_label"
+                            style="@style/UtilsMediumTextStyle"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="4dp"
+                            app:layout_constraintHorizontal_weight="1"
+                            android:text="@string/lbl_balance"
+                            android:gravity="center"
+                            app:layout_constraintLeft_toRightOf="@+id/tv_achived_label"
+                            app:layout_constraintRight_toLeftOf="@+id/tv_percentage_label"
+
+                            android:layout_marginRight="4dp" />
+
+                        <TextView
+                            android:id="@+id/tv_percentage_label"
+                            style="@style/UtilsMediumTextStyle"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="4dp"
+                            app:layout_constraintHorizontal_weight="1"
+                            android:text="%"
+                            android:gravity="center"
+                            app:layout_constraintLeft_toRightOf="@+id/tv_bal_label"
+                            app:layout_constraintRight_toRightOf="parent"
+
+                            android:layout_marginRight="4dp" />
+
+                      <!--  <android.support.constraint.Guideline
+                            android:id="@+id/guideline4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="141dp"
+                            android:orientation="vertical"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintGuide_percent="0.45"
+                            app:layout_constraintStart_toEndOf="@+id/tv_achived_label"
+                            android:layout_marginRight="141dp" />-->
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="@dimen/_18sdp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tv_target_val"
+                            style="@style/UtilsMediumTextStyle"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="4dp"
+                            app:layout_constraintHorizontal_weight="1"
+                            android:text="0"
+                            android:gravity="center"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toLeftOf="@+id/tv_achieved_val"
+                            android:layout_marginRight="4dp" />
+
+                        <!--
+
+                                                <TextView
+                                                    android:id="@+id/tv_target_val"
+                                                    style="@style/SubItemTextStyle"
+                                                    android:layout_width="0dp"
+                                                    android:layout_height="wrap_content"
+                                                    android:text=""
+                                                    android:gravity="right"
+                                                    android:textSize="@dimen/util_normal_text_sp"
+                                                    app:layout_constraintEnd_toEndOf="parent"
+                                                    app:layout_constraintStart_toStartOf="@+id/guideline4" />
+                        -->
+
+                        <TextView
+                            android:id="@+id/tv_achieved_val"
+                            style="@style/UtilsMediumTextStyle"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="4dp"
+                            app:layout_constraintHorizontal_weight="1"
+                            android:text="0"
+                            android:gravity="center"
+                            app:layout_constraintLeft_toRightOf="@+id/tv_target_val"
+                            app:layout_constraintRight_toLeftOf="@+id/tv_bal_val"
+                            android:layout_marginRight="4dp" />
+                        <TextView
+                            android:id="@+id/tv_bal_val"
+                            style="@style/UtilsMediumTextStyle"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="4dp"
+                            app:layout_constraintHorizontal_weight="1"
+                            android:text=""
+                            android:gravity="center"
+                            app:layout_constraintLeft_toRightOf="@+id/tv_achieved_val"
+                            app:layout_constraintRight_toLeftOf="@+id/tv_percentage_val"
+
+                            android:layout_marginRight="4dp" />
+
+                        <TextView
+                            android:id="@+id/tv_percentage_val"
+                            style="@style/UtilsMediumTextStyle"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="4dp"
+                            app:layout_constraintHorizontal_weight="1"
+                            android:text="0"
+                            android:gravity="center"
+                            app:layout_constraintLeft_toRightOf="@+id/tv_bal_val"
+                            app:layout_constraintRight_toRightOf="parent"
+
+                            android:layout_marginRight="4dp" />
+
+                        <!--  <android.support.constraint.Guideline
+                              android:id="@+id/guideline4"
+                              android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:layout_marginEnd="141dp"
+                              android:orientation="vertical"
+                              app:layout_constraintEnd_toEndOf="parent"
+                              app:layout_constraintGuide_percent="0.45"
+                              app:layout_constraintStart_toEndOf="@+id/tv_achived_label"
+                              android:layout_marginRight="141dp" />-->
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                  <!--  <android.support.constraint.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:padding="@dimen/padding_normal_8"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tv_achived_label"
+                            style="@style/UtilsMediumTextStyle"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="4dp"
+                            android:text="@string/lbl_achived"
+                            app:layout_constraintEnd_toStartOf="@+id/guidelineach"
+                            app:layout_constraintStart_toStartOf="parent"
+                            android:layout_marginRight="4dp" />
+
+                        <TextView
+                            android:id="@+id/tv_achieved_val"
+                            style="@style/SubItemTextStyle"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:gravity="right"
+                            android:textSize="@dimen/util_normal_text_sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="@+id/guidelineach" />
+&lt;!&ndash;
+                        <android.support.constraint.Guideline
+                            android:id="@+id/guidelineach"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintGuide_percent="0.45"
+                            app:layout_constraintStart_toEndOf="@+id/tv_achived_label"/>&ndash;&gt;
+                    </android.support.constraint.ConstraintLayout>
+
+                    <android.support.constraint.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:padding="@dimen/padding_normal_8"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tv_bal_label"
+                            style="@style/UtilsMediumTextStyle"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="4dp"
+                            android:text="@string/lbl_balance"
+                            app:layout_constraintEnd_toStartOf="@+id/guidelineBal"
+                            app:layout_constraintStart_toStartOf="parent"
+                            android:layout_marginRight="4dp" />
+
+                        <TextView
+                            android:id="@+id/tv_bal_val"
+                            style="@style/SubItemTextStyle"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:gravity="right"
+                            android:textSize="@dimen/util_normal_text_sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="@+id/guidelineBal" />
+&lt;!&ndash;
+                        <android.support.constraint.Guideline
+                            android:id="@+id/guidelineBal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintGuide_percent="0.45"
+                            app:layout_constraintStart_toEndOf="@+id/tv_bal_label" />&ndash;&gt;
+                    </android.support.constraint.ConstraintLayout>-->
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+
+</LinearLayout>

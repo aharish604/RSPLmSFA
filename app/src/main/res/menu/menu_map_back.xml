@@ -1,0 +1,21 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <item
+        app:showAsAction="always"
+        android:id="@+id/menu_map"
+        android:orderInCategory="100"
+        android:title="@string/map_menu"/>
+
+    <item
+        app:showAsAction="always"
+        android:id="@+id/menu_prospected_customer"
+        android:orderInCategory="200"
+        android:icon="@drawable/ic_menu_prospected"
+        android:visible="false"
+        android:title="@string/map_menu_pc"/>
+
+
+
+</menu>

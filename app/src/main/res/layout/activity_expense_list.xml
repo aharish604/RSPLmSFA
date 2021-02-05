@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/WHITE"
+    android:orientation="vertical">
+
+    <include layout="@layout/appbar_layout"/>
+
+    <LinearLayout
+        android:padding="4dp"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:background="@color/GREY">
+
+        <LinearLayout
+            android:layout_marginRight="24dp"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="1.2"
+                android:gravity="left"
+                android:layout_gravity="bottom"
+                android:paddingLeft="@dimen/padding_zero_dip"
+                android:paddingRight="@dimen/padding_zero_dip"
+                android:paddingEnd="@dimen/padding_zero_dip"
+                android:paddingStart="@dimen/padding_zero_dip"
+                android:text="@string/lbl_expense_no"
+                android:textColor="@color/TEXT_COLOR"
+                android:textSize="@dimen/medium_text"/>
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight=".8"
+                android:gravity="right"
+                android:layout_gravity="bottom"
+                android:paddingLeft="@dimen/padding_zero_dip"
+                android:paddingRight="@dimen/padding_zero_dip"
+                android:paddingEnd="@dimen/padding_zero_dip"
+                android:paddingStart="@dimen/padding_zero_dip"
+                android:text="@string/lbl_expense_type"
+                android:textColor="@color/TEXT_COLOR"
+                android:textSize="@dimen/medium_text"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginRight="24dp"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="1.2"
+                android:gravity="left"
+                android:layout_gravity="bottom"
+                android:paddingLeft="@dimen/padding_zero_dip"
+                android:paddingRight="@dimen/padding_zero_dip"
+                android:paddingEnd="@dimen/padding_zero_dip"
+                android:paddingStart="@dimen/padding_zero_dip"
+                android:text="@string/lbl_expense_date"
+                android:textColor="@color/TEXT_COLOR"
+                android:textSize="@dimen/medium_text"/>
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight=".8"
+                android:gravity="right"
+                android:layout_gravity="bottom|center_horizontal"
+                android:paddingLeft="@dimen/padding_zero_dip"
+                android:paddingRight="@dimen/padding_zero_dip"
+                android:paddingEnd="@dimen/padding_zero_dip"
+                android:paddingStart="@dimen/padding_zero_dip"
+                android:text="@string/lbl_amount"
+                android:textColor="@color/TEXT_COLOR"
+                android:textSize="@dimen/medium_text" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <include layout="@layout/single_line_lay"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_expense_list"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true" />
+
+    <include layout="@layout/empty_list_lay"/>
+
+</LinearLayout>

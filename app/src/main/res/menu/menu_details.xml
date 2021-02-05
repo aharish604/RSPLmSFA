@@ -1,0 +1,21 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <!--<item
+        android:id="@+id/menu_note"
+        android:orderInCategory="9999"
+        android:icon="@drawable/note_bitmap"
+        android:title="@string/notes_menu"
+        app:showAsAction="always" />-->
+    <item
+        android:id="@+id/menu_cancel"
+        android:orderInCategory="9999"
+        android:title="@string/cancel_menu"
+        android:icon="@drawable/ic_action_cancel"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/menu_print"
+        android:orderInCategory="2"
+        android:title="@string/print_menu"
+        app:showAsAction="never" />
+
+</menu>

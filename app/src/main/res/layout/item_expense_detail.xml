@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:id="@+id/ll_vertical_layout"
+    >
+
+    <LinearLayout
+        android:background="@color/GREY"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="4dp"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:text="@string/lbl_invoice_item_no"
+            android:textColor="@color/BLACK" />
+
+
+        <TextView
+            android:layout_marginLeft="4dp"
+            android:id="@+id/tv_expense_item_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/_10sdp"
+            android:layout_weight="1"
+            android:text=""
+            android:textColor="@color/BLACK" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="@dimen/_120sdp"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:text="@string/lbl_beat"
+            android:textColor="@color/BLACK"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lbl_semi_colon"
+            android:textColor="@color/BLACK"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_beat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:paddingLeft="@dimen/_10sdp"
+            android:text=""
+            android:textColor="@color/BLACK"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="@dimen/_120sdp"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:paddingLeft="@dimen/_5sdp"
+            android:text="@string/lbl_crs_sku_group"
+            android:textColor="@color/BLACK"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lbl_semi_colon"
+            android:textColor="@color/BLACK"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_invoice_details_mat_code_ex"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:paddingLeft="@dimen/_10sdp"
+            android:text=""
+            android:textColor="@color/BLACK"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp">
+
+        <TextView
+            android:layout_width="@dimen/_120sdp"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:text="@string/lbl_location"
+            android:textColor="@color/BLACK"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lbl_semi_colon"
+            android:textColor="@color/BLACK"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_location"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:paddingLeft="@dimen/_10sdp"
+            android:text=""
+            android:textColor="@color/BLACK"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="@dimen/_120sdp"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:text="@string/lbl_mode_of_transport"
+            android:textColor="@color/BLACK"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lbl_semi_colon"
+            android:textColor="@color/BLACK"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_mode_of_trans"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:paddingLeft="@dimen/_10sdp"
+            android:text=""
+            android:textColor="@color/BLACK"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="@dimen/_120sdp"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:text="@string/lbl_distance"
+            android:textColor="@color/BLACK"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lbl_semi_colon"
+            android:textColor="@color/BLACK"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_distance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:paddingLeft="@dimen/_10sdp"
+            android:text=""
+            android:textColor="@color/BLACK"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="@dimen/_120sdp"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:text="@string/lbl_amount"
+            android:textColor="@color/BLACK"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lbl_semi_colon"
+            android:textColor="@color/BLACK"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_amount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:paddingLeft="@dimen/_10sdp"
+            android:text=""
+            android:textColor="@color/BLACK"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="@dimen/_120sdp"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:text="@string/lbl_remarks"
+            android:textColor="@color/BLACK"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lbl_semi_colon"
+            android:textColor="@color/BLACK"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_remarks"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:paddingLeft="@dimen/_10sdp"
+            android:text=""
+            android:textColor="@color/BLACK"
+            android:textSize="14sp" />
+    </LinearLayout>
+    <include layout="@layout/single_line_lay"/>
+
+    <LinearLayout
+        android:background="@color/GREY"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="4dp"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:text="@string/lbl_attachments"
+            android:textColor="@color/BLACK" />
+
+
+        <TextView
+            android:layout_marginLeft="4dp"
+            android:id="@+id/tv_attachment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/_10sdp"
+            android:layout_weight="1"
+            android:text=""
+            android:textColor="@color/BLACK" />
+    </LinearLayout>
+
+
+
+    <TextView
+        android:layout_marginLeft="4dp"
+        android:id="@+id/tv_attachment_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/_10sdp"
+        android:layout_weight="1"
+        android:text=""
+        android:textColor="@color/BLACK" />
+
+</LinearLayout>

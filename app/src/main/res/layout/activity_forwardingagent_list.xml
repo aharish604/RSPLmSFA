@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/WHITE">
+
+
+    <include layout="@layout/appbar_layout"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/WHITE"
+
+        android:orientation="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <Spinner
+            android:id="@+id/spinner"
+            style="@style/spinner_style"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/margin_five_dip" />
+
+        <EditText
+            android:id="@+id/search_view"
+            style="@style/EditBookTextEdit"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:drawableRight="@android:drawable/ic_menu_search"
+            android:hint="@string/search_hint"
+            android:textColor="@color/BLACK" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent" />
+
+        <include layout="@layout/empty_layout" />
+
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

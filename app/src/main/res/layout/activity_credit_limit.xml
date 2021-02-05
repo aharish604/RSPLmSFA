@@ -1,0 +1,779 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_sales_order_create"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cardBackgroundColor"
+    android:orientation="vertical">
+
+    <!--<include layout="@layout/retailer_detail_header_lay" />-->
+    <include layout="@layout/appbar_layout" />
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nestedScroll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <androidx.cardview.widget.CardView
+                        style="@style/CardViewStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/padding_normal_16">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:paddingBottom="@dimen/padding_normal_8">
+
+                            <TextView
+                                style="@style/Header"
+                                android:layout_width="fill_parent"
+                                android:layout_height="@dimen/nav_item_height"
+                                android:gravity="left|center"
+                                android:text="@string/profile_credit_info" />
+
+                            <include layout="@layout/single_line_lay" />
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:id="@+id/clCreditController"
+                                style="@style/UtilsItemSpacing"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <!-- <TextView
+                                     style="@style/MediumHeaderTextStyle"
+                                     android:layout_width="0dp"
+                                     android:layout_height="wrap_content"
+                                     android:layout_marginEnd="4dp"
+                                     android:layout_marginRight="4dp"
+                                     android:paddingBottom="@dimen/padding_normal_8"
+                                     android:paddingTop="@dimen/padding_normal_8"
+                                     android:text="@string/my_profile_credit_controller"
+                                     app:layout_constraintEnd_toStartOf="@+id/guideline4"
+                                     app:layout_constraintHorizontal_bias="1.0"
+                                     app:layout_constraintStart_toStartOf="parent"
+                                     app:layout_constraintTop_toTopOf="parent" />
+
+                                 <android.support.constraint.Guideline
+                                     android:id="@+id/guideline4"
+                                     android:layout_width="wrap_content"
+                                     android:layout_height="wrap_content"
+                                     android:orientation="vertical"
+                                     app:layout_constraintGuide_percent=".4" />-->
+
+                                <com.rspl.sf.msfa.ui.MaterialDesignSpinner
+                                    android:id="@+id/spin_credit_control_his_status_id"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:ms_enableErrorLabel="false"
+                                    app:ms_enableFloatingLabel="false"
+                                    app:ms_isHintSelectable="false"
+                                    tools:layout_editor_absoluteX="104dp" />
+                                <!--app:ms_isHintSelectable="false"-->
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            <!-- <LinearLayout
+                                 android:id="@+id/clCreditController"
+                                 style="@style/UtilsItemSpacing"
+                                 android:layout_width="match_parent"
+                                 android:layout_height="wrap_content"
+                                 android:orientation="vertical">
+
+                                 <TextView
+                                     android:id="@+id/creditLimitType"
+                                     android:layout_width="match_parent"
+                                     android:layout_height="wrap_content"
+                                     android:textColor="@color/BLACK"
+                                     android:textSize="@dimen/util_sub_title_sp" />
+
+                                 <TextView
+                                     android:id="@+id/tvCreditControlAreaHint"
+                                     android:layout_width="match_parent"
+                                     android:layout_height="wrap_content"
+                                     android:paddingTop="@dimen/padding_normal_4"
+                                     android:text="@string/my_profile_credit_controller"
+                                     android:textSize="@dimen/util_normal_text_sp" />
+
+                             </LinearLayout>-->
+                            <LinearLayout
+                                android:id="@+id/llDisplayCreditView"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <com.github.mikephil.charting.charts.PieChart
+                                    android:id="@+id/pieChart"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="250dp"
+                                    android:layout_above="@+id/seekBar1" />
+
+                                <LinearLayout
+                                    android:id="@+id/llCreditLimit"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:visibility="gone">
+
+                                    <androidx.constraintlayout.widget.ConstraintLayout
+                                        style="@style/UtilsItemSpacing"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:paddingBottom="@dimen/padding_normal_8"
+                                        android:paddingTop="@dimen/padding_normal_8">
+
+                                        <TextView
+                                            style="@style/MediumHeaderTextStyle"
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:text="@string/my_profile_credit_limit"
+                                            app:layout_constraintEnd_toStartOf="@+id/guideline3"
+                                            app:layout_constraintHorizontal_bias="1.0"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            tools:layout_editor_absoluteX="24dp" />
+
+                                        <androidx.constraintlayout.widget.Guideline
+                                            android:id="@+id/guideline3"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="vertical"
+                                            app:layout_constraintGuide_percent="0.4"
+                                            tools:layout_editor_absoluteX="159dp"
+                                            tools:layout_editor_absoluteY="282dp" />
+
+                                        <TextView
+                                            android:id="@+id/tv_credit_limit"
+                                            style="@style/MediumHeaderTextStyle"
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:gravity="end"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintStart_toStartOf="@+id/guideline3"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            tools:layout_editor_absoluteX="159dp" />
+                                    </androidx.constraintlayout.widget.ConstraintLayout>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/llCreditExposure"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:visibility="gone">
+
+                                    <include layout="@layout/single_line_lay" />
+
+                                    <androidx.constraintlayout.widget.ConstraintLayout
+                                        style="@style/UtilsItemSpacing"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:paddingBottom="@dimen/padding_normal_8"
+                                        android:paddingTop="@dimen/padding_normal_8">
+
+                                        <TextView
+                                            style="@style/MediumHeaderTextStyle"
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:text="@string/my_profile_credit_exposure_label"
+                                            app:layout_constraintEnd_toStartOf="@+id/guideline5"
+                                            app:layout_constraintHorizontal_bias="1.0"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            tools:layout_editor_absoluteX="24dp" />
+
+                                        <androidx.constraintlayout.widget.Guideline
+                                            android:id="@+id/guideline5"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="vertical"
+                                            app:layout_constraintGuide_percent="0.4"
+                                            tools:layout_editor_absoluteX="159dp"
+                                            tools:layout_editor_absoluteY="282dp" />
+
+                                        <TextView
+                                            android:id="@+id/tv_credit_exposure"
+                                            style="@style/MediumHeaderTextStyle"
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:gravity="end"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintStart_toStartOf="@+id/guideline5"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            tools:layout_editor_absoluteX="159dp" />
+                                    </androidx.constraintlayout.widget.ConstraintLayout>
+                                </LinearLayout>
+
+                                <include layout="@layout/single_line_lay" />
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    style="@style/UtilsItemSpacing"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:paddingBottom="@dimen/padding_normal_8"
+                                    android:paddingTop="@dimen/padding_normal_8">
+
+                                    <TextView
+                                        style="@style/MediumHeaderTextStyle"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/my_profile_balance_amount"
+                                        app:layout_constraintEnd_toStartOf="@+id/guideline9"
+                                        app:layout_constraintHorizontal_bias="1.0"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        tools:layout_editor_absoluteX="24dp" />
+
+                                    <androidx.constraintlayout.widget.Guideline
+                                        android:id="@+id/guideline9"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="vertical"
+                                        app:layout_constraintGuide_percent="0.4"
+                                        tools:layout_editor_absoluteX="159dp"
+                                        tools:layout_editor_absoluteY="282dp" />
+
+                                    <TextView
+                                        android:id="@+id/tvBalanceAmount"
+                                        style="@style/MediumHeaderTextStyle"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="end"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="@+id/guideline9"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        tools:layout_editor_absoluteX="159dp" />
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    style="@style/UtilsItemSpacing"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:paddingBottom="@dimen/padding_normal_8"
+                                    android:paddingTop="@dimen/padding_normal_8"
+                                    android:visibility="gone">
+
+                                    <TextView
+                                        style="@style/MediumHeaderTextStyle"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/lbl_credit_limit_used"
+                                        app:layout_constraintEnd_toStartOf="@+id/guideline6"
+                                        app:layout_constraintHorizontal_bias="1.0"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        tools:layout_editor_absoluteX="24dp" />
+
+                                    <androidx.constraintlayout.widget.Guideline
+                                        android:id="@+id/guideline6"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="vertical"
+                                        app:layout_constraintGuide_percent="0.4"
+                                        tools:layout_editor_absoluteX="159dp"
+                                        tools:layout_editor_absoluteY="282dp" />
+
+                                    <TextView
+                                        android:id="@+id/tv_credit_limit_used"
+                                        style="@style/MediumHeaderTextStyle"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="end"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="@+id/guideline6"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        tools:layout_editor_absoluteX="159dp" />
+                                    <!--style="@style/UtilsMediumTextStyle"-->
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                                <include
+                                    layout="@layout/single_line_lay"
+                                    android:visibility="gone" />
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    style="@style/UtilsItemSpacing"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:paddingBottom="@dimen/padding_normal_8"
+                                    android:paddingTop="@dimen/padding_normal_8"
+                                    android:visibility="gone">
+
+                                    <TextView
+                                        style="@style/MediumHeaderTextStyle"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/lbl_current_outsanding"
+                                        app:layout_constraintEnd_toStartOf="@+id/guideline7"
+                                        app:layout_constraintHorizontal_bias="1.0"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        tools:layout_editor_absoluteX="24dp" />
+
+                                    <androidx.constraintlayout.widget.Guideline
+                                        android:id="@+id/guideline7"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="vertical"
+                                        app:layout_constraintGuide_percent="0.4"
+                                        tools:layout_editor_absoluteX="159dp"
+                                        tools:layout_editor_absoluteY="282dp" />
+
+                                    <TextView
+                                        android:id="@+id/tv_current_outstanding"
+                                        style="@style/MediumHeaderTextStyle"
+                                        android:layout_width="0dp"
+                                        android:layout_height="26dp"
+                                        android:layout_marginTop="8dp"
+                                        android:gravity="end"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="@+id/guideline7"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        tools:layout_editor_absoluteX="159dp" />
+                                    <!--style="@style/UtilsMediumTextStyle"-->
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                                <include
+                                    layout="@layout/single_line_lay"
+                                    android:visibility="gone" />
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    style="@style/UtilsItemSpacing"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:paddingBottom="@dimen/padding_normal_8"
+                                    android:paddingTop="@dimen/padding_normal_8"
+                                    android:visibility="gone">
+
+                                    <TextView
+                                        style="@style/MediumHeaderTextStyle"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/lbl_security_deposit"
+                                        app:layout_constraintEnd_toStartOf="@+id/guideline8"
+                                        app:layout_constraintHorizontal_bias="1.0"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        tools:layout_editor_absoluteX="24dp" />
+
+                                    <androidx.constraintlayout.widget.Guideline
+                                        android:id="@+id/guideline8"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="vertical"
+                                        app:layout_constraintGuide_percent="0.4"
+                                        tools:layout_editor_absoluteX="159dp"
+                                        tools:layout_editor_absoluteY="282dp" />
+
+                                    <TextView
+                                        android:id="@+id/tv_security_deposit"
+                                        style="@style/MediumHeaderTextStyle"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="end"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="@+id/guideline8"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        tools:layout_editor_absoluteX="159dp" />
+                                    <!--style="@style/UtilsMediumTextStyle"-->
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:paddingBottom="4dp"
+                            android:paddingTop="4dp">
+
+                            <ImageView
+                                android:id="@+id/icon1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="@dimen/padding_six_dip"
+                                android:layout_marginRight="@dimen/padding_six_dip"
+                                android:contentDescription="@null"
+                                android:padding="4dp"
+                                android:src="@drawable/ic_retailer" />
+
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1.2"
+                                android:gravity="center_vertical"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/tv_reatiler_name"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="bottom"
+                                    android:text="Retailer Name"
+                                    android:textColor="@color/BLACK"
+                                    android:textSize="@dimen/medium_text"
+                                    android:textStyle="bold" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:text="@string/title_UID"
+                                        android:textColor="@color/BLACK"
+                                        android:textSize="@dimen/medium_text"
+                                        android:visibility="gone" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:text="@string/str_colon"
+                                        android:textColor="@color/BLACK"
+                                        android:textSize="@dimen/medium_text"
+                                        android:visibility="gone" />
+
+                                    <TextView
+                                        android:id="@+id/tv_reatiler_id"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:text="Od -15362"
+                                        android:textColor="@color/BLACK"
+                                        android:textSize="@dimen/medium_text" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <!--   <Spinner
+                                   android:id="@+id/spin_credit_control_his_status_id"
+                                   style="@style/spinner_style"
+                                   android:layout_width="0dp"
+                                   android:layout_height="wrap_content"
+                                   android:layout_gravity="center_vertical"
+                                   android:layout_margin="@dimen/margin_two_dip"
+                                   android:layout_weight="1"></Spinner>-->
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="@dimen/line_height_one_dip"
+                            android:background="@color/BLACK" />
+                        <!--
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:paddingLeft="4dp"
+                                    android:paddingRight="4dp"
+                                    android:paddingTop="4dp">
+
+                                    <TextView
+                                        android:layout_width="@dimen/height_zero_dip"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:gravity="start"
+                                        android:text="@string/lbl_credit_limit"
+                                        android:textColor="@color/TEXT_COLOR"
+                                        android:textSize="@dimen/medium_text" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:text="@string/lbl_semi_colon"
+                                        android:textColor="@android:color/black"
+                                        android:textSize="@dimen/medium_text" />
+
+                                    <TextView
+                                        android:id="@+id/tv_credit_limit"
+                                        android:layout_width="@dimen/height_zero_dip"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:gravity="right"
+                                        android:paddingEnd="@dimen/padding_zero_dip"
+                                        android:paddingLeft="@dimen/padding_three_dip"
+                                        android:paddingRight="@dimen/padding_three_dip"
+                                        android:paddingStart="@dimen/padding_three_dip"
+                                        android:text=""
+                                        android:textColor="@color/TEXT_COLOR"
+                                        android:textSize="@dimen/medium_text" />
+
+                                </LinearLayout>-->
+
+                        <!--   <LinearLayout
+                               android:layout_width="match_parent"
+                               android:layout_height="wrap_content"
+                               android:orientation="horizontal"
+                               android:paddingLeft="4dp"
+                               android:paddingRight="4dp"
+                               android:paddingTop="4dp">
+
+                               <TextView
+                                   android:layout_width="@dimen/height_zero_dip"
+                                   android:layout_height="wrap_content"
+                                   android:layout_weight="1"
+                                   android:gravity="start"
+                                   android:text="@string/lbl_credit_exposure"
+                                   android:textColor="@color/TEXT_COLOR"
+                                   android:textSize="@dimen/medium_text" />
+
+                               <TextView
+                                   android:layout_width="wrap_content"
+                                   android:layout_height="wrap_content"
+                                   android:layout_gravity="center"
+                                   android:text="@string/lbl_semi_colon"
+                                   android:textColor="@android:color/black"
+                                   android:textSize="@dimen/medium_text" />
+
+                               <TextView
+                                   android:id="@+id/tv_credit_exposure"
+                                   android:layout_width="@dimen/height_zero_dip"
+                                   android:layout_height="wrap_content"
+                                   android:layout_weight="1"
+                                   android:gravity="right"
+                                   android:paddingEnd="@dimen/padding_zero_dip"
+                                   android:paddingLeft="@dimen/padding_three_dip"
+                                   android:paddingRight="@dimen/padding_three_dip"
+                                   android:paddingStart="@dimen/padding_three_dip"
+                                   android:text=""
+                                   android:textColor="@color/TEXT_COLOR"
+                                   android:textSize="@dimen/medium_text" />
+
+                           </LinearLayout>-->
+
+                        <!--  <LinearLayout
+                              android:layout_width="match_parent"
+                              android:layout_height="wrap_content"
+                              android:orientation="horizontal"
+                              android:paddingLeft="4dp"
+                              android:paddingRight="4dp"
+                              android:paddingTop="4dp">
+
+                              <TextView
+                                  android:layout_width="@dimen/height_zero_dip"
+                                  android:layout_height="wrap_content"
+                                  android:layout_weight="1"
+                                  android:gravity="start"
+                                  android:text="@string/lbl_credit_limit_used"
+                                  android:textColor="@color/TEXT_COLOR"
+                                  android:textSize="@dimen/medium_text" />
+
+                              <TextView
+                                  android:layout_width="wrap_content"
+                                  android:layout_height="wrap_content"
+                                  android:layout_gravity="center"
+                                  android:text="@string/lbl_semi_colon"
+                                  android:textColor="@android:color/black"
+                                  android:textSize="@dimen/medium_text" />
+
+                              <TextView
+                                  android:id="@+id/tv_credit_limit_used"
+                                  android:layout_width="@dimen/height_zero_dip"
+                                  android:layout_height="wrap_content"
+                                  android:layout_weight="1"
+                                  android:gravity="right"
+                                  android:text=""
+                                  android:textColor="@color/TEXT_COLOR"
+                                  android:textSize="@dimen/medium_text" />
+
+                          </LinearLayout>-->
+
+
+                        <!--  <LinearLayout
+                              android:layout_width="match_parent"
+                              android:layout_height="wrap_content"
+                              android:orientation="horizontal"
+                              android:paddingLeft="4dp"
+                              android:paddingRight="4dp"
+                              android:paddingTop="4dp">
+
+                              <TextView
+                                  android:id="@+id/textView5"
+                                  android:layout_width="@dimen/height_zero_dip"
+                                  android:layout_height="wrap_content"
+                                  android:layout_weight="1"
+                                  android:gravity="start"
+                                  android:text="@string/lbl_current_outsanding"
+                                  android:textColor="@color/TEXT_COLOR"
+                                  android:textSize="@dimen/medium_text" />
+
+                              <TextView
+                                  android:layout_width="wrap_content"
+                                  android:layout_height="wrap_content"
+                                  android:layout_gravity="center"
+                                  android:text="@string/lbl_semi_colon"
+                                  android:textColor="@android:color/black"
+                                  android:textSize="@dimen/medium_text" />
+
+                              <TextView
+                                  android:id="@+id/tv_current_outstanding"
+                                  android:layout_width="@dimen/height_zero_dip"
+                                  android:layout_height="wrap_content"
+                                  android:layout_weight="1"
+                                  android:gravity="right"
+                                  android:text=""
+                                  android:textColor="@color/TEXT_COLOR"
+                                  android:textSize="@dimen/medium_text" />
+
+                          </LinearLayout>-->
+
+                        <!--
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:paddingLeft="4dp"
+                                    android:paddingRight="4dp"
+                                    android:paddingTop="4dp">
+
+                                    <TextView
+                                        android:layout_width="@dimen/height_zero_dip"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:gravity="start"
+                                        android:text="@string/lbl_security_deposit"
+                                        android:textColor="@color/TEXT_COLOR"
+                                        android:textSize="@dimen/medium_text" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:text="@string/lbl_semi_colon"
+                                        android:textColor="@android:color/black"
+                                        android:textSize="@dimen/medium_text" />
+
+                                    <TextView
+                                        android:id="@+id/tv_security_deposit"
+                                        android:layout_width="@dimen/height_zero_dip"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:gravity="right"
+                                        android:text=""
+                                        android:textColor="@color/TEXT_COLOR"
+                                        android:textSize="@dimen/medium_text" />
+                                </LinearLayout>-->
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <androidx.cardview.widget.CardView
+                        style="@style/CardViewStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="0dp">
+
+                        <LinearLayout
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                style="@style/Header"
+                                android:layout_width="fill_parent"
+                                android:layout_height="@dimen/nav_item_height"
+                                android:gravity="left|center"
+                                android:text="@string/credit_status_open" />
+
+                            <include layout="@layout/single_line_lay" />
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/rvCreditDocOpen"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+
+                            <include
+                                android:id="@+id/llOpenView"
+                                layout="@layout/no_record_found" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <androidx.cardview.widget.CardView
+                        style="@style/CardViewStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="0dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                style="@style/Header"
+                                android:layout_width="fill_parent"
+                                android:layout_height="@dimen/nav_item_height"
+                                android:gravity="left|center"
+                                android:text="@string/credit_status_closed" />
+
+                            <include layout="@layout/single_line_lay" />
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/rvCreditDocClosed"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+
+                            <include
+                                android:id="@+id/llCloseView"
+                                layout="@layout/no_record_found" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+</LinearLayout>

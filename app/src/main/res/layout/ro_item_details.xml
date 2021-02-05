@@ -1,0 +1,1107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/UtilsItemSpacing"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingTop="0dp">
+
+    <!-- <TextView
+         android:id="@+id/textView13"
+         style="@style/Header"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:paddingLeft="0dp"
+         android:text="Ship to Party" />-->
+
+
+    <!--sales area-->
+    <TextView
+        android:id="@+id/tvReferenceHeader"
+        style="@style/Header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="bottom|left"
+        android:paddingBottom="0dp"
+        android:paddingLeft="0dp"
+        android:paddingTop="@dimen/padding_normal_16"
+        android:text="@string/quantity" />
+    <!--Invoice Qty-->
+    <LinearLayout
+        android:id="@+id/llInvQty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:paddingBottom="@dimen/padding_normal_16"
+            android:paddingTop="@dimen/padding_normal_16">
+
+            <TextView
+                android:id="@+id/tvInvQtyHeading"
+                style="@style/UtilsMediumTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="56dp"
+                android:layout_marginStart="56dp"
+                android:text="@string/inv_qty"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="0dp"
+                android:visibility="gone"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_store_mall_directory_black_24dp" />
+
+            <TextView
+                android:id="@+id/tvInvQtyVal"
+                style="@style/SubItemTextStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="56dp"
+                android:layout_marginRight="0dp"
+                android:layout_marginStart="56dp"
+                android:layout_marginTop="4dp"
+                android:text="Sales Area"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvInvQtyHeading" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="56dp"
+            android:orientation="vertical">
+
+            <include layout="@layout/single_line_lay" />
+        </LinearLayout>
+    </LinearLayout>
+    <!--Order Qty-->
+    <LinearLayout
+        android:id="@+id/llOrderQty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:paddingBottom="@dimen/padding_normal_16"
+            android:paddingTop="@dimen/padding_normal_16">
+
+            <TextView
+                android:id="@+id/tvOrderQtyHeading"
+                style="@style/UtilsMediumTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="56dp"
+                android:layout_marginStart="56dp"
+                android:text="@string/tvsoQty"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="0dp"
+                android:visibility="gone"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_store_mall_directory_black_24dp" />
+
+            <TextView
+                android:id="@+id/tvOrderQtyVal"
+                style="@style/SubItemTextStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="56dp"
+                android:layout_marginRight="0dp"
+                android:layout_marginStart="56dp"
+                android:layout_marginTop="4dp"
+                android:text="Sales Area"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvOrderQtyHeading" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="56dp"
+            android:orientation="vertical">
+
+            <include layout="@layout/single_line_lay" />
+        </LinearLayout>
+    </LinearLayout>
+    <!--Batch-->
+    <LinearLayout
+        android:id="@+id/llBatchNo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:paddingBottom="@dimen/padding_normal_16"
+            android:paddingTop="@dimen/padding_normal_16">
+
+            <TextView
+                android:id="@+id/tvBatchNoHeading"
+                style="@style/UtilsMediumTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="56dp"
+                android:layout_marginStart="56dp"
+                android:text="@string/tvBatch"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="0dp"
+                android:visibility="gone"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_store_mall_directory_black_24dp" />
+
+            <TextView
+                android:id="@+id/tvBatchNoVal"
+                style="@style/SubItemTextStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="56dp"
+                android:layout_marginRight="0dp"
+                android:layout_marginStart="56dp"
+                android:layout_marginTop="4dp"
+                android:text="Sales Area"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvBatchNoHeading" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="56dp"
+            android:orientation="vertical">
+
+            <include layout="@layout/single_line_lay" />
+        </LinearLayout>
+    </LinearLayout>
+    <!--MFD-->
+    <LinearLayout
+        android:id="@+id/llMFD"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:paddingBottom="@dimen/padding_normal_16"
+            android:paddingTop="@dimen/padding_normal_16">
+
+            <TextView
+                android:id="@+id/tvMFDHeading"
+                style="@style/UtilsMediumTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="56dp"
+                android:layout_marginStart="56dp"
+                android:text="@string/str_mfd"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="0dp"
+                android:visibility="gone"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_store_mall_directory_black_24dp" />
+
+            <TextView
+                android:id="@+id/tvMFDVal"
+                style="@style/SubItemTextStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="56dp"
+                android:layout_marginRight="0dp"
+                android:layout_marginStart="56dp"
+                android:layout_marginTop="4dp"
+                android:text="Sales Area"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvMFDHeading" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="56dp"
+            android:orientation="vertical">
+
+            <include layout="@layout/single_line_lay" />
+        </LinearLayout>
+    </LinearLayout>
+    <!--Exp Date-->
+    <LinearLayout
+        android:id="@+id/llExpDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:paddingBottom="@dimen/padding_normal_16"
+            android:paddingTop="@dimen/padding_normal_16">
+
+            <TextView
+                android:id="@+id/tvExpDateHeading"
+                style="@style/UtilsMediumTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="56dp"
+                android:layout_marginStart="56dp"
+                android:text="@string/str_exp_date"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="0dp"
+                android:visibility="gone"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_store_mall_directory_black_24dp" />
+
+            <TextView
+                android:id="@+id/tvExpDateVal"
+                style="@style/SubItemTextStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="56dp"
+                android:layout_marginRight="0dp"
+                android:layout_marginStart="56dp"
+                android:layout_marginTop="4dp"
+                android:text="Sales Area"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvExpDateHeading" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="56dp"
+            android:orientation="vertical">
+
+            <include layout="@layout/single_line_lay" />
+        </LinearLayout>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/tvTitleShip"
+        style="@style/Header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="0dp"
+        android:paddingLeft="0dp"
+        android:paddingTop="@dimen/padding_normal_16"
+        android:text="@string/price_details" />
+    <!--MRP-->
+    <LinearLayout
+        android:id="@+id/llMRP"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:paddingBottom="@dimen/padding_normal_16"
+            android:paddingTop="@dimen/padding_normal_16">
+
+            <TextView
+                android:id="@+id/tvMRPHeading"
+                style="@style/UtilsMediumTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="56dp"
+                android:layout_marginStart="56dp"
+                android:text="@string/mrp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="0dp"
+                android:visibility="gone"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_store_mall_directory_black_24dp" />
+
+            <TextView
+                android:id="@+id/tvMRPVal"
+                style="@style/SubItemTextStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="56dp"
+                android:layout_marginRight="0dp"
+                android:layout_marginStart="56dp"
+                android:layout_marginTop="4dp"
+                android:text="Sales Area"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvMRPHeading" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="56dp"
+            android:orientation="vertical">
+
+            <include layout="@layout/single_line_lay" />
+        </LinearLayout>
+    </LinearLayout>
+    <!--Unit Price-->
+    <LinearLayout
+        android:id="@+id/ll_unit_price"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clSalesArea"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:paddingBottom="@dimen/padding_normal_16"
+            android:paddingTop="@dimen/padding_normal_16">
+
+            <TextView
+                android:id="@+id/tvUnitPriceHeading"
+                style="@style/UtilsMediumTextStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="56dp"
+                android:layout_marginRight="0dp"
+                android:layout_marginStart="56dp"
+                android:text="@string/unit_price"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="0dp"
+                android:visibility="gone"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_store_mall_directory_black_24dp" />
+
+            <TextView
+                android:id="@+id/tvUnitPriceVal"
+                style="@style/SubItemTextStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="56dp"
+                android:layout_marginRight="0dp"
+                android:layout_marginStart="56dp"
+                android:layout_marginTop="4dp"
+                android:text="Sales Area"
+                android:textSize="@dimen/util_normal_text_sp"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvUnitPriceHeading" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="56dp"
+            android:orientation="vertical">
+
+            <include layout="@layout/single_line_lay" />
+        </LinearLayout>
+    </LinearLayout>
+    <!--Net Amount-->
+    <LinearLayout
+        android:id="@+id/ll_net_amt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:paddingBottom="@dimen/padding_normal_16"
+            android:paddingTop="@dimen/padding_normal_16">
+
+            <TextView
+                android:id="@+id/tvNetAmtHeading"
+                style="@style/UtilsMediumTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="56dp"
+                android:layout_marginStart="56dp"
+                android:text="@string/so_order_value"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="0dp"
+                android:visibility="gone"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_store_mall_directory_black_24dp" />
+
+            <TextView
+                android:id="@+id/tvNetAmtVal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="56dp"
+                android:layout_marginStart="56dp"
+                android:layout_marginTop="4dp"
+                android:text="Sales Area"
+                android:textSize="@dimen/util_normal_text_sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvNetAmtHeading" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="56dp"
+            android:orientation="vertical">
+
+            <include layout="@layout/single_line_lay" />
+        </LinearLayout>
+    </LinearLayout>
+    <!--Primary Discount amt-->
+    <LinearLayout
+        android:id="@+id/llPrimaryDisAmt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clpriDisAmt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:paddingBottom="@dimen/padding_normal_16"
+            android:paddingTop="@dimen/padding_normal_16">
+
+            <TextView
+                android:id="@+id/tvPrimaryDisAmtHead"
+                style="@style/UtilsMediumTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="56dp"
+                android:layout_marginStart="56dp"
+                android:text="@string/str_primay_dis_amt"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="0dp"
+                android:visibility="gone"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_store_mall_directory_black_24dp" />
+
+            <TextView
+                android:id="@+id/tvPrimaryDisAmtVal"
+                style="@style/SubItemTextStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="56dp"
+                android:layout_marginRight="0dp"
+                android:layout_marginStart="56dp"
+                android:layout_marginTop="4dp"
+                android:text="Sales Area"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvPrimaryDisAmtHead" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="56dp"
+            android:orientation="vertical">
+
+            <include layout="@layout/single_line_lay" />
+        </LinearLayout>
+    </LinearLayout>
+    <!--Primary Discount-->
+    <LinearLayout
+        android:id="@+id/llPrimaryDis"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clpriDis"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:paddingBottom="@dimen/padding_normal_16"
+            android:paddingTop="@dimen/padding_normal_16">
+
+            <TextView
+                android:id="@+id/tvPrimaryDiscountHead"
+                style="@style/UtilsMediumTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="56dp"
+                android:layout_marginStart="56dp"
+                android:text="@string/str_primay_dis_per"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="0dp"
+                android:visibility="gone"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_store_mall_directory_black_24dp" />
+
+            <TextView
+                android:id="@+id/tvPrimaryDiscountVal"
+                style="@style/SubItemTextStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="56dp"
+                android:layout_marginRight="0dp"
+                android:layout_marginStart="56dp"
+                android:layout_marginTop="4dp"
+                android:text="Sales Area"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvPrimaryDiscountHead" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="56dp"
+            android:orientation="vertical">
+
+            <include layout="@layout/single_line_lay" />
+        </LinearLayout>
+    </LinearLayout>
+    <!--Tax 1 Amount-->
+    <LinearLayout
+        android:id="@+id/llTaxOneAmt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clTaxOneAmt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:paddingBottom="@dimen/padding_normal_16"
+            android:paddingTop="@dimen/padding_normal_16">
+
+            <TextView
+                android:id="@+id/tvTaxOneAmtHead"
+                style="@style/UtilsMediumTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="56dp"
+                android:layout_marginStart="56dp"
+                android:text="@string/str_tax_one_amt"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="0dp"
+                android:visibility="gone"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_store_mall_directory_black_24dp" />
+
+            <TextView
+                android:id="@+id/tvTaxOneAmtVal"
+                style="@style/SubItemTextStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="56dp"
+                android:layout_marginRight="0dp"
+                android:layout_marginStart="56dp"
+                android:layout_marginTop="4dp"
+                android:text="Sales Area"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvTaxOneAmtHead" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="56dp"
+            android:orientation="vertical">
+
+            <include layout="@layout/single_line_lay" />
+        </LinearLayout>
+    </LinearLayout>
+    <!--Tax 2 Amount-->
+    <LinearLayout
+        android:id="@+id/llTaxTwoAmt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clTaxTwoAmt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:paddingBottom="@dimen/padding_normal_16"
+            android:paddingTop="@dimen/padding_normal_16">
+
+            <TextView
+                android:id="@+id/tvTaxTwoAmtHead"
+                style="@style/UtilsMediumTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="56dp"
+                android:layout_marginStart="56dp"
+                android:text="@string/str_tax_two_amt"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="0dp"
+                android:visibility="gone"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_store_mall_directory_black_24dp" />
+
+            <TextView
+                android:id="@+id/tvTaxTwoAmtVal"
+                style="@style/SubItemTextStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="56dp"
+                android:layout_marginRight="0dp"
+                android:layout_marginStart="56dp"
+                android:layout_marginTop="4dp"
+                android:text="Sales Area"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvTaxTwoAmtHead" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="56dp"
+            android:orientation="vertical">
+
+            <include layout="@layout/single_line_lay" />
+        </LinearLayout>
+    </LinearLayout>
+    <!--Tax 3 Amount-->
+    <LinearLayout
+        android:id="@+id/llTaxThreeAmt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clTaxThreeAmt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:paddingBottom="@dimen/padding_normal_16"
+            android:paddingTop="@dimen/padding_normal_16">
+
+            <TextView
+                android:id="@+id/tvTaxThreeAmtHead"
+                style="@style/UtilsMediumTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="56dp"
+                android:layout_marginStart="56dp"
+                android:text="@string/str_tax_three_amt"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="0dp"
+                android:visibility="gone"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_store_mall_directory_black_24dp" />
+
+            <TextView
+                android:id="@+id/tvTaxThreeAmtVal"
+                style="@style/SubItemTextStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="56dp"
+                android:layout_marginRight="0dp"
+                android:layout_marginStart="56dp"
+                android:layout_marginTop="4dp"
+                android:text="Sales Area"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvTaxThreeAmtHead" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="56dp"
+            android:orientation="vertical">
+
+            <include layout="@layout/single_line_lay" />
+        </LinearLayout>
+    </LinearLayout>
+    <!--Tax 1 Percentage-->
+    <LinearLayout
+        android:id="@+id/llTaxOnePer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clTaxOnePer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:paddingBottom="@dimen/padding_normal_16"
+            android:paddingTop="@dimen/padding_normal_16">
+
+            <TextView
+                android:id="@+id/tvTaxOnePerHead"
+                style="@style/UtilsMediumTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="56dp"
+                android:layout_marginStart="56dp"
+                android:text="@string/str_tax_one_per"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="0dp"
+                android:visibility="gone"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_store_mall_directory_black_24dp" />
+
+            <TextView
+                android:id="@+id/tvTaxOnePerVal"
+                style="@style/SubItemTextStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="56dp"
+                android:layout_marginRight="0dp"
+                android:layout_marginStart="56dp"
+                android:layout_marginTop="4dp"
+                android:text="Sales Area"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvTaxOnePerHead" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="56dp"
+            android:orientation="vertical">
+
+            <include layout="@layout/single_line_lay" />
+        </LinearLayout>
+    </LinearLayout>
+    <!--Tax 2 Percentage-->
+    <LinearLayout
+        android:id="@+id/llTaxTwoPer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clTaxTwoPer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:paddingBottom="@dimen/padding_normal_16"
+            android:paddingTop="@dimen/padding_normal_16">
+
+            <TextView
+                android:id="@+id/tvTaxTwoPerHead"
+                style="@style/UtilsMediumTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="56dp"
+                android:layout_marginStart="56dp"
+                android:text="@string/str_tax_two_pert"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="0dp"
+                android:visibility="gone"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_store_mall_directory_black_24dp" />
+
+            <TextView
+                android:id="@+id/tvTaxTwoPerVal"
+                style="@style/SubItemTextStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="56dp"
+                android:layout_marginRight="0dp"
+                android:layout_marginStart="56dp"
+                android:layout_marginTop="4dp"
+                android:text="Sales Area"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvTaxTwoPerHead" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="56dp"
+            android:orientation="vertical">
+
+            <include layout="@layout/single_line_lay" />
+        </LinearLayout>
+    </LinearLayout>
+    <!--Tax 3 Percentage-->
+    <LinearLayout
+        android:id="@+id/llTaxThreePer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clTaxThreePer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:paddingBottom="@dimen/padding_normal_16"
+            android:paddingTop="@dimen/padding_normal_16">
+
+            <TextView
+                android:id="@+id/tvTaxThreePerHead"
+                style="@style/UtilsMediumTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="56dp"
+                android:layout_marginStart="56dp"
+                android:text="@string/str_tax_two_pert"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="0dp"
+                android:visibility="gone"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_store_mall_directory_black_24dp" />
+
+            <TextView
+                android:id="@+id/tvTaxThreePerVal"
+                style="@style/SubItemTextStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="56dp"
+                android:layout_marginRight="0dp"
+                android:layout_marginStart="56dp"
+                android:layout_marginTop="4dp"
+                android:text="Sales Area"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvTaxThreePerHead" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="56dp"
+            android:orientation="vertical">
+
+            <include layout="@layout/single_line_lay" />
+        </LinearLayout>
+    </LinearLayout>
+    <!--plant-->
+    <LinearLayout
+        android:id="@+id/llPlant"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clPlant"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:paddingBottom="@dimen/padding_normal_16"
+            android:paddingTop="@dimen/padding_normal_16">
+
+            <TextView
+                android:id="@+id/tvPlant"
+                style="@style/UtilsMediumTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="56dp"
+                android:layout_marginStart="56dp"
+                android:text="@string/so_details_sub_title_plant"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="0dp"
+                android:visibility="gone"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_store_mall_directory_black_24dp" />
+
+            <TextView
+                android:id="@+id/tvPlantDesc"
+                style="@style/SubItemTextStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="56dp"
+                android:layout_marginRight="0dp"
+                android:layout_marginStart="56dp"
+                android:layout_marginTop="4dp"
+                android:text="Sales Area"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvPlant" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="56dp"
+            android:orientation="vertical">
+
+            <include layout="@layout/single_line_lay" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

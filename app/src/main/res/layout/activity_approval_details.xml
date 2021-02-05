@@ -1,0 +1,701 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cardBackgroundColor">
+
+    <include layout="@layout/appbar_layout" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <com.rspl.sf.msfa.ui.fabTnsfmgToolBar.FABToolbarLayout
+            android:id="@+id/fabtoolbarContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:containerId="@+id/fabtoolbar_container"
+            app:fabId="@+id/fabtoolbar"
+            app:fabToolbarId="@+id/fabtoolbar_toolbar"
+            app:fadeInFraction="0.2"
+            app:hideDuration="200"
+            app:horizontalMargin="30dp"
+            app:showDuration="600"
+            app:verticalMargin="30dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.coordinatorlayout.widget.CoordinatorLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <include
+                            layout="@layout/so_header"
+                            android:visibility="gone" />
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            style="@style/UtilsItemSpacing"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/WHITE">
+
+                            <TextView
+                                android:id="@+id/tvSONo"
+                                style="@style/UtilsSubHeaderStyles"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="4dp"
+                                android:layout_marginRight="4dp"
+                                android:text="TextView"
+                                android:textSize="@dimen/xlarge_text_size"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toLeftOf="@+id/tvCreditAmount"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <ImageView
+                                android:id="@+id/ivDeliveryStatus"
+                                android:layout_width="48dp"
+                                android:layout_height="48dp"
+                                android:tint="@color/PendingApprovalColor"
+                                android:visibility="gone"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/tvCreditAmount"
+                                app:srcCompat="@drawable/ic_shopping_cart_black_24dp" />
+
+                            <TextView
+                                android:id="@+id/tvCreditAmount"
+                                style="@style/UtilsMediumTextStyle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=""
+                                android:layout_marginTop="6dp"
+                                app:layout_constraintLeft_toRightOf="@+id/tvSONo"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/tvSONo">
+
+                                <TextView
+                                    android:id="@+id/tvOrderType"
+                                    style="@style/UtilsMediumTextStyle"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="4dp"
+                                    android:layout_weight="0.8"
+                                    android:layout_marginRight="4dp"
+                                    android:layout_marginTop="6dp"
+                                    android:gravity="start"
+                                    android:text="Text View"/>
+                                <TextView
+                                    android:id="@+id/tvCreditAmountFBD"
+                                    style="@style/UtilsMediumTextStyle"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1"
+                                    android:gravity="end"
+                                    android:layout_height="wrap_content"
+                                    android:text="TextView"
+                                    android:layout_marginTop="8dp" />
+                            </LinearLayout>
+
+                            <!-- <TextView
+                                 android:id="@+id/tvPONumber"
+                                 style="@style/UtilsMediumTextStyle"
+                                 android:layout_width="0dp"
+                                 android:layout_height="wrap_content"
+                                 android:layout_marginEnd="4dp"
+                                 android:layout_marginRight="4dp"
+                                 android:layout_marginTop="4dp"
+                                 android:gravity="start"
+                                 android:text="TextView"
+                                 app:layout_constraintLeft_toLeftOf="parent"
+                                 app:layout_constraintRight_toLeftOf="@+id/ivDeliveryStatus"
+                                 app:layout_constraintTop_toBottomOf="@+id/tvOrderType" />
+                 -->
+                            <!-- <ImageView
+                                 android:id="@+id/ivStatus"
+                                 android:layout_width="wrap_content"
+                                 android:layout_height="wrap_content"
+                                 android:layout_marginBottom="16dp"
+                                 android:layout_marginRight="16dp"
+                                 android:layout_marginTop="4dp"
+                                 app:layout_constraintBottom_toBottomOf="parent"
+                                 app:layout_constraintRight_toRightOf="parent"
+                                 app:layout_constraintTop_toBottomOf="@+id/ivDeliveryStatus"
+                                 app:srcCompat="@drawable/ic_assignment_black_24dp"
+                                 app:layout_constraintVertical_bias="0.0" />-->
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_details_header"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <include layout="@layout/single_line_lay" />
+
+                            <include
+                                android:id="@+id/singleView"
+                                layout="@layout/so_list_item" />
+                        </LinearLayout>
+
+                        <include layout="@layout/single_line_lay" />
+
+                        <androidx.core.widget.NestedScrollView
+                            android:id="@+id/nestedScroll"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@color/cardBackgroundColor"
+                                android:orientation="vertical">
+
+                                <androidx.cardview.widget.CardView
+                                    android:id="@+id/cvOrderDetails"
+                                    style="@style/CardViewStyle"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="0dp"
+                                    android:orientation="vertical">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="vertical">
+
+                                        <androidx.constraintlayout.widget.ConstraintLayout
+                                            style="@style/UtilsItemSpacing"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:background="@color/secondaryDarkColor"
+                                            android:paddingBottom="@dimen/padding_normal_16"
+                                            android:paddingTop="@dimen/padding_normal_16">
+
+                                            <ImageView
+                                                android:id="@+id/ivOrderDetails"
+                                                android:layout_width="24dp"
+                                                android:layout_height="24dp"
+                                                android:layout_marginBottom="0dp"
+                                                android:layout_marginRight="8dp"
+                                                android:tint="@color/secondaryTextColor"
+                                                app:layout_constraintBottom_toBottomOf="parent"
+                                                app:layout_constraintRight_toRightOf="parent"
+                                                app:layout_constraintTop_toTopOf="parent"
+                                                app:srcCompat="@drawable/ic_arrow_down_black_24dp" />
+
+                                            <TextView
+                                                android:id="@+id/tvOrderDetails"
+                                                style="@style/UtilsSubHeaderStyles"
+                                                android:layout_width="0dp"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginBottom="0dp"
+                                                android:layout_marginRight="8dp"
+                                                android:text="Order Data"
+                                                android:textColor="@color/secondaryTextColor"
+                                                app:layout_constraintBottom_toBottomOf="parent"
+                                                app:layout_constraintHorizontal_bias="0.518"
+                                                app:layout_constraintLeft_toRightOf="@+id/ivEmptyView"
+                                                app:layout_constraintRight_toLeftOf="@+id/guideline1" />
+
+                                            <ImageView
+                                                android:id="@+id/ivEmptyView"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:visibility="gone"
+                                                app:layout_constraintLeft_toLeftOf="parent"
+                                                app:layout_constraintTop_toTopOf="parent"
+                                                app:srcCompat="@drawable/ic_store_black_24dp" />
+
+                                            <androidx.constraintlayout.widget.Guideline
+                                                android:id="@+id/guideline1"
+                                                android:layout_width="0dp"
+                                                android:layout_height="wrap_content"
+                                                android:orientation="vertical"
+                                                app:layout_constraintGuide_percent="0.32"
+                                                tools:layout_editor_absoluteX="140dp"
+                                                tools:layout_editor_absoluteY="242dp" />
+
+                                            <TextView
+                                                android:id="@+id/tvDate"
+                                                style="@style/UtilsMediumTextStyle"
+                                                android:layout_width="0dp"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginBottom="0dp"
+                                                android:layout_marginEnd="16dp"
+                                                android:layout_marginLeft="16dp"
+                                                android:layout_marginRight="16dp"
+                                                android:layout_marginStart="16dp"
+                                                android:gravity="right"
+                                                android:text="TextView"
+                                                android:textColor="@color/secondaryTextColor"
+                                                app:layout_constraintBottom_toBottomOf="parent"
+                                                app:layout_constraintHorizontal_bias="0.0"
+                                                app:layout_constraintLeft_toLeftOf="@+id/guideline1"
+                                                app:layout_constraintRight_toLeftOf="@+id/ivOrderDetails" />
+
+                                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                                        <include layout="@layout/single_line_lay" />
+
+                                        <include
+                                            android:id="@+id/headerItem"
+                                            layout="@layout/so_header_details"
+                                            android:visibility="gone" />
+                                    </LinearLayout>
+                                </androidx.cardview.widget.CardView>
+
+
+                                <androidx.cardview.widget.CardView
+                                    android:id="@+id/cvPricingDetails"
+                                    style="@style/CardViewStyle"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="0dp"
+                                    android:layout_marginTop="0dp"
+                                    android:orientation="vertical">
+
+                                    <!--<include layout="@layout/single_line_lay" />-->
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="vertical">
+
+                                        <androidx.constraintlayout.widget.ConstraintLayout
+                                            style="@style/UtilsItemSpacing"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:background="@color/secondaryDarkColor">
+
+                                            <ImageView
+                                                android:id="@+id/ivPricingDetails"
+                                                android:layout_width="24dp"
+                                                android:layout_height="24dp"
+                                                android:layout_marginBottom="0dp"
+                                                android:layout_marginRight="8dp"
+                                                android:layout_marginTop="0dp"
+                                                android:tint="@color/secondaryTextColor"
+                                                app:layout_constraintBottom_toBottomOf="parent"
+                                                app:layout_constraintRight_toRightOf="parent"
+                                                app:layout_constraintTop_toTopOf="parent"
+                                                app:layout_constraintVertical_bias="0.562"
+                                                app:srcCompat="@drawable/ic_arrow_down_black_24dp" />
+
+                                            <TextView
+                                                android:id="@+id/tvPricingDetail"
+                                                style="@style/UtilsSubHeaderStyles"
+                                                android:layout_width="0dp"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginBottom="0dp"
+                                                android:layout_marginEnd="8dp"
+                                                android:layout_marginRight="8dp"
+                                                android:layout_marginTop="0dp"
+                                                android:text="Total Amount"
+                                                android:textColor="@color/secondaryTextColor"
+                                                app:layout_constraintBottom_toBottomOf="parent"
+                                                app:layout_constraintLeft_toRightOf="@+id/ivEmptyView1"
+                                                app:layout_constraintRight_toLeftOf="@+id/guideline"
+                                                app:layout_constraintTop_toTopOf="parent" />
+
+                                            <ImageView
+                                                android:id="@+id/ivEmptyView1"
+                                                android:layout_width="0dp"
+                                                android:layout_height="0dp"
+                                                android:visibility="gone"
+                                                app:layout_constraintLeft_toLeftOf="parent"
+                                                app:layout_constraintTop_toTopOf="parent"
+                                                app:srcCompat="@drawable/ic_store_black_24dp" />
+
+                                            <androidx.constraintlayout.widget.Guideline
+                                                android:id="@+id/guideline"
+                                                android:layout_width="0dp"
+                                                android:layout_height="wrap_content"
+                                                android:orientation="vertical"
+                                                app:layout_constraintGuide_percent="0.32"
+                                                tools:layout_editor_absoluteX="140dp"
+                                                tools:layout_editor_absoluteY="409dp" />
+
+                                            <TextView
+                                                android:id="@+id/tvAmount"
+                                                style="@style/UtilsMediumTextStyle"
+                                                android:layout_width="0dp"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginBottom="0dp"
+                                                android:layout_marginEnd="16dp"
+                                                android:layout_marginLeft="16dp"
+                                                android:layout_marginRight="16dp"
+                                                android:layout_marginStart="16dp"
+                                                android:layout_marginTop="0dp"
+                                                android:gravity="right"
+                                                android:text="TextView"
+                                                android:textColor="@color/secondaryTextColor"
+                                                app:layout_constraintBottom_toBottomOf="parent"
+                                                app:layout_constraintHorizontal_bias="0.0"
+                                                app:layout_constraintLeft_toLeftOf="@+id/guideline"
+                                                app:layout_constraintRight_toLeftOf="@+id/ivPricingDetails"
+                                                app:layout_constraintTop_toTopOf="parent"
+                                                app:layout_constraintVertical_bias="0.521" />
+                                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                                        <LinearLayout
+                                            android:id="@+id/llSOCondition"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="vertical"
+                                            android:paddingBottom="@dimen/padding_normal_16"
+                                            android:visibility="gone" />
+                                    </LinearLayout>
+                                </androidx.cardview.widget.CardView>
+
+
+                                <androidx.cardview.widget.CardView
+                                    android:id="@+id/cvItem"
+                                    style="@style/CardViewStyle"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+
+                                    <include layout="@layout/single_line_lay" />
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="vertical">
+
+                                        <androidx.constraintlayout.widget.ConstraintLayout
+                                            style="@style/UtilsItemSpacing"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:background="@color/secondaryDarkColor"
+                                            android:paddingBottom="@dimen/padding_normal_16"
+                                            android:paddingTop="@dimen/padding_normal_16">
+
+                                            <ImageView
+                                                android:id="@+id/ivItemDetails"
+                                                android:layout_width="24dp"
+                                                android:layout_height="24dp"
+                                                android:tint="@color/secondaryTextColor"
+                                                android:visibility="invisible"
+                                                android:layout_marginRight="@dimen/padding_normal_8"
+                                                app:layout_constraintRight_toRightOf="parent"
+                                                app:layout_constraintTop_toTopOf="parent"
+                                                app:srcCompat="@drawable/ic_arrow_down_black_24dp" />
+
+                                            <TextView
+                                                android:id="@+id/tvItemDetail"
+                                                style="@style/UtilsSubHeaderStyles"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginBottom="0dp"
+                                                android:layout_marginTop="0dp"
+                                                android:text="Items"
+                                                android:textColor="@color/secondaryTextColor"
+                                                app:layout_constraintBottom_toBottomOf="parent"
+                                                app:layout_constraintLeft_toRightOf="@+id/ivEmptyView2"
+                                                app:layout_constraintTop_toTopOf="parent" />
+
+                                            <ImageView
+                                                android:id="@+id/ivEmptyView2"
+                                                android:layout_width="0dp"
+                                                android:layout_height="0dp"
+                                                android:visibility="gone"
+                                                app:layout_constraintLeft_toLeftOf="parent"
+                                                app:layout_constraintTop_toTopOf="parent"
+                                                app:srcCompat="@drawable/ic_store_black_24dp" />
+
+                                            <TextView
+                                                android:id="@+id/tvTotlWeightAmt"
+                                                android:layout_width="0dp"
+                                                style="@style/UtilsMediumTextStyle"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginEnd="16dp"
+                                                android:layout_marginStart="8dp"
+                                                android:layout_marginTop="0dp"
+                                                android:gravity="right"
+                                                app:layout_constraintEnd_toStartOf="@+id/ivItemDetails"
+                                                app:layout_constraintStart_toEndOf="@+id/tvItemDetail"
+                                                app:layout_constraintTop_toTopOf="parent"
+                                                android:layout_marginRight="16dp"
+                                                android:layout_marginLeft="8dp" />
+                                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                                        <include layout="@layout/single_line_lay" />
+
+                                        <LinearLayout
+                                            android:id="@+id/llItemList"
+                                            android:layout_width="match_parent"
+
+                                            android:layout_height="wrap_content"
+                                            android:orientation="vertical">
+
+                                            <androidx.recyclerview.widget.RecyclerView
+                                                android:id="@+id/recycler_view"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content" />
+                                        </LinearLayout>
+                                    </LinearLayout>
+
+                                </androidx.cardview.widget.CardView>
+
+                                <androidx.cardview.widget.CardView
+                                    android:id="@+id/soApprovalHist"
+                                    style="@style/CardViewStyle"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <include layout="@layout/single_line_lay" />
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="vertical">
+
+                                        <androidx.constraintlayout.widget.ConstraintLayout
+                                            style="@style/UtilsItemSpacing"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:background="@color/secondaryDarkColor"
+                                            android:paddingBottom="@dimen/padding_normal_16"
+                                            android:paddingTop="@dimen/padding_normal_16">
+
+                                            <ImageView
+                                                android:id="@+id/ivApprovalHist"
+                                                android:layout_width="24dp"
+                                                android:layout_height="24dp"
+                                                android:tint="@color/secondaryTextColor"
+                                                android:visibility="invisible"
+                                                app:layout_constraintRight_toRightOf="parent"
+                                                app:layout_constraintTop_toTopOf="parent"
+                                                app:srcCompat="@drawable/ic_arrow_down_black_24dp" />
+
+                                            <TextView
+                                                android:id="@+id/tvApprovalHist"
+                                                style="@style/UtilsSubHeaderStyles"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginBottom="0dp"
+                                                android:layout_marginTop="0dp"
+                                                android:text="History"
+                                                android:textColor="@color/secondaryTextColor"
+                                                android:textSize="@dimen/medium_sixteen_text"
+                                                app:layout_constraintBottom_toBottomOf="parent"
+                                                app:layout_constraintLeft_toRightOf="@+id/ivApprovalHist2"
+                                                app:layout_constraintTop_toTopOf="parent" />
+
+                                            <ImageView
+                                                android:id="@+id/ivApprovalHist2"
+                                                android:layout_width="0dp"
+                                                android:layout_height="0dp"
+                                                android:visibility="gone"
+                                                app:layout_constraintLeft_toLeftOf="parent"
+                                                app:layout_constraintTop_toTopOf="parent"
+                                                app:srcCompat="@drawable/ic_store_black_24dp" />
+                                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                                        <include layout="@layout/single_line_lay" />
+
+                                        <LinearLayout
+                                            android:id="@+id/llApprovalList"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="vertical">
+
+                                            <androidx.recyclerview.widget.RecyclerView
+                                                android:id="@+id/rvApprovalHistory"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content" />
+
+                                            <include layout="@layout/no_record_found" />
+                                        </LinearLayout>
+                                    </LinearLayout>
+                                </androidx.cardview.widget.CardView>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:visibility="gone">
+
+                                    <include
+                                        android:id="@+id/soItemTitelView"
+                                        layout="@layout/so_header_title" />
+
+                                    <include layout="@layout/single_line_lay" />
+
+
+                                    <include layout="@layout/no_record_found" />
+                                </LinearLayout>
+
+
+                                <com.google.android.material.tabs.TabLayout
+                                    android:id="@+id/tlDetails"
+                                    style="@style/UtilsTabLayout"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:visibility="gone"
+                                    app:tabGravity="fill"
+                                    app:tabMaxWidth="0dp"
+                                    app:tabMode="fixed" />
+
+                                <androidx.viewpager.widget.ViewPager
+                                    android:id="@+id/viewPager"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="150dp"
+                                    android:visibility="gone" />
+
+                                <LinearLayout
+                                    android:id="@+id/ll_notes_list_header"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:visibility="gone">
+
+                                    <include
+                                        android:id="@+id/notesView"
+                                        layout="@layout/so_header_title" />
+
+                                    <include layout="@layout/single_line_lay" />
+
+                                    <include layout="@layout/so_notes" />
+
+                                    <include
+                                        android:id="@+id/so_notes_item"
+                                        layout="@layout/so_notes_item"
+                                        android:visibility="gone" />
+
+                                    <include layout="@layout/single_line_lay" />
+                                </LinearLayout>
+                            </LinearLayout>
+                        </androidx.core.widget.NestedScrollView>
+
+                    </LinearLayout>
+
+                    <!--  <android.support.design.widget.CoordinatorLayout
+                          android:layout_width="match_parent"
+                          android:visibility="gone"
+                          android:layout_height="match_parent">
+
+                          <com.arteriatech.sf.mdc.ui.MovableFloatingActionButton
+                              android:id="@+id/fabEdit"
+                              android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:layout_gravity="bottom|end"
+                              android:layout_margin="@dimen/so_details_fab_margin"
+                              style="@style/FloatingActionButtonStyle"
+                              app:backgroundTint="@color/floatingActionButtonColor"
+                              app:srcCompat="@drawable/ic_mode_edit_black_24dp" />
+                      </android.support.design.widget.CoordinatorLayout>-->
+                </androidx.coordinatorlayout.widget.CoordinatorLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@id/fabtoolbar_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@id/fabtoolbar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/abc_ic_menu_share_mtrl_alpha"
+                    app:backgroundTint="@color/primaryColor"
+                    app:borderWidth="0dp"
+                    app:fabSize="normal" />
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:id="@id/fabtoolbar_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="70dp"
+                android:layout_alignParentBottom="true"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:id="@+id/tvEditApprove"
+                    style="@style/SelectableItemBackground"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/Headers"
+                        android:gravity="center"
+                        android:text="@string/menu_edit_approve"
+                        android:textColor="@color/actionBarMenuIconColor" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/actionBarMenuIconColor" />
+                <LinearLayout
+                    android:id="@+id/tvReject"
+                    style="@style/SelectableItemBackground"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/Headers"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/menu_reject"
+                        android:textColor="@color/actionBarMenuIconColor" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/actionBarMenuIconColor" />
+
+                <LinearLayout
+                    android:id="@+id/tvApprove"
+                    style="@style/SelectableItemBackground"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/Headers"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/menu_approve"
+                        android:textColor="@color/actionBarMenuIconColor" />
+                </LinearLayout>
+            </LinearLayout>
+        </com.rspl.sf.msfa.ui.fabTnsfmgToolBar.FABToolbarLayout>
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/padding_normal_16">
+
+
+        <TextView
+            android:id="@+id/tvMatDesc"
+            style="@style/UtilsSubHeaderStyles"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toStartOf="@+id/guideline7"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.60" />
+
+
+        <LinearLayout
+            android:id="@+id/cBt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center|right"
+            android:orientation="vertical"
+            android:text="TextView"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline7"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:id="@+id/clView"
+                android:layout_width="match_parent"
+                android:layout_gravity="right"
+                android:gravity="right"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <!--
+                                -->
+                <Button
+                    android:id="@+id/tvMinus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:text="-"
+                    android:visibility="gone" />
+
+                <com.rspl.sf.msfa.ui.EditextClearButton
+                    android:id="@+id/etQty"
+                    style="@style/UtilsMediumTextStyle"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    app:clearButtonMode="always"
+                    android:inputType="numberDecimal"
+                    app:clearButtonDrawable="@mipmap/ic_clear_button" />
+
+                <Button
+                    android:id="@+id/tvPlus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:text="+"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tvUom"
+                    style="@style/UtilsMediumTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/padding_normal_4"
+                    android:layout_marginLeft="@dimen/padding_normal_4"
+                    android:gravity="right"
+                    tools:layout_editor_absoluteX="317dp"
+                    tools:layout_editor_absoluteY="36dp" />
+
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:id="@+id/tv_price"
+                android:text="200"
+                android:layout_height="wrap_content" />
+
+
+
+
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <include layout="@layout/single_line_lay" />
+</LinearLayout>

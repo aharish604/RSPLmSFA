@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:theme="@android:style/Theme.NoTitleBar"
+    android:background="@color/WHITE"
+    android:orientation="vertical">
+
+    <include layout="@layout/appbar_layout"/>
+    <LinearLayout
+        android:id="@+id/ll_dist_line"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/line_height_one_dip"
+        android:background="@color/line_color"
+        android:orientation="horizontal">
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/et_name_search"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/lbl_search_by_scheme_name"
+        android:drawableRight="@android:drawable/ic_menu_search"
+        android:textColor="@color/BLACK"
+        style="@style/EditBookTextEdit" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/line_height_one_dip"
+        android:background="@color/line_color"
+        android:id="@+id/ll_edit_text_above_line"
+        android:orientation="horizontal" >
+    </LinearLayout>
+
+    <LinearLayout
+        android:background="@color/bg_title"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        android:paddingTop="2dp"
+        android:paddingBottom="2dp"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_scheme_name"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1.6"
+            android:gravity="left"
+            android:layout_gravity="bottom"
+            android:paddingLeft="@dimen/padding_zero_dip"
+            android:paddingRight="@dimen/padding_zero_dip"
+            android:paddingEnd="@dimen/padding_zero_dip"
+            android:paddingStart="@dimen/padding_zero_dip"
+            android:text="@string/lbl_scheme_name"
+            android:textColor="@color/TEXT_COLOR"
+            android:textStyle="normal"
+            android:textSize="@dimen/medium_text"/>
+
+        <TextView
+            android:id="@+id/tv_valid_from"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_gravity="bottom"
+            android:paddingLeft="@dimen/padding_zero_dip"
+            android:paddingRight="@dimen/padding_zero_dip"
+            android:paddingEnd="@dimen/padding_zero_dip"
+            android:paddingStart="@dimen/padding_zero_dip"
+            android:text="@string/lbl_valid_from"
+            android:textColor="@color/TEXT_COLOR"
+            android:textStyle="normal"
+            android:textSize="@dimen/medium_text"/>
+
+        <TextView
+            android:id="@+id/tv_valid_to"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_gravity="bottom"
+            android:paddingLeft="@dimen/padding_zero_dip"
+            android:paddingRight="@dimen/padding_zero_dip"
+            android:paddingEnd="@dimen/padding_zero_dip"
+            android:paddingStart="@dimen/padding_zero_dip"
+            android:text="@string/lbl_valid_to"
+            android:textColor="@color/TEXT_COLOR"
+            android:textStyle="normal"
+            android:textSize="@dimen/medium_text"/>
+
+    </LinearLayout>
+
+    <include layout="@layout/single_line_lay"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_scheme_list"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true" />
+
+    <include layout="@layout/empty_list_lay" />
+
+</LinearLayout>
